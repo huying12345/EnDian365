@@ -1,0 +1,230 @@
+@charset "UTF-8";
+#enDianMark, #enDianMark2 {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#enDianMark .row, #enDianMark2 .row {
+  margin: 0px;
+}
+
+#enDianMark .col-lg-1, #enDianMark .col-lg-3, #enDianMark .col-lg-2, #enDianMark .col-lg-8, #enDianMark .col-lg-4, #enDianMark .col-lg-12, #enDianMark .col-lg-6, #enDianMark .col-lg-9, #enDianMark2 .col-lg-1, #enDianMark2 .col-lg-3, #enDianMark2 .col-lg-2, #enDianMark2 .col-lg-8, #enDianMark2 .col-lg-4, #enDianMark2 .col-lg-12, #enDianMark2 .col-lg-6, #enDianMark2 .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#enDianMark .searchBox, #enDianMark2 .searchBox {
+  padding: 0px;
+  height: 65px;
+  margin-top: 20px;
+}
+
+#enDianMark .searchBox .col-lg-1, #enDianMark .searchBox .col-lg-3, #enDianMark .searchBox .col-lg-2, #enDianMark2 .searchBox .col-lg-1, #enDianMark2 .searchBox .col-lg-3, #enDianMark2 .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#enDianMark .searchBox span, #enDianMark .searchBox input, #enDianMark .searchBox select, #enDianMark .searchBox button, #enDianMark2 .searchBox span, #enDianMark2 .searchBox input, #enDianMark2 .searchBox select, #enDianMark2 .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#enDianMark .searchBox input, #enDianMark .searchBox select, #enDianMark2 .searchBox input, #enDianMark2 .searchBox select {
+  border: 2px solid #9A9A9A;
+}
+
+#enDianMark .searchBox button, #enDianMark2 .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#enDianMark .itmeTitle, #enDianMark2 .itmeTitle {
+  background: #403B3B;
+  margin-top: 10px;
+}
+
+#enDianMark .itmeTitle p, #enDianMark2 .itmeTitle p {
+  width: 100%;
+}
+
+#enDianMark .itmeTitle .video, #enDianMark2 .itmeTitle .video {
+  background: #ac2b2b;
+}
+
+#enDianMark .itmeTitle .video p, #enDianMark2 .itmeTitle .video p {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 0px;
+  /*box-shadow:0px 6px 10px #848181;*/
+  /*padding-left:20px;*/
+}
+
+#enDianMark .itmeTitle .video iframe, #enDianMark2 .itmeTitle .video iframe {
+  width: 100%;
+  height: 550px;
+}
+
+#enDianMark .itmeTitle .videoList iframe, #enDianMark2 .itmeTitle .videoList iframe {
+  width: 100%;
+  height: 80px;
+}
+
+#enDianMark .itmeTitle .videoList .list-group, #enDianMark2 .itmeTitle .videoList .list-group {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+#enDianMark .itmeTitle .videoList .list-group .list-group-item, #enDianMark2 .itmeTitle .videoList .list-group .list-group-item {
+  border: none;
+}
+
+#enDianMark .itmeTitle .videoList .hoster, #enDianMark2 .itmeTitle .videoList .hoster {
+  font-size: 20px;
+}
+
+#enDianMark .itmeTitle .videoList .tips, #enDianMark2 .itmeTitle .videoList .tips {
+  font-size: 18px;
+}
+
+#enDianMark .itmeTitle .videoList .text, #enDianMark2 .itmeTitle .videoList .text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+#enDianMark .itmeTitle .videoList .source, #enDianMark2 .itmeTitle .videoList .source {
+  font-size: 12px;
+  padding-left: 10px;
+  color: #807a7a;
+}
+
+#enDianMark .article, #enDianMark2 .article {
+  margin-top: 10px;
+  background-image: url("../img/aboutUs_03.jpg");
+  background-size: 100%;
+  padding: 10px;
+}
+
+#enDianMark .article .title, #enDianMark2 .article .title {
+  margin-bottom: 20px;
+  width: 60%;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+}
+
+#enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+  font-weight: 700;
+  background: black;
+  color: yellow;
+  padding: 10px;
+}
+
+#enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+#enDianMark .article img, #enDianMark2 .article img {
+  width: 100%;
+}
+
+#enDianMark .article p, #enDianMark2 .article p {
+  line-height: 40px;
+  padding: 10px;
+}
+
+#enDianMark .footer, #enDianMark2 .footer {
+  margin-top: 0px;
+}
+
+#enDianMark .footer .col-lg-4, #enDianMark .footer .col-lg-6, #enDianMark2 .footer .col-lg-4, #enDianMark2 .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1201px) {
+  #enDianMark, #enDianMark2 {
+    /*.itmeTitle .video p{
+            padding: 16px 0px;
+            font-size: 22px;
+        }*/
+  }
+  #enDianMark p, #enDianMark2 p {
+    font-size: 16px;
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 22px;
+  }
+  #enDianMark .article p, #enDianMark2 .article p {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .list-group-item, #enDianMark2 .reviewVideos .list-group-item {
+    font-size: 18px;
+  }
+  #enDianMark .reviewVideos .pages li, #enDianMark2 .reviewVideos .pages li {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #enDianMark, #enDianMark2 {
+    /*.itmeTitle .video p{
+            padding:14px 0px;
+            height: 60px;
+            font-size:25px;
+        }*/
+    /*.P{
+            height:60px
+        }*/
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 22px;
+  }
+  #enDianMark .article p, #enDianMark2 .article p {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .list-group-item, #enDianMark2 .reviewVideos .list-group-item {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .pages li, #enDianMark2 .reviewVideos .pages li {
+    font-size: 20px;
+  }
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 60%;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #enDianMark .carousel-indicators, #enDianMark2 .carousel-indicators {
+    width: 80%;
+  }
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 80%;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 100%;
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 14px;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+  }
+  #enDianMark .itmeTitle .video p, #enDianMark2 .itmeTitle .video p {
+    font-size: 15px;
+    padding: 5px 0px 0px 0px;
+  }
+}

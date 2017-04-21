@@ -1,0 +1,104 @@
+@charset "UTF-8";
+#article {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#article .pageUl {
+  width: 100%;
+}
+
+#article .pageUl li {
+  width: 50%;
+}
+
+#article .reviewVideos {
+  margin-top: 10px !important;
+  /*.list-group:hover :first-child{
+             text-decoration:underline;
+         }*/
+  /*分页*/
+}
+
+#article .reviewVideos .list-group {
+  /*margin:0px 5px;*/
+  /*background:#262625;*/
+  /*color:#fff;*/
+  /*padding: 15px 10px;*/
+}
+
+#article .reviewVideos .list-group li {
+  cursor: pointer;
+}
+
+#article .reviewVideos .list-group li:hover {
+  text-decoration: underline;
+}
+
+#article .reviewVideos .list-group-item {
+  background: none;
+  border: none;
+  font-size: 16px;
+  /*height:55px;*/
+}
+
+#article .reviewVideos #pageGro {
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+#article .reviewVideos #pageGro div,
+#article .reviewVideos #pageGro div ul li {
+  color: #999;
+  display: inline-block;
+  text-align: center;
+}
+
+#article .reviewVideos #pageGro div ul {
+  padding: 0px;
+}
+
+#article .reviewVideos #pageGro div ul li {
+  width: 30px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+#article .reviewVideos #pageGro .on {
+  color: red;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+#article .reviewVideos #pageGro .pageUp,
+#article .reviewVideos #pageGro .pageDown,
+#article .reviewVideos #pageGro .pagestart,
+#article .reviewVideos #pageGro .pageend {
+  cursor: pointer;
+  width: 50px;
+}
+
+@media screen and (min-width: 1201px) {
+  #article .reviewVideos .list-group-item {
+    font-size: 16px !important;
+  }
+  #article #pageGro div ul li, #article #pageGro div {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #article .carousel-indicators {
+    width: 80%;
+  }
+  #article .reviewVideos .list-group-item {
+    font-size: 14px !important;
+  }
+  #article #pageGro div ul li, #article #pageGro div {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,70 @@
+﻿@using System.Data
+@using Yamon.Framework.Common
+@using Yamon.Module.SiteManage
+
+<noscript>
+    <div style="position: absolute; z-index: 100000; height: 2046px; top: 0px; left: 0px;
+            width: 100%; background: white; text-align: center;">
+        <img src="~/Static/v1/images/noscript.gif" alt='抱歉，请开启Javascript脚本支持！' />
+    </div>
+</noscript>
+<div id="loading-mask" style="">
+</div>
+<div id="loading">
+    <div class="loading-indicator">
+        <img src="~/Static/v1/images/extanim32.gif" width="32" height="32" style="margin-right: 8px;float: left; vertical-align: top;" /><br />
+        <span id="loading-msg">数据加载中...</span>
+    </div>
+</div>
+<div class="index_top" region="north" split="false" border="false" style="width: 1366px; height: 90px;overflow-y:hidden;overflow-x:hidden;">
+    <iframe id="topFrame" name="topFrame" frameborder="0" noresize="noresize" scrolling="no" src="/Home/header" height="100%" width="100%"></iframe>
+</div>
+<div id="leftRegion" region="west" split="true" border="false" id="west" style="width: 200px;height: 90%;overflow-y:hidden;overflow-x:hidden;">
+    <iframe id="leftFrame" name="leftFrame" frameborder="0" scrolling="no" src="about:blank" height="100%" width="100%"></iframe>
+</div>
+<div id="mainPanle" region="center" style="background: #eee; overflow-y:hidden;overflow-x:hidden;">
+    <div id="tabs" class="easyui-tabs" fit="true" border="false">
+    </div>
+</div>
+<div class="flooter" region="south" split="false" id="bg">
+    <div class="floot01">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维护支撑：上海天声
+    </div>
+</div>
+<div id="mm" class="easyui-menu" style="width: 150px;">
+    <div id="mm-tabclose">
+        关闭
+    </div>
+    <div id="mm-tabcloseother">
+        除此之外全部关闭
+    </div>
+    <div class="menu-sep">
+    </div>
+    <div id="mm-tabcloseright">
+        当前页右侧全部关闭
+    </div>
+    <div id="mm-tabcloseleft">
+        当前页左侧全部关闭
+    </div>
+</div>
+
+@section styles
+    {
+    <link href="~/Static/Home/css/shcommon.css" rel="stylesheet" />
+}
+
+@section scripts
+{
+    <script src="~/Static/Home/js/Index.js"></script>
+    <script>
+
+        function menuClickleftFrame(menuObj) {
+
+            if (menuObj.attr("url") != "") {
+                document.getElementById("leftFrame").contentWindow.location.href = menuObj.attr("url");
+            } else {
+                document.getElementById("leftFrame").contentWindow.location.href = "/Home/LeftMenu?ParentID=" + menuObj.attr("menuId");
+            }
+        }
+    </script>
+}

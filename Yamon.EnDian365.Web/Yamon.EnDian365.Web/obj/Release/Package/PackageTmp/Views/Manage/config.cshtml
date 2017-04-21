@@ -1,0 +1,177 @@
+﻿@{ ViewBag.Title = "config"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>系统参数设置</title>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <script src="/assets/manage/js/checkfrom.js"></script>
+    <script type="text/javascript" src="~/assets/libs/jquery.idTabs.min.js"></script>
+</head>
+
+<body>
+
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>基本信息</li>
+            <li>管理页面</li>
+        </ul>
+    </div>
+
+    <div class="formbody"> 
+        <div id="usual1" class="usual">
+
+            <div class="itab">
+                <ul>
+                    <li>
+                        <a href="#tab1" class="selected">基本信息</a>
+                    </li>
+                    <li>
+                        <a href="#tab2">上传参数</a>
+                    </li>
+                    <li>
+                        <a href="#tab3">SEO设置</a>
+                    </li>
+                    <li>
+                        <a href="#tab4">第三方安装代码</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="" method="post" name="myform" id="myform" enctype="multipart/form-data">
+                <input type="hidden" name="delimg" value="2015071815135373.png" />
+                <input type="hidden" name="delimg2" value="2015071509322045.jpg" />
+                <div id="tab1" class="tabson">
+
+                    <div class="formtext">Hi，<b>admin</b>，欢迎您使用信息发布功能！</div>
+                    <ul class="forminfo">
+                        <li><label style="width:110px;">网站名称<b>*</b></label><input name="sitename" type="text" class="dfinput" value="上海珺意科技股份有限公司" style="width:518px;" /></li>
+
+                        <li>
+                            <label style="width:110px;">网站LOGO<b>*</b></label><cite>
+                                <input name="img1" type="file" id="img1" /> <a href="../uploadfile/upload/2015071815135373.png" target="_blank">查看图片</a>  <input name="isdel1" type="checkbox" class=radio id="isdel1" value="1" /> 删除 <font color="red">*请上传png透明底图,尺寸:215*80像素</font>
+                            </cite>
+                        </li>
+
+                        <li>
+                            <label style="width:110px;">下拉菜单</label><cite>
+                                <input type="radio" name="ismenu" value="0" checked=checked /> 开启</input>
+                                <input type="radio" name="ismenu" value="1" /> 关闭</input>
+                            </cite>
+                        </li>
+
+                        <li>
+                            <label style="width:110px;">在线QQ</label><cite>
+                                <input type="radio" name="isqq" value="0" checked=checked /> 开启</input>
+                                <input type="radio" name="isqq" value="1" /> 关闭</input>
+                            </cite>
+                        </li>
+
+                        <li>
+                            <label style="padding-right:300px;">
+                                <script>
+                                    function doroom() {
+                                        var i;
+                                        var str = "";
+                                        var oldi = 0;
+                                        var j = 0;
+                                        oldi = parseInt(document.myform.oeditroomnum.value);
+                                        for (i = 1; i <= document.myform.oroomnum.value; i++) {
+                                            j = i + oldi;
+                                            str = str + "<tr><td>QQ号：<input name=oqq[] value='' class='dfinput' style='width:150px'> 名称：<input name=otitle[] value='' class='dfinput' style='width:100px'></td></tr>";
+                                        }
+                                        document.getElementById("addroom").innerHTML = "<table width='100%'>" + str + "</table>";
+                                    }
+                                </script>
+                                <table width="500">
+                                    <tr>
+                                        <td>
+                                            <input value="2" type="checkbox" name="odelpathid[]" />删 QQ号：<input name="oqq[]" class="dfinput" style="width:150px;" value="1534996449" size="25" />
+                                            名称：<input name="otitle[]" class="dfinput" style="width:100px;" value="售前咨询" size="25" />
+                                            <input value="2" name="odownid[]" type="hidden" />
+                                            <font color="red">*限4个字</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input value="3" type="checkbox" name="odelpathid[]" />删 QQ号：<input name="oqq[]" class="dfinput" style="width:150px;" value="123456788" size="25" />
+                                            名称：<input name="otitle[]" class="dfinput" style="width:100px;" value="售后服务" size="25" />
+                                            <input value="3" name="odownid[]" type="hidden" />
+                                            <font color="red">*限4个字</font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            再增加：<input id="oeditroomnum" value="2" type="hidden" name="oeditroomnum" />
+                                            <input id="oroomnum" value="1" type="text" name="oroomnum" class="dfinput" style="width:50px;" /> 个
+                                            <a href="javascript:void()" onclick="javascript:doroom();">确认增加</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id=addroom>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </label>
+                        </li>
+                        <li>
+                            <label style="width:110px;">QQ下方二维码</label><cite>
+                                <input type="radio" name="isweixin" value="0" checked=checked /> 开启</input>
+                                <input type="radio" name="isweixin" value="1" /> 关闭</input>
+                                <input name="img2" type="file" id="img2" /> <a href="../uploadfile/upload/2015071509322045.jpg" target="_blank">查看图片</a>  <input name="isdel2" type="checkbox" class=radio id="isdel2" value="1" /> 删除
+                            </cite>
+                        </li>
+                        <li><label style="width:110px;">网站客服电话</label><input name="phone" type="text" class="dfinput" value="" /></li>
+                        <li><label style="width:110px;">网站邮箱</label><input name="siteurl" type="text" class="dfinput" value="" /></li>
+                        <li><label style="width:110px;">底部版权</label><textarea id="copyright" name="copyright" style="width:520px;height:100px;" class="dfinput"><p>地址：上海市虹口区汶水东路181弄三九大厦2号1206室   联系电话：400-0960305
+                        </p></textarea></li>
+                    </ul>
+                </div>
+                <p>Copyright 2015-2016 上海慧赟软件有限公司 版权所有 沪ICP备15052564号</p></textarea></li>
+                <li><label style="width:110px;">子页左侧联系方式</label><textarea id="contact" name="contact" style="width:520px;height:100px;" class="dfinput"></textarea></li>
+                </ul>
+            </form>
+        </div>
+
+        <div id="tab2" class="tabson">
+            <ul class="forminfo">
+                <li><label style="width:110px;">文件类型<b>*</b></label><input name="filetype" type="text" class="dfinput" value="pdf|doc|docx|rar|zip" style="width:518px;" /> 以|分隔后缀名,切记勿允许上传asp/exe文件</li>
+                <li><label style="width:110px;">文件大小<b>*</b></label><input name="filesize" type="text" class="dfinput" value="20480" style="width:518px;" /> K</li>
+                <li><label style="width:110px;">图片类型<b>*</b></label><input name="pictype" type="text" class="dfinput" value="gif|jpg|jpeg|png" style="width:518px;" /> 以|分隔后缀名,切记勿允许上传asp/exe文件</li>
+                <li><label style="width:110px;">图片大小<b>*</b></label><input name="picsize" type="text" class="dfinput" value="20480" style="width:518px;" /> K</li>
+            </ul>
+        </div>
+
+        <div id="tab3" class="tabson">
+            <ul class="forminfo">
+                <li><label style="width:110px;">页面标题<b>*</b></label><input name="seotitle" type="text" class="dfinput" value="" style="width:518px;" /></li>
+                <li><label style="width:110px;">页面关键字<b>*</b></label><textarea id="keywords" name="keywords" style="width:520px;height:100px;" class="dfinput"></textarea></li>
+                <li><label style="width:110px;">页面描述<b>*</b></label><textarea id="description" name="description" style="width:520px;height:100px;" class="dfinput"></textarea></li>
+            </ul>
+        </div>
+
+        <div id="tab4" class="tabson">
+            <ul class="forminfo">
+                <li><label>流量统计<b>*</b></label><textarea id="visits" name="visits" style="width:520px;height:100px;" class="dfinput"></textarea></li>
+                <li><label>在线客服<b>*</b></label><textarea id="qq" name="qq" style="width:520px;height:100px;" class="dfinput"></textarea></li>
+                <li><label>在线分享<b>*</b></label><textarea id="share" name="share" style="width:520px;height:100px;" class="dfinput"> </textarea></li>
+            </ul>
+        </div>
+
+        <li><label style="width:110px;">&nbsp;</label><input name="update" type="submit" class="btn" value="马上修改" /></li>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $("#usual1 ul").idTabs();
+    </script>
+
+    <script type="text/javascript">
+        $('.tablelist tbody tr:odd').addClass('odd');
+    </script>
+
+    </div>
+
+</body>
+
+</html>

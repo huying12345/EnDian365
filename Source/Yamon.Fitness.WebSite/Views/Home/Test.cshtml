@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+}
+
+<h2>Test</h2>
+<button onclick="PrintReport()">打印报表</button>
+<button onclick=" PrintProductLabel() ">打印标签条码</button>
+<br/>
+
+<button onclick="InitCard()">初始化卡</button>
+<input id="CardSN" type="text"/>
+<br/>
+<input id="Money" type="text" />
+<button onclick="RechargeToCard()">充值</button>
+@section scripts
+{
+    <script>
+        function PrintReport() {
+            if (typeof (jsObj) == 'undefined') {
+                alert('此功能只能在客户端下使用');
+                return;
+            }
+            jsObj.PrintReport('20160824160838');
+        }
+
+        function PrintProductLabel() {
+            if (typeof (jsObj) == 'undefined') {
+                alert('此功能只能在客户端下使用');
+                return;
+            }
+            jsObj.PrintProductLabel('10016', 100);
+        }
+
+        function InitCard() {
+            if (typeof (cardEvent) == 'undefined') {
+                alert('此功能只能在客户端下使用');
+                return;
+            }
+            var cardNo = cardEvent.InitCard();
+            $('#CardSN').val(cardNo);
+        }
+
+        function RechargeToCard() {
+            if (typeof (cardEvent) == 'undefined') {
+                alert('此功能只能在客户端下使用');
+                return;
+            }
+            var money = $('#Money').val();
+            var result = cardEvent.RechargeToCard(parseFloat(money), 10);
+            alert(result);
+        }
+    </script>
+}

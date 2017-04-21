@@ -1,0 +1,179 @@
+﻿body{
+    font-family:'微软雅黑';
+    width:100%;
+    overflow-x:hidden;
+    p{
+        font-size:16px;
+    }
+    .navbar,
+    .nav,
+    .nav li,
+    .navbar>.container-fluid,
+    .navbar-header,
+    .collapse{
+       min-height:70px!important;
+    }
+    nav{
+        border:none!important;
+        background:#000!important;
+        margin-bottom:0px!important;
+    }
+    #example-navbar-collapse ul li{
+        a:hover{
+            background:#c73e3e !important;
+        }
+    }
+    .navbar-brand{
+        font-size:22px!important;
+        color:#fff!important;
+        padding:25px 30px!important;
+        margin-right:13px!important;
+    }
+    .nav li a{
+        color:#fff!important;
+        background:#AC2B2B!important;
+        border:1px solid #000;
+        /*border-radius:2px;
+        box-shadow: 0px 5px 20px #000;*/
+    }
+     .navbar-nav>li{
+            padding:15px 0px;
+            cursor:pointer;
+            .simplify{
+               color:#fff;
+            }
+        }
+   
+    .title-img{
+        width:100%!important;
+    }
+    .title-img>img{
+        width:100%!important;
+    }
+   .dropdown-menu{
+             background:#ac2b2b;
+             li{
+                  min-height:30px!important;
+                  a{
+                      border:none;
+                      background:none!important;
+                  }
+             }
+         } 
+    @media screen and (min-width: 1201px) { 
+        .nav li a{
+              font-size:16px!important;
+              width:145px;
+              text-align:center;
+              padding:10px 0px;
+              margin-top:10px;
+         }
+        .navbar-brand{
+           padding: 33px 30px !important;
+           padding-right: 0px !important;
+        }
+         .simplify{
+           color:#fff;
+           font-size:14px !important;
+           padding:15px 15px !important;
+        }
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+        .nav li a{
+            padding:10px 28px !important;
+        }
+        .navbar-brand{
+           font-size: 22px !important;
+           padding: 27px 30px !important;
+        }
+        .simplify{
+            color:#fff;
+            font-size:13px !important;
+            padding:15px 6px !important;
+        }
+       
+    } 
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+    @media screen and (max-width: 900px) { 
+         #example-navbar-collapse{
+            margin:0px 10px;
+            overflow:hidden;
+        }
+         .navbar-brand{
+           font-size: 18px !important;
+        }
+         .simplify{
+            color:#fff;
+            font-size:12px !important;
+            padding:15px 0px !important
+        }
+          .navList{
+            
+         }
+    } 
+    /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+    @media (max-width: 768px){
+        .navbar-brand{
+            font-size:20px !important;  
+        }
+        .nav li a{
+            padding:10px 19px !important;
+        }
+         #glyphicon-search{
+            padding:10.5px 15px !important;
+        }
+          .nav li a{
+             font-size: 16px !important;
+             padding: 10px 20px !important;
+         }
+          .nav li{
+              min-height:30px!important;
+              padding:0px;
+              a{
+                  box-shadow:none;
+              }
+          }
+          .simplify{
+            color:#fff;
+            font-size:12px !important;
+            padding:15px 20px !important
+        }
+    }
+   
+    @media screen and (max-width: 500px) { 
+    .abc {width: 100px;} 
+    } 
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+    #home{
+        .nav .Homepage a{
+            background:#c73e3e !important;
+         }
+    }
+    #aboutUs{
+         .nav .Abpage a{
+             background:#c73e3e !important;
+         }
+    }
+    #spiritual{
+         .nav .Slpage .dropdown-toggle{
+             background:#c73e3e !important;
+         }
+    }
+    #Encyclopedias{
+         .nav .Rspage .dropdown-toggle{
+             background:#c73e3e !important;
+         }
+    }
+    #Contact{
+         .nav .Capage .dropdown-toggle{
+             background:#c73e3e !important;
+         }
+    }
+     #Search1{
+         .nav .Searchpage a{
+             background:#c73e3e !important;
+         }
+    }
+}

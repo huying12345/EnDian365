@@ -1,0 +1,185 @@
+@charset "UTF-8";
+body {
+  font-family: '微软雅黑';
+  width: 100%;
+  overflow-x: hidden;
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+body p {
+  font-size: 16px;
+}
+
+body .navbar,
+body .nav,
+body .nav li,
+body .navbar > .container-fluid,
+body .navbar-header,
+body .collapse {
+  min-height: 70px !important;
+}
+
+body nav {
+  border: none !important;
+  background: #000 !important;
+  margin-bottom: 0px !important;
+}
+
+body #example-navbar-collapse ul li a:hover {
+  background: #c73e3e !important;
+}
+
+body .navbar-brand {
+  font-size: 22px !important;
+  color: #fff !important;
+  padding: 25px 30px !important;
+  margin-right: 13px !important;
+}
+
+body .nav li a {
+  color: #fff !important;
+  background: #AC2B2B !important;
+  border: 1px solid #000;
+  /*border-radius:2px;
+        box-shadow: 0px 5px 20px #000;*/
+}
+
+body .navbar-nav > li {
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+body .navbar-nav > li .simplify {
+  color: #fff;
+}
+
+body .title-img {
+  width: 100% !important;
+}
+
+body .title-img > img {
+  width: 100% !important;
+}
+
+body .dropdown-menu {
+  background: #ac2b2b;
+}
+
+body .dropdown-menu li {
+  min-height: 30px !important;
+}
+
+body .dropdown-menu li a {
+  border: none;
+  background: none !important;
+}
+
+@media screen and (min-width: 1201px) {
+  body .nav li a {
+    font-size: 16px !important;
+    width: 145px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+  }
+  body .navbar-brand {
+    padding: 33px 30px !important;
+    padding-right: 0px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 14px !important;
+    padding: 15px 15px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body .nav li a {
+    padding: 10px 28px !important;
+  }
+  body .navbar-brand {
+    font-size: 22px !important;
+    padding: 27px 30px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 13px !important;
+    padding: 15px 6px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body #example-navbar-collapse {
+    margin: 0px 10px;
+    overflow: hidden;
+  }
+  body .navbar-brand {
+    font-size: 18px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body .navbar-brand {
+    font-size: 20px !important;
+  }
+  body .nav li a {
+    padding: 10px 19px !important;
+  }
+  body #glyphicon-search {
+    padding: 10.5px 15px !important;
+  }
+  body .nav li a {
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+  }
+  body .nav li {
+    min-height: 30px !important;
+    padding: 0px;
+  }
+  body .nav li a {
+    box-shadow: none;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 20px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .abc {
+    width: 100px;
+  }
+}
+
+body #home .nav .Homepage a {
+  background: #c73e3e !important;
+}
+
+body #aboutUs .nav .Abpage a {
+  background: #c73e3e !important;
+}
+
+body #spiritual .nav .Slpage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Encyclopedias .nav .Rspage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Contact .nav .Capage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Search1 .nav .Searchpage a {
+  background: #c73e3e !important;
+}

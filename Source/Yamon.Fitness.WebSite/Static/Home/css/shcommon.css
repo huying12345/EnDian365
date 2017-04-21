@@ -1,0 +1,265 @@
+html, body
+{
+    height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, input, textarea, p, blockquote, th, td
+{
+    padding: 0;
+    margin: 0;
+}
+body, th, td, select, input, textarea
+{
+    font-size: 12px;
+    font-family: "宋体" , "微软雅黑" ,Arial, sans-serif;
+}
+fieldset, img
+{
+    border: 0;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol, ul
+{
+    list-style: none;
+}
+address, caption, cite, code, dfn, em, strong, th, var
+{
+    font-weight: normal;
+    font-style: normal;
+}
+caption, th
+{
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before, q:after
+{
+    content: '';
+}
+abbr, acronym
+{
+    border: 0;
+}
+label
+{
+    cursor: pointer !important;
+    cursor: hand;
+}
+.mytable, .mytr, .mytd
+{
+    border-collapse: collapse;
+    border: 1px #b7cde4 solid;
+    height: 25px;
+    line-height: 25px;
+}
+.mytd
+{
+    padding-left: 5px;
+}
+.mytable
+{
+    background: #f2f6ff;
+    margin: 10px auto;
+}
+iframe
+{
+    margin: 10px auto;
+    text-align: center;
+}
+.myfieldset
+{
+    border: 1px #aed0f5 solid;
+    margin: 10px 0px;
+}
+.myfieldset legend
+{
+    font-size: 14px;
+    font-weight: 700;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: "宋体";
+}
+img
+{
+    vertical-align: middle;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+.cl
+{
+    clear: both;
+}
+a
+{
+    text-decoration: none;
+}
+
+body
+{
+    background-color: #EAEAEA;
+}
+
+
+.index_top
+{
+    height: 130px;
+    background: #3BC6ED url(../Images/TopBg01.png) repeat-x;
+    border-bottom: solid #40CCEF 2px;
+    position: relative;
+}
+.top_right
+{
+    float: right;
+    height: 22px;
+    margin-top: 5px;
+}
+.head_right li
+{
+    float: left;
+    height: 22px;
+    padding: 0px 7px 0px 4px;
+    color: #ffffff;
+    line-height: 22px;
+    vertical-align: middle;
+}
+.head_right li span
+{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.menu_main
+{
+    bottom: 3px;
+    height: 27px;
+    position: absolute;
+    right: 10px;
+}
+.menu_main li
+{
+    cursor: pointer;
+    float: left;
+    font-family: "宋体" ,Arail,verdana;
+    font-size: 13px;
+    height: 20px;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 7px;
+    width: 84px;
+    color: #676767;
+    background-image: url(../Images/nav_bg_inactive2.gif);
+}
+.menu_main .menu_hover
+{
+    background: #20A5FD;
+    background-image: url(../Images/nav_bg_active2.gif);
+}
+.flooter
+{
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    background-color:#056Da6;
+    color: #FFF;
+    text-align: center;
+}
+.flooter a
+{
+    color: #FFF;
+}
+
+#index_left
+{
+    overflow: hidden;
+}
+.sjjk_left
+{
+     background: rgba(0, 0, 0, 0) url("../img/leftline.gif") repeat-y scroll right center;
+     background-color:#f0f9fd;
+    overflow: hidden;
+}
+.btn_close_bg
+{
+    width: 10px;
+    float: right;
+    height: 100%;
+    background-color: #0274D4;
+}
+.gb
+{
+    width: 6px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background: url(../images/shlf_but01.gif) no-repeat;
+    margin-left: 3px;
+}
+.sjjk_con
+{
+    overflow: auto;
+    position: relative;
+    
+}
+.sjjk_left_list
+{
+    cursor: pointer;
+    background: #1a7ab7 url(../images/lf_bg01.png) no-repeat;
+    text-indent: 40px;
+    border-bottom: #EA5283 2px solid;
+}
+.sjjk_left_list .left_icon
+{
+    background: url(../images/lf_bg02.png) no-repeat 10px center;
+}
+.sjjk_left_list .left_icon span
+{
+    display: block;
+    height: 30px;
+    line-height: 32px;
+    color: #FFF;
+    font-family: "微软雅黑";
+}
+.sjjk_list li
+{
+    height: 30px;
+    line-height: 30px;
+    text-indent: 45px;
+    color: #EA5283;
+    cursor: pointer;
+    background: url(../images/lf_bg03.png) no-repeat 25px center;
+}
+#loading-mask
+{
+    background-color: white;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 20000;
+}
+#loading
+{
+    height: auto;
+    left: 45%;
+    padding: 2px;
+    position: absolute;
+    top: 40%;
+    z-index: 20001;
+}
+

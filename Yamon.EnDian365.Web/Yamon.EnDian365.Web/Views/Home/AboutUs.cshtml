@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "AboutUs";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>关于我们</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+    <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+</head>
+<body>
+    <div class="container" id="aboutUs">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/11_03.jpg" />
+        </div>
+        <!------------（最新信息读活）----------->
+        <div class="row content">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <p>天声传播协会大陆授权，独家发布与分享寇绍恩团队之“恩典365”、“每日亲近神”等栏目的最新消息和灵修内容。</p> 
+            </div>
+        </div>
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

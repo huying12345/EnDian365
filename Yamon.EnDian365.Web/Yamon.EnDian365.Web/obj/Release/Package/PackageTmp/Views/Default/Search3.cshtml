@@ -1,0 +1,133 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Search3";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category=(Category)ViewBag.category;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@category.DisplayName</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+@{
+    List<vwInfoCategory> everyList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED'", new object[] { category.CategoryID }, "BackInt desc", 4);
+}
+    <div class="container" id="Search3">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/index.jpg" />
+        </div>
+@if (everyList.Count > 0)
+{
+        <div class="row itmeTitle">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                <p>@everyList[0].Title</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                <p class="P" style=""></p>
+            </div>
+        </div>
+  }
+@if (everyList.Count > 0)
+{
+    <div class="videobox row">
+       
+            <div class="video-img col-lg-9 col-sm-9 col-md-8 col-xs-12">
+                <iframe id="js_videoCon_1" class="js_videoCon" style="" src="@everyList[0].VideoUrl"></iframe>
+            </div>
+        <div class="video-list col-lg-3 col-sm-3 col-md-4 col-xs-12">
+                <div class="text">
+                    <p>主讲：@(everyList[0].Author)</p>
+                    <article>
+                        @(everyList[0].Description == "" ? "信息摘要" : everyList[0].SubTitle)
+                    </article>
+                </div>
+            
+            <ul style="padding:0px" class="oul">
+                @foreach (vwInfoCategory vwInfos in everyList)
+                    {
+                    <li class="now row" id="@(vwInfos.Author == "" ?"主讲："+ "寇绍恩" : "主讲："+vwInfos.Author)" video0="@(vwInfos.Description == "" ? "信息摘要" : vwInfos.SubTitle)"
+                        video="@(vwInfos.Description == "" ? "" : vwInfos.Description)" vid="1" value="@(vwInfos.VideoUrl)"
+                        value2="@(vwInfos.Title)" value3="@Html.Raw(vwInfos.Content == "" ? "" : vwInfos.Content)">
+                        <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                            <iframe src="@(vwInfos.VideoUrl)"></iframe>
+                        </div>
+                        <div class="ins col-lg-7 col-sm-7 col-md-7 col-xs-7">
+                            <p class="title">@vwInfos.Title</p>
+                            <p>@vwInfos.SubTitle</p>
+                            <span> 自頻道：@vwInfos.Source</span>
+                        </div>
+                    </li>
+                    }
+            </ul>
+        </div>
+    </div>  
+}
+        @if(everyList.Count>0){
+            <div class="article">
+                @if (everyList[0].Description.Trim().Length != 0)
+                {
+                    <p class="p1">@(everyList[0].Description)</p>
+                }
+                else
+                {
+                    <p class="p1" style="border:none !important;"></p>
+                }
+                @if (everyList[0].Content.Trim().Length != 0)
+                {
+                    <article style="width:100%;">
+                        @Html.Raw(everyList[0].Content)
+                    </article>
+                }
+                else
+                {
+                    <article style="width:100%;border:none !important;"></article>
+                }
+            </div>
+        }
+            <div class="row" style="margin:20px 10px;">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 copyRight">
+                    <p>影像及音乐版权均属天声传播协会所有</p>
+                    <p><a href="javascript:;" onclick="window.open('http://www.hvfhoc.com/')">天声传播协会：http://www.hvfhoc.com/</a></p>
+                    <p><a href="javascript:;" onclick="window.open('http://www.tpehoc.org.tw/')">台北基督之家：http://www.tpehoc.org.tw/</a></p>
+                </div>
+            </div>
+        @RenderPage("~/Views/Default/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script type="text/javascript">
+        var articleViewModel = new ArticleViewModel();
+        ko.applyBindings(articleViewModel, document.getElementById("article"));
+        articleViewModel.refresh();
+        $(function () {
+            $(".oul li").click(function () {
+                if ($(this).attr("video").toString().trim()== "") {
+                    $('.p1').hide();
+                } else {
+                    $('.p1').show();
+                    $('.p1').attr('style', '')
+                }
+                if ($(this).attr("value3").toString().trim() == "") {
+                    $('.article article').hide();
+                } else {
+                    $('.article article').show();
+                    $('.article article').css('border', '4px solid #ef5b1d')
+                }
+                $("#js_videoCon_1").attr("src", $(this).attr("value"));
+                $(".p1").text($(this).attr("video"));
+                $(".article article").html($(this).attr("value3"));
+                $('.text p').text($(this).attr('id'));
+                $('.text article').text($(this).attr('video0'));
+                $('.video p').text($(this).attr('value2'))
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<script>
+    var backUrl = '@Html.Raw(RequestHelper.GetUrlReferrer())';
+
+    MyForm.onSubmitSuccess = function (msg) {
+        jQuery.messager.progress('close');
+        if (msg.success) {
+            jQuery.messager.alert('提示', '保存成功！', 'info');
+            
+            location.href = backUrl;
+
+        } else {
+            jQuery.messager.alert('提示', '保存失败：' + msg.message, 'info');
+            return false;
+        }
+    }
+
+</script>

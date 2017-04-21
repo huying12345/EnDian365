@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "enDianMark";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图文详情页</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+    <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+</head>
+<body>
+    <div class="container" id="enDianMark">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/Encyclopedias-03.png" />
+        </div>
+        <div class="row itmeTitle">
+            <div class="col-lg-12 xol-xs-12">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                    <p>《恩典记号》之“最揪心的春节”</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                    <p class="P" style=""></p>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="title">
+                <span class="title1">最揪心的春节</span><span class="title2">寇绍恩2016.02.14</span>
+            </div>
+            <p>
+                <img src="~/assets/img/about_02.jpg" />
+                农历年是全家团聚的日子，<br />
+                在台湾，今年，我们却过了一个最揪心的春节！<br />
+                今年的年假特长，原本，<br />
+                家家户户都兴奋的计划着过一个快乐的团圆长假，<br />
+                你看见办事殷勤的人么?他必站在君王面前，必不站在下贱人面前。<br />
+                诸般勤劳都有益处，嘴上多言乃致穷乏。<br />
+                懒惰人羡慕，却无所得。""好酒贪食的，必致贫穷，好睡觉的，必穿破烂衣服。<br />
+                往来传舌的泄漏密事，大张嘴的，不可与他结交。<br />
+                寡少言语的有知识;"但"愚妄人都爱争闹。<br />
+                不可行恶人的路"，"人若在火炭上走，脚岂能不烫呢?<br />
+                与智慧人同行的，必得智慧。<br />
+            </p>
+        </div>
+        @RenderPage("~/Views/Home/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

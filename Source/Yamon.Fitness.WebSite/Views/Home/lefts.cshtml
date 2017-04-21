@@ -1,0 +1,112 @@
+﻿@using System.Data
+@using Yamon.Module.SiteManage.Entity
+@{
+    ViewBag.Title = "lefts";
+    Layout = null;
+    List<Menu> menuList = (List<Menu>)ViewBag.LeftMenuList;
+    string menuStr = RequestHelper.GetString("menuId");
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <title>网站信息</title>
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(function () {
+                $(".menuson li.active").removeClass("active")
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+
+            
+        });
+    </script>
+</head>
+
+<body style="background:#f0f9fd;">
+    <dl class="leftmenu" style="height:100%; overflow-y:auto; padding-bottom:0px;">
+        @foreach (Menu menu in menuList)
+        {
+            string menuId = menu.MenuID;
+            
+            if (menuStr != menuId)
+            {
+                continue;
+            }
+            
+            if (menu.Children == null)
+            {
+                
+            }
+            else 
+            { 
+                foreach (Menu subMenu in menu.Children)
+                {
+                    <dd>
+                        <div class="title" url="@(subMenu.LinkUrl.Replace("Frame=1", "1=1"))" parentid="@menuId" menuid="@(subMenu.MenuID)"><span><img src="~/Static/Home/img/leftico01.png" /></span>@(subMenu.MenuName)</div>
+                        <ul class="menuson">
+                            @if (subMenu.Children != null)
+                            {
+                                foreach (Menu subMenu2 in subMenu.Children)
+                                {
+                                    <li style="margin-left:-30px;" url="@(subMenu2.LinkUrl.Replace("Frame=1", "1=1"))" menuid="@(subMenu2.MenuID)">
+                                        <cite></cite>
+                                        <a href="javascript:void(0);">@(subMenu2.MenuName)</a><i></i>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </dd>
+                }
+            }
+        }
+    </dl>
+
+</body>
+
+</html>
+
+
+    <link href="~/Static/Home/css/shcommon.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        jQuery(function () {
+            
+            jQuery(".menuson li").click(function () {
+                liclick(jQuery(this));
+            });
+            resizeWin();
+            window.onresize = resizeWin;
+            var firstli = jQuery('body').find(".location")[0];
+            if (jQuery(firstli).attr("url")) {
+                liclick(firstli);
+            }
+            $(".menuson li:first").addClass("active");
+
+            liclick(jQuery(".menuson li:first"));
+        });
+
+        function liclick(obj) {
+            parent.addTab(jQuery(obj).text().trim(), jQuery(obj).attr("url"), jQuery(obj).attr("menuId") + "_Frame");
+        }
+
+        function resizeWin() {
+            var bodyHeight = jQuery(window).height(); //浏览器当前窗口文档body的高度
+            var bodyWidth = jQuery(window).width();
+            jQuery(".leftmenu").css("height", bodyHeight);
+            jQuery(".leftmenu").css("height", bodyHeight + 5);
+        }
+
+    </script>

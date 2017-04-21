@@ -1,0 +1,1988 @@
+/*!css/aboutUs.scss*/
+#aboutUs .content {
+  min-height: 500px;
+  margin-top: 20px;
+}
+
+#aboutUs .content p {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  line-height: 25px;
+  width: 100%;
+  text-indent: 32px;
+}
+
+#aboutUs .content img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media screen and (max-width: 500px) {
+  #aboutUs .content p {
+    font-size: 15px;
+    text-indent: 30px;
+  }
+}
+
+/*!css/article.scss*/
+
+#article {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#article .pageUl {
+  width: 100%;
+}
+
+#article .pageUl li {
+  width: 50%;
+}
+
+#article .reviewVideos {
+  margin-top: 10px !important;
+  /*.list-group:hover :first-child{
+             text-decoration:underline;
+         }*/
+  /*分页*/
+}
+
+#article .reviewVideos .list-group {
+  /*margin:0px 5px;*/
+  /*background:#262625;*/
+  /*color:#fff;*/
+  /*padding: 15px 10px;*/
+}
+
+#article .reviewVideos .list-group li {
+  cursor: pointer;
+}
+
+#article .reviewVideos .list-group li:hover {
+  text-decoration: underline;
+}
+
+#article .reviewVideos .list-group-item {
+  background: none;
+  border: none;
+  font-size: 16px;
+  /*height:55px;*/
+}
+
+#article .reviewVideos #pageGro {
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+#article .reviewVideos #pageGro div,
+#article .reviewVideos #pageGro div ul li {
+  color: #999;
+  display: inline-block;
+  text-align: center;
+}
+
+#article .reviewVideos #pageGro div ul {
+  padding: 0px;
+}
+
+#article .reviewVideos #pageGro div ul li {
+  width: 30px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+#article .reviewVideos #pageGro .on {
+  color: red;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+#article .reviewVideos #pageGro .pageUp,
+#article .reviewVideos #pageGro .pageDown,
+#article .reviewVideos #pageGro .pagestart,
+#article .reviewVideos #pageGro .pageend {
+  cursor: pointer;
+  width: 50px;
+}
+
+@media screen and (min-width: 1201px) {
+  #article .reviewVideos .list-group-item {
+    font-size: 16px !important;
+  }
+  #article #pageGro div ul li, #article #pageGro div {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #article .carousel-indicators {
+    width: 80%;
+  }
+  #article .reviewVideos .list-group-item {
+    font-size: 14px !important;
+  }
+  #article #pageGro div ul li, #article #pageGro div {
+    font-size: 16px;
+  }
+}
+
+/*!css/contact.scss*/
+#Contact #contactAndJoin, #fengxian #contactAndJoin {
+  margin-top: 10px;
+}
+
+#Contact #contactAndJoin p, #fengxian #contactAndJoin p {
+  font-size: 16px;
+}
+
+#Contact #contactAndJoin .emaileTo, #fengxian #contactAndJoin .emaileTo {
+  border-bottom: 1px dashed #999;
+  padding-bottom: 10px;
+}
+
+#Contact #zhiChiAndFengXian .emaileTo, #fengxian #zhiChiAndFengXian .emaileTo {
+  border-bottom: 1px dashed #999;
+  padding-bottom: 10px;
+}
+
+#Contact #zhiChiAndFengXian ul, #fengxian #zhiChiAndFengXian ul {
+  width: 100%;
+}
+
+#Contact #zhiChiAndFengXian ul li, #fengxian #zhiChiAndFengXian ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#Contact #zhiChiAndFengXian ul li a, #fengxian #zhiChiAndFengXian ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#Contact #zhiChiAndFengXian ul .active, #fengxian #zhiChiAndFengXian ul .active {
+  background: #a52929;
+}
+
+#Contact #zhiChiAndFengXian ul .active a, #fengxian #zhiChiAndFengXian ul .active a {
+  color: #fff;
+}
+
+#Contact #zhiChiAndFengXian table, #fengxian #zhiChiAndFengXian table {
+  width: 100%;
+  margin-left: 30px;
+}
+
+#Contact #zhiChiAndFengXian table tr, #fengxian #zhiChiAndFengXian table tr {
+  width: 100%;
+}
+
+#Contact #zhiChiAndFengXian table tr th, #Contact #zhiChiAndFengXian table tr td, #fengxian #zhiChiAndFengXian table tr th, #fengxian #zhiChiAndFengXian table tr td {
+  text-align: center;
+  height: 35px;
+}
+
+#Contact #zhiChiAndFengXian #payMoney2 tr td, #fengxian #zhiChiAndFengXian #payMoney2 tr td {
+  text-align: left;
+}
+
+#Contact #zhiChiAndFengXian input[type=number], #fengxian #zhiChiAndFengXian input[type=number] {
+  width: 100px;
+}
+
+#Contact input[type=button], #fengxian input[type=button] {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+#Contact input[type=button]:hover, #fengxian input[type=button]:hover {
+  background: #ddd;
+}
+
+#Contact .joinUs, #fengxian .joinUs {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #Contact #contactAndJoin p, #fengxian #contactAndJoin p {
+    font-size: 14px;
+  }
+}
+
+/*!css/endianMark.scss*/
+
+#enDianMark, #enDianMark2 {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#enDianMark .row, #enDianMark2 .row {
+  margin: 0px;
+}
+
+#enDianMark .col-lg-1, #enDianMark .col-lg-3, #enDianMark .col-lg-2, #enDianMark .col-lg-8, #enDianMark .col-lg-4, #enDianMark .col-lg-12, #enDianMark .col-lg-6, #enDianMark .col-lg-9, #enDianMark2 .col-lg-1, #enDianMark2 .col-lg-3, #enDianMark2 .col-lg-2, #enDianMark2 .col-lg-8, #enDianMark2 .col-lg-4, #enDianMark2 .col-lg-12, #enDianMark2 .col-lg-6, #enDianMark2 .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#enDianMark .searchBox, #enDianMark2 .searchBox {
+  padding: 0px;
+  height: 65px;
+  margin-top: 20px;
+}
+
+#enDianMark .searchBox .col-lg-1, #enDianMark .searchBox .col-lg-3, #enDianMark .searchBox .col-lg-2, #enDianMark2 .searchBox .col-lg-1, #enDianMark2 .searchBox .col-lg-3, #enDianMark2 .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#enDianMark .searchBox span, #enDianMark .searchBox input, #enDianMark .searchBox select, #enDianMark .searchBox button, #enDianMark2 .searchBox span, #enDianMark2 .searchBox input, #enDianMark2 .searchBox select, #enDianMark2 .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#enDianMark .searchBox input, #enDianMark .searchBox select, #enDianMark2 .searchBox input, #enDianMark2 .searchBox select {
+  border: 2px solid #9A9A9A;
+}
+
+#enDianMark .searchBox button, #enDianMark2 .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#enDianMark .itmeTitle, #enDianMark2 .itmeTitle {
+  background: #403B3B;
+  margin-top: 10px;
+}
+
+#enDianMark .itmeTitle p, #enDianMark2 .itmeTitle p {
+  width: 100%;
+}
+
+#enDianMark .itmeTitle .video, #enDianMark2 .itmeTitle .video {
+  background: #ac2b2b;
+}
+
+#enDianMark .itmeTitle .video p, #enDianMark2 .itmeTitle .video p {
+  color: #fff;
+  font-size: 22px;
+  padding: 10px 0px;
+  /*box-shadow:0px 6px 10px #848181;*/
+  /*padding-left:20px;*/
+}
+
+#enDianMark .itmeTitle .video iframe, #enDianMark2 .itmeTitle .video iframe {
+  width: 100%;
+  height: 550px;
+}
+
+#enDianMark .itmeTitle .videoList iframe, #enDianMark2 .itmeTitle .videoList iframe {
+  width: 100%;
+  height: 80px;
+}
+
+#enDianMark .itmeTitle .videoList .list-group, #enDianMark2 .itmeTitle .videoList .list-group {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+#enDianMark .itmeTitle .videoList .list-group .list-group-item, #enDianMark2 .itmeTitle .videoList .list-group .list-group-item {
+  border: none;
+}
+
+#enDianMark .itmeTitle .videoList .hoster, #enDianMark2 .itmeTitle .videoList .hoster {
+  font-size: 20px;
+}
+
+#enDianMark .itmeTitle .videoList .tips, #enDianMark2 .itmeTitle .videoList .tips {
+  font-size: 18px;
+}
+
+#enDianMark .itmeTitle .videoList .text, #enDianMark2 .itmeTitle .videoList .text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+#enDianMark .itmeTitle .videoList .source, #enDianMark2 .itmeTitle .videoList .source {
+  font-size: 12px;
+  padding-left: 10px;
+  color: #807a7a;
+}
+
+#enDianMark .article, #enDianMark2 .article {
+  margin-top: 10px;
+  background-image: url("img/aboutUs_03.jpg");
+  background-size: 100%;
+  padding: 10px;
+}
+
+#enDianMark .article .title, #enDianMark2 .article .title {
+  margin-bottom: 20px;
+  width: 60%;
+  border-bottom: 2px solid #000;
+  padding-bottom: 15px;
+}
+
+#enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+  font-weight: 700;
+  background: black;
+  color: yellow;
+  padding: 10px;
+}
+
+#enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+#enDianMark .article img, #enDianMark2 .article img {
+  width: 100%;
+}
+
+#enDianMark .article p, #enDianMark2 .article p {
+  line-height: 40px;
+  padding: 10px;
+}
+
+#enDianMark .footer, #enDianMark2 .footer {
+  margin-top: 0px;
+}
+
+#enDianMark .footer .col-lg-4, #enDianMark .footer .col-lg-6, #enDianMark2 .footer .col-lg-4, #enDianMark2 .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1201px) {
+  #enDianMark, #enDianMark2 {
+    /*.itmeTitle .video p{
+            padding: 16px 0px;
+            font-size: 22px;
+        }*/
+  }
+  #enDianMark p, #enDianMark2 p {
+    font-size: 16px;
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 22px;
+  }
+  #enDianMark .article p, #enDianMark2 .article p {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .list-group-item, #enDianMark2 .reviewVideos .list-group-item {
+    font-size: 18px;
+  }
+  #enDianMark .reviewVideos .pages li, #enDianMark2 .reviewVideos .pages li {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #enDianMark, #enDianMark2 {
+    /*.itmeTitle .video p{
+            padding:14px 0px;
+            height: 60px;
+            font-size:25px;
+        }*/
+    /*.P{
+            height:60px
+        }*/
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 22px;
+  }
+  #enDianMark .article p, #enDianMark2 .article p {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .list-group-item, #enDianMark2 .reviewVideos .list-group-item {
+    font-size: 16px;
+  }
+  #enDianMark .reviewVideos .pages li, #enDianMark2 .reviewVideos .pages li {
+    font-size: 20px;
+  }
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 60%;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #enDianMark .carousel-indicators, #enDianMark2 .carousel-indicators {
+    width: 80%;
+  }
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 80%;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #enDianMark .article .title, #enDianMark2 .article .title {
+    width: 100%;
+  }
+  #enDianMark .article .title .title1, #enDianMark2 .article .title .title1 {
+    font-size: 14px;
+  }
+  #enDianMark .article .title .title2, #enDianMark2 .article .title .title2 {
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+  }
+  #enDianMark .itmeTitle .video p, #enDianMark2 .itmeTitle .video p {
+    font-size: 15px;
+    padding: 5px 0px 0px 0px;
+  }
+}
+
+/*!css/foot.scss*/
+
+.footer {
+  background: #262625;
+  color: #fff;
+  margin-top: 30px;
+  position: relative;
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+.footer .row {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.footer .row .title {
+  margin-bottom: 20px;
+}
+
+.footer .row p {
+  font-size: 14px;
+}
+
+.footer .row .FriendStaion p a {
+  color: #fff;
+}
+
+.footer .row .friendTitleImg img {
+  width: 100%;
+}
+
+.footer .row .friendTitleImg p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer .backUp {
+  position: fixed;
+  bottom: 20px;
+  left: 70%;
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 0px;
+  display: none;
+}
+
+.footer .backUp a {
+  font-size: 12px;
+  padding: 10px 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1201px) {
+  .footer .friendTitle,
+  .footer .FriendStaion > p > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer .backUp {
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer .backUp {
+    left: 50%;
+  }
+}
+
+/*!css/head.scss*/
+
+body {
+  font-family: '微软雅黑';
+  width: 100%;
+  overflow-x: hidden;
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+body p {
+  font-size: 16px;
+}
+
+body .navbar,
+body .nav,
+body .nav li,
+body .navbar > .container-fluid,
+body .navbar-header,
+body .collapse {
+  min-height: 70px !important;
+}
+
+body nav {
+  border: none !important;
+  background: #000 !important;
+  margin-bottom: 0px !important;
+}
+
+body #example-navbar-collapse ul li a:hover {
+  background: #c73e3e !important;
+}
+
+body .navbar-brand {
+  font-size: 22px !important;
+  color: #fff !important;
+  padding: 25px 30px !important;
+  margin-right: 13px !important;
+}
+
+body .nav li a {
+  color: #fff !important;
+  background: #AC2B2B !important;
+  border: 1px solid #000;
+  /*border-radius:2px;
+        box-shadow: 0px 5px 20px #000;*/
+}
+
+body .navbar-nav > li {
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+body .navbar-nav > li .simplify {
+  color: #fff;
+}
+
+body .title-img {
+  width: 100% !important;
+}
+
+body .title-img > img {
+  width: 100% !important;
+}
+
+body .dropdown-menu {
+  background: #ac2b2b;
+}
+
+body .dropdown-menu li {
+  min-height: 30px !important;
+}
+
+body .dropdown-menu li a {
+  border: none;
+  background: none !important;
+}
+
+@media screen and (min-width: 1201px) {
+  body .nav li a {
+    font-size: 16px !important;
+    width: 145px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+  }
+  body .navbar-brand {
+    padding: 33px 30px !important;
+    padding-right: 0px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 14px !important;
+    padding: 15px 15px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body .nav li a {
+    padding: 10px 28px !important;
+  }
+  body .navbar-brand {
+    font-size: 22px !important;
+    padding: 27px 30px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 13px !important;
+    padding: 15px 6px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body #example-navbar-collapse {
+    margin: 0px 10px;
+    overflow: hidden;
+  }
+  body .navbar-brand {
+    font-size: 18px !important;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body .navbar-brand {
+    font-size: 20px !important;
+  }
+  body .nav li a {
+    padding: 10px 19px !important;
+  }
+  body #glyphicon-search {
+    padding: 10.5px 15px !important;
+  }
+  body .nav li a {
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+  }
+  body .nav li {
+    min-height: 30px !important;
+    padding: 0px;
+  }
+  body .nav li a {
+    box-shadow: none;
+  }
+  body .simplify {
+    color: #fff;
+    font-size: 12px !important;
+    padding: 15px 20px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .abc {
+    width: 100px;
+  }
+}
+
+body #home .nav .Homepage a {
+  background: #c73e3e !important;
+}
+
+body #aboutUs .nav .Abpage a {
+  background: #c73e3e !important;
+}
+
+body #spiritual .nav .Slpage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Encyclopedias .nav .Rspage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Contact .nav .Capage .dropdown-toggle {
+  background: #c73e3e !important;
+}
+
+body #Search1 .nav .Searchpage a {
+  background: #c73e3e !important;
+}
+
+/*!css/index.scss*/
+
+#home {
+  overflow-x: hidden;
+  /* videobox */
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#home .col-lg-2, #home .col-xs-2, #home .col-md-2, #home .col-sm-2, #home .col-lg-10, #home .col-sm-10, #home .col-md-10, #home .col-xs-10 {
+  padding: 0px;
+}
+
+#home .title-img p {
+  background: #545454;
+  color: #fff;
+  font-size: 20px;
+}
+
+#home .title-img p img {
+  margin-right: 10px;
+}
+
+#home .carousel-control {
+  background: none;
+  color: #7FB7F3;
+  top: 25%;
+  display: none;
+}
+
+#home .carousel {
+  cursor: pointer;
+}
+
+#home .carousel:hover .carousel-control {
+  display: block;
+}
+
+#home .carousel-inner > .item > img {
+  width: 100%;
+}
+
+#home .carousel-indicators {
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  margin-left: 0px;
+}
+
+#home .carousel-indicators li {
+  border-radius: 50%;
+  border: 2px solid #7FB7F3;
+  background-color: #ccc;
+  margin: 0px 5px;
+}
+
+#home .carousel-indicators .active {
+  background-color: #fff;
+}
+
+#home #myCarousel {
+  margin-top: 10px;
+}
+
+#home .submenu .col-lg-4,
+#home .clauses .col-xs-4 {
+  text-align: center;
+}
+
+#home .submenu .col-lg-4 {
+  cursor: pointer;
+  position: relative;
+  /*.mark1{
+                 background:#000;
+                 position:absolute;
+                 height:300px;
+             }*/
+}
+
+#home .submenu .col-lg-4 img {
+  width: 300px;
+  position: relative;
+}
+
+#home .submenu .col-lg-4 p {
+  color: #fff;
+  /*width:300px;*/
+  width: 100%;
+  text-align: center;
+  /*margin-left: 30px;*/
+  margin-top: 2px;
+}
+
+#home .submenu .col-lg-4 p span {
+  padding: 5px 110px;
+  background: #AC2B2B;
+  box-shadow: 0 5px 10px #7E6B6B;
+}
+
+#home .submenu .col-lg-4 span:hover {
+  color: #000;
+}
+
+#home .clauses {
+  margin: 20px 0px;
+}
+
+#home .clauses p {
+  width: 300px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+#home .clauses p a {
+  color: #000;
+}
+
+#home .videobox .video-img {
+  overflow: hidden;
+}
+
+#home .videobox .video-img iframe {
+  width: 100%;
+}
+
+#home .videobox .video_list {
+  height: 78px;
+  padding-left: 10px;
+}
+
+#home .videobox .video_list .videoTitle {
+  background: #AC2B2B;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 22px;
+}
+
+#home .videobox .video_list .videoMore {
+  text-align: left;
+  background: #262625;
+  color: #fff;
+  width: 100%;
+  padding: 15px 0px;
+  padding-left: 10px;
+  margin-top: -10px;
+  cursor: pointer;
+  line-height: 15px;
+}
+
+#home .videobox .video_list .videoMore p {
+  font-size: 16px;
+}
+
+#home .videobox .video_list .videoMore:hover .video_title {
+  text-decoration: underline;
+}
+
+#home .videobox .video_list .oul {
+  overflow: hidden;
+  text-align: center;
+}
+
+#home .videobox .video_list .oul li {
+  padding: 0px 1px;
+}
+
+#home .videobox .video_list .oul img {
+  width: 100%;
+  /*box-shadow:0 5px 10px #7E6B6B;*/
+  border: 1px solid #ccc;
+  /*height:100px;*/
+}
+
+#home .videobox .video_list .oul img:hover {
+  border: 1px solid #ccc;
+}
+
+#home .videobox .video_list .oul p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#home .videobox .video_list .oul span {
+  font-size: 12px;
+  color: #888;
+}
+
+#home .videobox .video_list li {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+#home .videobox .video_list li .icon-video {
+  position: absolute;
+  z-index: 99;
+}
+
+#home .videobox .video_list li .now .icon-video {
+  display: none;
+}
+
+#home .videobox .video_list li:hover {
+  cursor: pointer;
+}
+
+#home .videobox .video_list .more {
+  line-height: 10px;
+}
+
+#home .videobox .video_list .more:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1201px) {
+  #home {
+    /*.carousel-inner > .item > img{
+            height:400px;
+        }*/
+  }
+  #home p {
+    font-size: 16px;
+  }
+  #home .clauses p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  #home .carousel-control {
+    font-size: 45px;
+  }
+  #home .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+  }
+  #home .video-list .videoTitle {
+    font-size: 30px;
+  }
+  #home .videobox .video-list .oul iframe {
+    height: 80px;
+  }
+  #home .videobox .video-list li .icon-video {
+    left: 45px;
+    top: 25px;
+  }
+  #home .video-img iframe {
+    height: 300px;
+  }
+  #home .videobox .video-list .oul {
+    margin-top: 100px;
+  }
+  #home .videobox .video-list li .icon-video {
+    top: 20px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 118px;
+  }
+  #home .videobox .video_list .oul {
+    margin-top: 10px;
+  }
+  #home .videobox .video_list .more {
+    text-align: center;
+  }
+  #home .friendTitleImg p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #home {
+    /*.carousel-inner>.item>img{
+                height:300px;
+        }*/
+    /*.carousel-inner > .item > img{
+                height:300px;
+            }*/
+  }
+  #home p {
+    font-size: 14px;
+  }
+  #home .clauses p {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  #home .video .col-lg-4 .f1 {
+    font-size: 14px;
+  }
+  #home .videobox .video-list .oul {
+    margin-top: 70px;
+  }
+  #home .video-img iframe {
+    height: 330px;
+  }
+  #home .video-list .videoTitle {
+    font-size: 20px;
+  }
+  #home .videobox .video-list .oul iframe {
+    height: 60px;
+  }
+  #home .videobox .video-list li .icon-video {
+    top: 20px;
+    left: 55px;
+    width: 20px;
+    height: 20px;
+  }
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 122px;
+  }
+  #home .carousel-control {
+    font-size: 30px;
+  }
+  #home .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+  }
+  #home .videobox .video_list .oul {
+    margin-top: 50px;
+  }
+  #home .videobox .video_list .more {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #home p {
+    font-size: 12px;
+  }
+  #home .carousel-indicators {
+    width: 100%;
+  }
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 110px;
+  }
+  #home .clauses p {
+    font-size: 14px;
+  }
+  #home .carousel-control {
+    font-size: 30px;
+  }
+  #home .video .col-lg-6 iframe {
+    height: 250px;
+  }
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 126px;
+  }
+  #home .videobox .video-list li .icon-video {
+    top: 20px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+  }
+  #home .videobox .video_list {
+    height: 315px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 126px;
+  }
+  #home .title-img img {
+    width: 50px;
+    /*height:50px;*/
+  }
+  #home .title-img span {
+    font-size: 12px;
+  }
+  #home .submenu .col-lg-4 img {
+    width: 248px;
+  }
+  #home .submenu .col-lg-4 p span {
+    padding: 5px 100px;
+  }
+  #home .videobox .video_list {
+    /*margin-bottom:170px;*/
+  }
+  #home .videobox .video_list .oul {
+    margin-top: 22px;
+  }
+  #home .videobox .video_list .oul p {
+    font-size: 12px;
+  }
+}
+
+/*!css/Interaction.scss*/
+#Interaction #tianShengShop, #Interaction #wenJuanDiaoCha {
+  min-height: 300px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+/*!css/search.scss*/
+
+#Search, #Search1, #AudioMore {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#Search .row, #Search1 .row, #AudioMore .row {
+  margin: 0px;
+}
+
+#Search .col-lg-1, #Search .col-lg-3, #Search .col-lg-2, #Search .col-lg-8, #Search .col-lg-4, #Search .col-lg-12, #Search .col-lg-6, #Search .col-lg-9, #Search1 .col-lg-1, #Search1 .col-lg-3, #Search1 .col-lg-2, #Search1 .col-lg-8, #Search1 .col-lg-4, #Search1 .col-lg-12, #Search1 .col-lg-6, #Search1 .col-lg-9, #AudioMore .col-lg-1, #AudioMore .col-lg-3, #AudioMore .col-lg-2, #AudioMore .col-lg-8, #AudioMore .col-lg-4, #AudioMore .col-lg-12, #AudioMore .col-lg-6, #AudioMore .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#Search .searchBox, #Search1 .searchBox, #AudioMore .searchBox {
+  padding: 0px;
+  /*height:65px;*/
+  margin-top: 20px;
+}
+
+#Search .searchBox .col-lg-1, #Search .searchBox .col-lg-3, #Search .searchBox .col-lg-2, #Search1 .searchBox .col-lg-1, #Search1 .searchBox .col-lg-3, #Search1 .searchBox .col-lg-2, #AudioMore .searchBox .col-lg-1, #AudioMore .searchBox .col-lg-3, #AudioMore .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#Search .searchBox span, #Search .searchBox input, #Search .searchBox select, #Search .searchBox button, #Search1 .searchBox span, #Search1 .searchBox input, #Search1 .searchBox select, #Search1 .searchBox button, #AudioMore .searchBox span, #AudioMore .searchBox input, #AudioMore .searchBox select, #AudioMore .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#Search .searchBox input, #Search .searchBox select, #Search1 .searchBox input, #Search1 .searchBox select, #AudioMore .searchBox input, #AudioMore .searchBox select {
+  border: 2px solid #9A9A9A;
+}
+
+#Search .searchBox button, #Search1 .searchBox button, #AudioMore .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#Search .itmeTitle, #Search1 .itmeTitle, #AudioMore .itmeTitle {
+  background: #403B3B;
+  margin-top: 10px;
+}
+
+#Search .itmeTitle p, #Search1 .itmeTitle p, #AudioMore .itmeTitle p {
+  width: 100%;
+}
+
+#Search .itmeTitle .video, #Search1 .itmeTitle .video, #AudioMore .itmeTitle .video {
+  background: #ac2b2b;
+}
+
+#Search .itmeTitle .video p, #Search1 .itmeTitle .video p, #AudioMore .itmeTitle .video p {
+  color: #fff;
+  padding-left: 20px !important;
+}
+
+#Search .itmeTitle .video iframe, #Search1 .itmeTitle .video iframe, #AudioMore .itmeTitle .video iframe {
+  width: 100%;
+  height: 550px;
+}
+
+#Search .itmeTitle .videoList .list-group, #Search1 .itmeTitle .videoList .list-group, #AudioMore .itmeTitle .videoList .list-group {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+#Search .itmeTitle .videoList .list-group .list-group-item, #Search1 .itmeTitle .videoList .list-group .list-group-item, #AudioMore .itmeTitle .videoList .list-group .list-group-item {
+  border: none;
+}
+
+#Search .itmeTitle .videoList .hoster, #Search1 .itmeTitle .videoList .hoster, #AudioMore .itmeTitle .videoList .hoster {
+  font-size: 20px;
+}
+
+#Search .itmeTitle .videoList .tips, #Search1 .itmeTitle .videoList .tips, #AudioMore .itmeTitle .videoList .tips {
+  font-size: 18px;
+}
+
+#Search .itmeTitle .videoList .text, #Search1 .itmeTitle .videoList .text, #AudioMore .itmeTitle .videoList .text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+#Search .itmeTitle .videoList .source, #Search1 .itmeTitle .videoList .source, #AudioMore .itmeTitle .videoList .source {
+  font-size: 12px;
+  padding-left: 10px;
+  color: #807a7a;
+}
+
+#Search .audio, #Search1 .audio, #AudioMore .audio {
+  width: 100%;
+}
+
+#Search .itmeTitle .video p, #Search1 .itmeTitle .video p, #AudioMore .itmeTitle .video p {
+  font-size: 22px;
+  padding: 10px 0px;
+}
+
+#Search .scriptureList, #Search1 .scriptureList, #AudioMore .scriptureList {
+  width: 100%;
+  position: relative;
+  border: 3px solid #8db4e6;
+}
+
+#Search .scriptureList img, #Search1 .scriptureList img, #AudioMore .scriptureList img {
+  position: absolute;
+  margin-top: -105px;
+  width: 100%;
+  z-index: -1;
+}
+
+#Search .scriptureList .list-group-item, #Search1 .scriptureList .list-group-item, #AudioMore .scriptureList .list-group-item {
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+#Search .scriptureList .list-group-item:hover, #Search1 .scriptureList .list-group-item:hover, #AudioMore .scriptureList .list-group-item:hover {
+  text-decoration: underline;
+}
+
+#Search .article, #Search1 .article, #AudioMore .article {
+  margin-top: 10px;
+  position: relative;
+  overflow-y: hidden;
+  border: 3px solid orange;
+}
+
+#Search .article img, #Search1 .article img, #AudioMore .article img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#Search .article p, #Search1 .article p, #AudioMore .article p {
+  width: 100%;
+  font-size: 25px;
+}
+
+#Search .article article, #Search1 .article article, #AudioMore .article article {
+  font-size: 22px;
+  line-height: 25px;
+  text-indent: 32px;
+  padding: 10px 10px;
+}
+
+#Search .answer, #Search1 .answer, #AudioMore .answer {
+  padding: 10px 20px;
+  border: 2px solid #fcd793;
+  margin-top: 20px;
+  /*margin-bottom:40px;
+            border-radius:20px;*/
+}
+
+#Search .answer h3, #Search1 .answer h3, #AudioMore .answer h3 {
+  color: orange;
+  font-weight: bold;
+}
+
+#Search .answer p, #Search1 .answer p, #AudioMore .answer p {
+  font-size: 18px;
+}
+
+#Search .answer .callback, #Search1 .answer .callback, #AudioMore .answer .callback {
+  margin-bottom: 30px;
+}
+
+#Search .answer .daodu, #Search1 .answer .daodu, #AudioMore .answer .daodu {
+  border-top: 1px solid #ccc;
+}
+
+#Search .answer .daodu ul > li, #Search1 .answer .daodu ul > li, #AudioMore .answer .daodu ul > li {
+  list-style: none;
+  font-size: 18px;
+}
+
+#Search #pageGro, #Search1 #pageGro, #AudioMore #pageGro {
+  width: 100%;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+#Search #pageGro div,
+#Search #pageGro div ul li, #Search1 #pageGro div,
+#Search1 #pageGro div ul li, #AudioMore #pageGro div,
+#AudioMore #pageGro div ul li {
+  color: #999;
+  display: inline-block;
+  text-align: center;
+}
+
+#Search #pageGro div ul, #Search1 #pageGro div ul, #AudioMore #pageGro div ul {
+  padding: 0px;
+}
+
+#Search #pageGro div ul li, #Search1 #pageGro div ul li, #AudioMore #pageGro div ul li {
+  width: 30px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+#Search #pageGro .on, #Search1 #pageGro .on, #AudioMore #pageGro .on {
+  color: red;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+#Search #pageGro .pageUp,
+#Search #pageGro .pageDown,
+#Search #pageGro .pagestart,
+#Search #pageGro .pageend, #Search1 #pageGro .pageUp,
+#Search1 #pageGro .pageDown,
+#Search1 #pageGro .pagestart,
+#Search1 #pageGro .pageend, #AudioMore #pageGro .pageUp,
+#AudioMore #pageGro .pageDown,
+#AudioMore #pageGro .pagestart,
+#AudioMore #pageGro .pageend {
+  cursor: pointer;
+  width: 50px;
+}
+
+#Search .footer, #Search1 .footer, #AudioMore .footer {
+  margin-top: 0px;
+}
+
+#Search .footer .col-lg-4, #Search .footer .col-lg-6, #Search1 .footer .col-lg-4, #Search1 .footer .col-lg-6, #AudioMore .footer .col-lg-4, #AudioMore .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1201px) {
+  #Search #pageGro div ul li, #Search #pageGro div, #Search1 #pageGro div ul li, #Search1 #pageGro div, #AudioMore #pageGro div ul li, #AudioMore #pageGro div {
+    font-size: 15px;
+  }
+  #Search .scriptureList .list-group-item, #Search1 .scriptureList .list-group-item, #AudioMore .scriptureList .list-group-item {
+    font-size: 18px;
+  }
+  #Search .scriptureList .list-group-item:first-child, #Search1 .scriptureList .list-group-item:first-child, #AudioMore .scriptureList .list-group-item:first-child {
+    font-size: 25px;
+  }
+  #Search .article article, #Search1 .article article, #AudioMore .article article {
+    font-size: 18px;
+  }
+  #Search .article article, #Search1 .article article, #AudioMore .article article {
+    overflow-y: auto;
+    line-height: 30px;
+  }
+  #Search .article article padding, #Search .article article span, #Search1 .article article padding, #Search1 .article article span, #AudioMore .article article padding, #AudioMore .article article span {
+    font-size: 18px;
+  }
+  #Search .searchBox span, #Search .searchBox input, #Search .searchBox select, #Search .searchBox button, #Search1 .searchBox span, #Search1 .searchBox input, #Search1 .searchBox select, #Search1 .searchBox button, #AudioMore .searchBox span, #AudioMore .searchBox input, #AudioMore .searchBox select, #AudioMore .searchBox button {
+    font-size: 18px;
+  }
+  #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
+    line-height: 50px;
+    padding-top: 10px;
+  }
+  #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #319df1;
+  }
+  #Search .answer, #Search .oul > li > a, #Search1 .answer, #Search1 .oul > li > a, #AudioMore .answer, #AudioMore .oul > li > a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Search .scriptureList .list-group-item, #Search1 .scriptureList .list-group-item, #AudioMore .scriptureList .list-group-item {
+    font-size: 16px;
+  }
+  #Search .scriptureList .list-group-item:first-child, #Search1 .scriptureList .list-group-item:first-child, #AudioMore .scriptureList .list-group-item:first-child {
+    font-size: 20px;
+  }
+  #Search .article article, #Search1 .article article, #AudioMore .article article {
+    font-size: 16px;
+  }
+  #Search .article article p, #Search .article article span, #Search1 .article article p, #Search1 .article article span, #AudioMore .article article p, #AudioMore .article article span {
+    font-size: 16px;
+  }
+  #Search .searchBox span, #Search .searchBox input, #Search .searchBox select, #Search .searchBox button, #Search1 .searchBox span, #Search1 .searchBox input, #Search1 .searchBox select, #Search1 .searchBox button, #AudioMore .searchBox span, #AudioMore .searchBox input, #AudioMore .searchBox select, #AudioMore .searchBox button {
+    font-size: 16px;
+  }
+  #Search .scriptureList .list-group, #Search .scriptureList .list-group, #Search1 .scriptureList .list-group, #Search1 .scriptureList .list-group, #AudioMore .scriptureList .list-group, #AudioMore .scriptureList .list-group {
+    /*padding: 20px 45px;*/
+  }
+  #Search .answer, #Search .oul > li > a, #Search1 .answer, #Search1 .oul > li > a, #AudioMore .answer, #AudioMore .oul > li > a {
+    font-size: 16px;
+  }
+  #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
+    line-height: 40px;
+    padding-top: 10px;
+  }
+  #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #319df1;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+  #Search .carousel-indicators, #Search1 .carousel-indicators, #AudioMore .carousel-indicators {
+    width: 80%;
+  }
+  #Search .article article, #Search1 .article article, #AudioMore .article article {
+    padding: 20px 20px;
+  }
+  #Search .article img, #Search .article img, #Search1 .article img, #Search1 .article img, #AudioMore .article img, #AudioMore .article img {
+    height: 100%;
+  }
+  #Search #pageGro div ul li, #Search #pageGro div, #Search1 #pageGro div ul li, #Search1 #pageGro div, #AudioMore #pageGro div ul li, #AudioMore #pageGro div {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Search .carousel-indicators, #Search1 .carousel-indicators, #AudioMore .carousel-indicators {
+    width: 80%;
+  }
+  #Search .article article, #Search1 .article article, #AudioMore .article article {
+    font-size: 14px;
+  }
+  #Search .article img, #Search .article img, #Search1 .article img, #Search1 .article img, #AudioMore .article img, #AudioMore .article img {
+    height: 100%;
+  }
+  #Search .answer, #Search1 .answer, #AudioMore .answer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Search .video-list, #Search1 .video-list, #AudioMore .video-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #Search .scriptureList img, #Search .scriptureList img, #Search1 .scriptureList img, #Search1 .scriptureList img, #AudioMore .scriptureList img, #AudioMore .scriptureList img {
+    height: 100%;
+  }
+  #Search .scriptureList .list-group-item, #Search1 .scriptureList .list-group-item, #AudioMore .scriptureList .list-group-item {
+    font-size: 14px;
+  }
+  #Search .scriptureList .list-group-item:first-child, #Search1 .scriptureList .list-group-item:first-child, #AudioMore .scriptureList .list-group-item:first-child {
+    font-size: 16px;
+  }
+  #Search .answer p, #Search .answer .daodu ul > li, #Search1 .answer p, #Search1 .answer .daodu ul > li, #AudioMore .answer p, #AudioMore .answer .daodu ul > li {
+    font-size: 15px;
+  }
+  #Search h3, #Search1 h3, #AudioMore h3 {
+    font-size: 18px;
+  }
+  #Search .itmeTitle .video p, #Search1 .itmeTitle .video p, #AudioMore .itmeTitle .video p {
+    font-size: 15px;
+    padding: 0px;
+    padding-top: 5px;
+  }
+  #Search .article article p, #Search .article article span, #Search1 .article article p, #Search1 .article article span, #AudioMore .article article p, #AudioMore .article article span {
+    font-size: 14px;
+  }
+}
+
+#Search1 .title {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+}
+
+#Search1 .searchList li {
+  border: none;
+}
+
+/*!css/search2.scss*/
+
+#Search2, #Search3 {
+  /* videobox */
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#Search2 .row, #Search3 .row {
+  margin: 0px;
+}
+
+#Search2 .col-lg-1, #Search2 .col-lg-3, #Search2 .col-lg-2, #Search2 .col-lg-5, #Search2 .col-lg-7, #Search2 .col-lg-8, #Search2 .col-lg-4, #Search2 .col-lg-12, #Search2 .col-lg-6, #Search2 .col-lg-9, #Search3 .col-lg-1, #Search3 .col-lg-3, #Search3 .col-lg-2, #Search3 .col-lg-5, #Search3 .col-lg-7, #Search3 .col-lg-8, #Search3 .col-lg-4, #Search3 .col-lg-12, #Search3 .col-lg-6, #Search3 .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#Search2 .searchBox, #Search3 .searchBox {
+  padding: 0px;
+  height: 65px;
+  margin-top: 20px;
+}
+
+#Search2 .searchBox .col-lg-1, #Search2 .searchBox .col-lg-3, #Search2 .searchBox .col-lg-2, #Search3 .searchBox .col-lg-1, #Search3 .searchBox .col-lg-3, #Search3 .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#Search2 .searchBox input, #Search2 .searchBox select, #Search3 .searchBox input, #Search3 .searchBox select {
+  border: 2px solid #9A9A9A;
+  /*background:#ac2b2b;*/
+}
+
+#Search2 .searchBox button, #Search3 .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#Search2 .itmeTitle, #Search3 .itmeTitle {
+  background: #403B3B;
+  margin-bottom: 10px;
+}
+
+#Search2 .itmeTitle p, #Search3 .itmeTitle p {
+  width: 100%;
+}
+
+#Search2 .itmeTitle .video, #Search3 .itmeTitle .video {
+  background: #ac2b2b;
+}
+
+#Search2 .itmeTitle .video p, #Search3 .itmeTitle .video p {
+  color: #fff;
+  padding: 10px 0px;
+  font-size: 22px;
+  /*box-shadow:0px 6px 10px #848181;*/
+  /*height:45px;*/
+  text-align: center;
+}
+
+#Search2 .article, #Search3 .article {
+  margin-top: 10px;
+}
+
+#Search2 .article .p1, #Search3 .article .p1 {
+  width: 100%;
+  padding: 20px 0px;
+  padding-left: 54px;
+  border: 4px solid #4397e2;
+}
+
+#Search2 .article article, #Search3 .article article {
+  font-size: 16px;
+  line-height: 32px;
+  text-indent: 32px;
+  border: 4px solid #ef5b1d;
+  padding: 10px;
+}
+
+#Search2 .jingwen, #Search3 .jingwen {
+  border: 1px solid #888;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#Search2 .jingwen p, #Search3 .jingwen p {
+  font-size: 22px;
+  color: #ab3ec9;
+  border: 3px solid #000;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#Search2 .jingwen p span, #Search3 .jingwen p span {
+  font-weight: bold;
+}
+
+#Search2 .copyRight p, #Search3 .copyRight p {
+  color: orange;
+  font-weight: 600;
+}
+
+#Search2 .copyRight p a, #Search3 .copyRight p a {
+  color: orange;
+}
+
+#Search2 .footer, #Search3 .footer {
+  margin-top: 0px;
+}
+
+#Search2 .footer .col-lg-4, #Search2 .footer .col-lg-6, #Search3 .footer .col-lg-4, #Search3 .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#Search2 .videobox .video-img, #Search3 .videobox .video-img {
+  overflow: hidden;
+}
+
+#Search2 .videobox .video-img iframe, #Search3 .videobox .video-img iframe {
+  width: 100%;
+  height: 550px;
+  border: 1px solid #ccc;
+}
+
+#Search2 .videobox .video-list, #Search3 .videobox .video-list {
+  height: 78px;
+  padding-left: 10px;
+}
+
+#Search2 .videobox .video-list .oul, #Search3 .videobox .video-list .oul {
+  height: 452px;
+  overflow: hidden;
+}
+
+#Search2 .videobox .video-list .oul iframe, #Search3 .videobox .video-list .oul iframe {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+#Search2 .videobox .video-list .oul .ins, #Search3 .videobox .video-list .oul .ins {
+  display: inline-block;
+  padding-left: 5px;
+  line-height: 15px;
+}
+
+#Search2 .videobox .video-list .oul .ins p, #Search3 .videobox .video-list .oul .ins p {
+  font-size: 14px;
+}
+
+#Search2 .videobox .video-list .oul .ins span, #Search3 .videobox .video-list .oul .ins span {
+  font-size: 12px;
+  color: #888;
+}
+
+#Search2 .videobox .video-list li, #Search3 .videobox .video-list li {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+
+#Search2 .videobox .video-list li .icon-video, #Search3 .videobox .video-list li .icon-video {
+  position: absolute;
+  left: 45px;
+  top: 25px;
+  width: 33px;
+  height: 33px;
+  z-index: 99;
+}
+
+#Search2 .videobox .video-list li .now .icon-video, #Search3 .videobox .video-list li .now .icon-video {
+  display: none;
+}
+
+@media screen and (min-width: 1201px) {
+  #Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+    font-size: 18px;
+  }
+  #Search2 .article p, #Search3 .article p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+    font-size: 16px;
+  }
+  #Search2 .videobox .video-list li .icon-video, #Search3 .videobox .video-list li .icon-video {
+    left: 25px;
+  }
+  #Search2 .article p, #Search3 .article p {
+    font-size: 16px;
+  }
+  #Search2 .article article, #Search3 .article article {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  #Search2 .searchBox, #Search3 .searchBox {
+    margin-bottom: 82px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Search2 .carousel-indicators, #Search3 .carousel-indicators {
+    width: 80%;
+  }
+  #Search2 .videobox .video-list, #Search3 .videobox .video-list {
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #Search2 .searchBox, #Search3 .searchBox {
+    margin-bottom: 220px;
+  }
+  #Search2 .article .p1, #Search3 .article .p1 {
+    padding: 15px 0px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  #Search2 .article article, #Search3 .article article {
+    overflow-x: hidden;
+  }
+  #Search2 .article article span, #Search2 .article article p, #Search3 .article article span, #Search3 .article article p {
+    font-size: 14px;
+  }
+  #Search2 .itmeTitle .video p, #Search3 .itmeTitle .video p {
+    font-size: 15px;
+    padding: 0px;
+    padding-top: 5px;
+  }
+  #Search2 .jingwen p, #Search3 .jingwen p {
+    font-size: 16px;
+  }
+  #Search2 .copyRight p, #Search3 .copyRight p {
+    font-size: 13px;
+  }
+}
+
+/*!css/spiritual.scss*/
+
+#spiritual, #Encyclopedias {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#spiritual .row, #Encyclopedias .row {
+  margin-left: 0px;
+}
+
+#spiritual .itemTitle, #Encyclopedias .itemTitle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#spiritual .itemTitle .title, #Encyclopedias .itemTitle .title {
+  background: #AC2B2B;
+  margin-left: 15px;
+  padding-left: 0px;
+  box-shadow: 0px 6px 10px #848181;
+  margin: 0px;
+  height: 50px;
+}
+
+#spiritual .itemTitle .title .img, #Encyclopedias .itemTitle .title .img {
+  padding-left: 0px;
+}
+
+#spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+  width: 100%;
+  border: 4px solid #645757;
+  box-shadow: 3px 0px 10px #47474B;
+  margin-top: -35px;
+}
+
+#spiritual .itemTitle .title p, #Encyclopedias .itemTitle .title p {
+  color: #fff;
+  text-align: center;
+  padding: 8px 0px;
+  font-size: 20px;
+}
+
+#spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+  background: #403B3B;
+  padding: 0px;
+  border-left: 2px solid #383131;
+  box-shadow: 0px 6px 10px #848181;
+  height: 50px;
+}
+
+#spiritual .itemContent audio, #Encyclopedias .itemContent audio {
+  width: 100%;
+}
+
+#spiritual .itemContent iframe, #Encyclopedias .itemContent iframe {
+  width: 100%;
+  height: 270px;
+  border: 4px solid #403B3B;
+}
+
+#spiritual .itemContent article, #Encyclopedias .itemContent article {
+  background: #403B3B;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#spiritual .itemContent .iframe, #Encyclopedias .itemContent .iframe {
+  height: 410px;
+  padding-right: 0px;
+  background: #403b3b;
+  padding: 0px;
+}
+
+#spiritual .itemContent .iframe article, #Encyclopedias .itemContent .iframe article {
+  margin-top: -5px;
+  height: 140px;
+}
+
+#spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+  font-size: 18px;
+}
+
+#spiritual .itemContent .iframe .more, #Encyclopedias .itemContent .iframe .more {
+  background: #403B3B;
+  color: #fff;
+  padding: 10px 20px;
+  height: 100%;
+  line-height: 40px;
+}
+
+#spiritual .itemContent .iframe .more p, #Encyclopedias .itemContent .iframe .more p {
+  cursor: pointer;
+}
+
+#spiritual .itemContent .iframe .more p:hover, #Encyclopedias .itemContent .iframe .more p:hover {
+  text-decoration: underline;
+}
+
+#spiritual .itemContent .ps, #Encyclopedias .itemContent .ps {
+  padding-left: 5px;
+}
+
+#spiritual .itemContent .ps article, #Encyclopedias .itemContent .ps article {
+  border: 4px solid #645757;
+  height: 410px;
+  line-height: 40px;
+}
+
+#spiritual .itemContent .ps article p:hover, #Encyclopedias .itemContent .ps article p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#spiritual .itemContent .ps .scripture, #Encyclopedias .itemContent .ps .scripture {
+  overflow-y: scroll;
+  height: 410px;
+  padding: 10px 20px;
+}
+
+#spiritual .itemContent .ps .scripture p, #Encyclopedias .itemContent .ps .scripture p {
+  font-size: 15px;
+  padding-top: 20px;
+  text-indent: 30px;
+}
+
+#spiritual .itemContent .ps .scripture .scriptureTitle, #Encyclopedias .itemContent .ps .scripture .scriptureTitle {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  margin-top: 20px;
+}
+
+#spiritual .itemContent .ps .scripture .scripturetime, #Encyclopedias .itemContent .ps .scripture .scripturetime {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#spiritual .itemContent .ps .scripture .statement, #Encyclopedias .itemContent .ps .scripture .statement {
+  display: block;
+  text-indent: 30px;
+}
+
+#spiritual .areaItem, #Encyclopedias .areaItem {
+  width: 100%;
+  background: #6C1717;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 20px #595454;
+}
+
+@media screen and (min-width: 1201px) {
+  #spiritual p, #Encyclopedias p {
+    font-size: 16px;
+  }
+  #spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+    height: 100px;
+  }
+  #spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+    font-size: 16px;
+  }
+  #spiritual .areaItem p, #Encyclopedias .areaItem p {
+    font-size: 30px;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 7%;
+  }
+  #spiritual .itemContent .smallShop a, #Encyclopedias .itemContent .smallShop a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #spiritual p, #Encyclopedias p {
+    font-size: 14px;
+  }
+  #spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+    height: 94px;
+  }
+  #spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+    font-size: 14px;
+  }
+  #spiritual .areaItem p, #Encyclopedias .areaItem p {
+    font-size: 25px;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 7%;
+  }
+  #spiritual .itemContent .smallShop a, #Encyclopedias .itemContent .smallShop a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #spiritual .carousel-indicators, #Encyclopedias .carousel-indicators {
+    width: 80%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 6.2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #spiritual .carousel-indicators, #Encyclopedias .carousel-indicators {
+    width: 80%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 16%;
+  }
+  #spiritual .itemContent .iframe, #spiritual .itemContent .Vedio, #spiritual .itemContent .Audio, #spiritual .itemContent .ps, #Encyclopedias .itemContent .iframe, #Encyclopedias .itemContent .Vedio, #Encyclopedias .itemContent .Audio, #Encyclopedias .itemContent .ps {
+    /*width:100%;*/
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #spiritual .itemTitle, #Encyclopedias .itemTitle {
+    margin-top: 25px;
+  }
+  #spiritual .itemTitle .img, #Encyclopedias .itemTitle .img {
+    display: none;
+  }
+  #spiritual .itemTitle .title, #Encyclopedias .itemTitle .title {
+    width: 96%;
+  }
+  #spiritual .itemTitle .content, #Encyclopedias .itemTitle .content {
+    width: 100%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    display: none;
+  }
+  #spiritual .itemTitle .title p, #Encyclopedias .itemTitle .title p {
+    font-size: 16px;
+    padding: 15px 0px;
+  }
+}
+
+#spiritual .areaItem p, #Encyclopedias .areaItem p {
+  font-size: 20px;
+}

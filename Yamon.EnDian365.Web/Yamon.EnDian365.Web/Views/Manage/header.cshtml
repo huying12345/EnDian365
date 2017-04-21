@@ -1,0 +1,99 @@
+﻿@{ ViewBag.Title = "header"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <title>后台管理页面</title>
+    <script type="text/javascript">
+        $(function () {
+            //顶部导航切换
+            $(".nav li a").click(function () {
+                $(".nav li a.selected").removeClass("selected")
+                $(this).addClass("selected");
+            })
+        })
+    </script>
+
+</head>
+
+<body style="background:url(/assets/manage/img/topbg.gif) repeat-x;">
+    <div class="topleft">
+        <a href="/Manage/mains" target="rightFrame"><img src="/assets/manage/img/365logo.png" border="0" title="系统首页" /></a>
+    </div>
+
+    <ul class="nav">
+        <li>
+            <a href="/Manage/mains" target="rightFrame" class="selected">
+                <img src="/assets/manage/img/icon02.png" title="工作台" />
+                <h2>工作台</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/news_cat" target="rightFrame">
+                <img src="/assets/manage/img/icon02.png" title="栏目管理" />
+                <h2>栏目管理</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/ads" target="rightFrame">
+                <img src="/assets/manage/img/icon03.png" title="模块设计" />
+                <h2>广告管理</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/person" target="rightFrame">
+                <img src="/assets/manage/img/icon09.png" title="修改密码" />
+                <h2>修改密码</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/manager" target="rightFrame">
+                <img src="/assets/manage/img/icon05.png" title="用户管理" />
+                <h2>用户管理</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/db_expore.php" target="rightFrame">
+                <img src="/assets/manage/img/icon07.png" title="用户管理" />
+                <h2>数据备份</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/log" target="rightFrame">
+                <img src="/assets/manage/img/icon07.png" title="用户管理" />
+                <h2>操作日志</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/Manage/config" target="rightFrame">
+                <img src="/assets/manage/img/icon06.png" title="系统设置" />
+                <h2>系统设置</h2>
+            </a>
+        </li>
+    </ul>
+
+    <div class="topright">
+        <ul>
+            <li>
+                <span><img src="/assets/manage/img/help.png" title="帮助" class="helpimg" /></span>
+                <a href="#">帮助</a>
+            </li>
+            <li>
+                <a href="../" target="_blank">网站首页</a>
+            </li>
+            <li>
+                <a href="logout.php?action=logout" target="_top" onclick="return confirm('确定退出系统吗？\n\n退出后自动关闭窗口！');">退出</a>
+            </li>
+        </ul>
+
+        <div class="user">
+            <span>→ 管理员：  admin  管理员级别：超级管理员</span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

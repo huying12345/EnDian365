@@ -1,0 +1,45 @@
+﻿@using Yamon.Module.SiteManage.Entity
+@{
+    List<Menu> menuList = (List<Menu>)ViewBag.LeftMenuList;
+    Layout = null;
+}
+
+
+
+        @foreach (Menu menu in menuList)
+        {
+            if (menu.Children == null)
+            {
+                <li><a href="@(menu.LinkUrl)">@(menu.MenuName)</a></li>
+            }
+            else
+            {
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@(menu.MenuName)<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu" id="dataList">
+                        @foreach (Menu subMenu in menu.Children)
+                        {
+                            if (subMenu != null) { 
+                                if (subMenu.Children != null)
+                                {
+                                    <li style="padding: 5px; font-weight: bold;">@(subMenu.MenuName)</li>
+                                    <li class="divider"></li>
+                                    foreach (Menu subMenu2 in subMenu.Children)
+                                    {
+                                        <li style="position: relative"><a href="@(subMenu2.LinkUrl)" @(subMenu2.OpenType>0?"target=\"_blank\"":"")>@(subMenu2.MenuName)</a></li>
+                                    }
+                                    <li class="divider"></li>
+                                }
+                                else
+                                {
+                                    <li><a href="@(subMenu.LinkUrl)" @(subMenu.OpenType > 0 ? "target=\"_blank\"" : "") id="newPage">@(subMenu.MenuName)</a></li>
+                                }
+                            }
+                        }
+                        
+                    </ul>
+                </li>
+            }
+        }
+
+

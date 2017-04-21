@@ -1,0 +1,55 @@
+﻿@using Yamon.Module.SiteManage
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @(ViewBag.Config.SiteName)</title>
+    <link href="/Resources/JsLib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Resources/JsLib/jquery-easyui/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="/Resources/JsLib/jquery-easyui/themes/icon.css" />
+    <link href="/Static/v1/css/icon.css" rel="stylesheet" />
+    <link href="/Static/v1/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Static/Home/css/Public.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="/Resources/JsLib/jquery.min.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery-easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/bootstrap/js/bootstrap.min.js"></script>
+    
+    @RenderSection("styles", required: false)
+    <script type="text/javascript">
+        var config = {};
+        config.ResourcesPath = "@Url.Content("~/Resources/")";
+        config.ViewPath = "@Url.Content("~/Static/")";
+        config.BaseURI = "@Url.Content("~/")";
+        config.RootURI = "@RequestHelper.GetRootURI()";
+
+        var myPage = {};
+        myPage.action = '@(ViewContext.RouteData.Values["action"].ToString())';
+        myPage.controller = '@(ViewContext.RouteData.Values["controller"].ToString())';
+        myPage.id = '@(ViewContext.RouteData.Values["id"])';
+
+    </script>
+</head>
+@{
+    string bodyClass = "easyui-layout";
+    if (ViewBag.BodyClass != null)
+    {
+        bodyClass = ViewBag.BodyClass;
+    }
+}
+<body class="@bodyClass">
+    @RenderBody()
+    <!--弹出窗体-->
+    <div id="dialogDiv">
+    </div>
+    <script src="/Static/v1/js/common.js"></script>
+    @RenderSection("scripts", required: false)
+    @RenderSection("scripts2", required: false)
+    @RenderSection("scripts_toolbar", required: false)
+
+
+</body>
+</html>

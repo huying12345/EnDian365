@@ -1,0 +1,378 @@
+﻿#home{
+    overflow-x:hidden;
+    .col-lg-2,.col-xs-2,.col-md-2,.col-sm-2,.col-lg-10 ,.col-sm-10, .col-md-10 ,.col-xs-10{
+        padding:0px;
+    }
+    .title-img{
+        p{
+            background: #545454;
+            color: #fff;
+            font-size: 20px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .carousel-control{
+        background:none;
+        color:#7FB7F3;
+        top:25%;
+        display:none;
+        }
+     .carousel{
+         cursor:pointer;
+     }
+    .carousel:hover .carousel-control{
+        display:block;
+    }
+        .carousel-inner>.item>img{
+            width:100%;
+        }
+        .carousel-indicators{
+            //width:75%;
+            width:100%;
+            left:0px;
+            bottom:0px;
+            margin-left:0px;
+            li{
+                border-radius:50%;
+                border: 2px solid #7FB7F3;
+                background-color:#ccc;
+                margin:0px 5px;
+            }
+             .active{
+                background-color:#fff;
+            }
+        }
+        
+         #myCarousel{
+            margin-top:10px;
+        }
+    
+         .submenu .col-lg-4,
+         .clauses .col-xs-4{
+            text-align:center;
+         }
+         .submenu .col-lg-4{
+             cursor:pointer;
+             position:relative;
+             /*.mark1{
+                 background:#000;
+                 position:absolute;
+                 height:300px;
+             }*/
+             img{
+                width:300px;
+                 position:relative;
+            }
+             p{
+                color: #fff;
+                /*width:300px;*/
+                width:100%;
+                text-align:center;
+                /*margin-left: 30px;*/
+                margin-top: 2px;
+                span{
+                    padding:5px 110px;
+                    background: #AC2B2B;
+                    box-shadow:0 5px 10px #7E6B6B;
+                }
+             }
+             span:hover{
+                color:#000;
+             }
+         } 
+         .clauses{
+             margin:20px 0px;
+              p{
+                width:300px;
+                text-align:left;
+                margin-left: 30px;
+                a{
+                    color:#000;
+                }
+             }
+          
+         }
+ /* videobox */
+    .videobox
+    {
+     .video-img
+        {
+            overflow:hidden;
+            iframe{
+                width:100%;
+            }
+        }
+      .video_list{
+            height:78px;
+            padding-left:10px;
+            .videoTitle{
+                    background:#AC2B2B;
+                    color:#fff;
+                    width:100%;
+                    padding:10px 0px;
+                    text-align:center;
+                    font-size:22px;
+                }
+                .videoMore{
+                    text-align:left;
+                    background:#262625;
+                    color:#fff;
+                    width:100%;
+                    padding:15px 0px;
+                    padding-left:10px;
+                    margin-top:-10px;
+                    cursor:pointer;
+                    line-height:15px;
+                    p{
+                         font-size:16px;
+                    }
+                }
+                .videoMore:hover .video_title{
+                        text-decoration:underline;
+                 }
+            .oul{
+                overflow: hidden;
+                text-align: center;
+                li{
+                     padding:0px 1px;
+                }
+                img{
+                    width:100%;
+                    /*box-shadow:0 5px 10px #7E6B6B;*/
+                    border:1px solid #ccc;
+                    /*height:100px;*/
+                }
+                img:hover{
+                    border:1px solid #ccc;
+                }
+                    p{
+                        font-size:16px;
+                        font-weight:bold;
+                    }
+                    span{
+                        font-size:12px;
+                        color:#888;
+                    }
+            }
+            
+           li{
+                overflow:hidden;
+                position:relative;
+                cursor:pointer;
+                .icon-video{
+                    position:absolute;
+                    z-index:99;
+                }
+                .now .icon-video{
+                    display:none;
+                }
+            }
+           li:hover{
+                cursor:pointer;
+           }
+           .more{
+               line-height:10px;
+            }
+           .more:hover{
+               cursor:pointer;
+           }
+        }
+    }
+    @media screen and (min-width: 1201px) { 
+        p{
+            font-size:16px;
+        }
+        .clauses p{
+              font-size:16px;
+              line-height:16px;
+          }
+        /*.carousel-inner > .item > img{
+            height:400px;
+        }*/
+         .carousel-control{
+             font-size:45px;
+         }
+         .carousel-indicators li{
+               width: 10px;
+               height: 10px;
+         }
+         .video-list .videoTitle{
+             font-size:30px;
+          }
+          .videobox .video-list .oul iframe{
+                height:80px;
+            }
+          .videobox .video-list li .icon-video{
+                left:45px;
+                top:25px;
+            }
+           .video-img iframe{
+             height:300px;
+          }
+           .videobox .video-list .oul{
+             margin-top:100px;
+         }
+            .videobox .video-list li .icon-video{
+                top: 20px;
+                left: 60px;
+                width: 40px;
+                height: 40px;
+            }
+            .video-list .more{
+             // margin-top:120px;
+          }
+             .submenu .col-lg-4 p span{
+                padding:5px 118px;
+            }
+             .videobox .video_list .oul{
+                 margin-top:10px;
+             }
+             .videobox .video_list .more{
+                 //margin-top:40px;
+                 text-align:center;
+             }
+             .friendTitleImg p{
+                 font-size:14px;
+             }
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+        p{
+            font-size:14px;
+        }
+         .clauses p{
+              font-size:15px;
+              line-height:15px;
+          }
+         .video .col-lg-4 .f1{
+             font-size:14px;
+         }
+          .videobox .video-list .oul{
+             margin-top:70px;
+         }
+          .video-list .more{
+             // margin-top:80px;
+          }
+          .video-img iframe{
+             height:330px;
+          }
+            .video-list .videoTitle{
+             font-size:20px;
+          }
+            .videobox .video-list .oul iframe{
+                height:60px;
+            }
+            .videobox .video-list li .icon-video{
+                top:20px;
+                left:55px;
+                width:20px;
+                height:20px;
+            }
+            .submenu .col-lg-4 p span{
+                padding:5px 122px;
+            }
+             /*.carousel-inner>.item>img{
+                height:300px;
+        }*/
+             .carousel-control{
+                 font-size:30px;
+             }
+              .carousel-indicators li{
+                 width: 10px;
+                 height: 10px;
+             }
+               /*.carousel-inner > .item > img{
+                height:300px;
+            }*/
+               .videobox .video_list .oul{
+                 margin-top:50px;
+             }
+                .videobox .video_list .more{
+                 //margin-top:50px;
+                 text-align:center;
+             }
+    } 
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+    @media screen and (max-width: 900px) { 
+        p{
+            font-size:12px;
+        }
+         .carousel-indicators {
+            width: 100%;
+        }
+          .submenu .col-lg-4 p span{
+            padding:5px 110px;
+        }
+          .clauses p{
+              font-size:14px;
+          }
+         .carousel-control{
+             font-size:30px;
+         }
+         .video .col-lg-6 iframe{
+             height:250px;
+         }
+          .submenu .col-lg-4 p span{
+                padding:5px 126px;
+            }
+         .videobox .video-list li .icon-video{
+                top:20px;
+                left:40px;
+                width:20px;
+                height:20px;
+        }
+          .videobox .video_list{
+              height:315px;
+         }
+    } 
+    /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+    @media screen and (max-width: 500px) { 
+        .submenu .col-lg-4 p span{
+                padding:5px 126px;
+            }
+        .title-img{
+            img{
+                width:50px;
+                /*height:50px;*/
+            }
+            span{
+                font-size:12px;
+            }
+        }
+        .submenu{
+             .col-lg-4{
+                 img{
+                     width:248px;
+                 }
+                 p span{
+                     padding:5px 100px;
+                 }
+            }
+        }
+        .videobox{
+            .video_list{
+                .oul{
+                    margin-top:22px;
+                }
+                /*margin-bottom:170px;*/
+                .oul p{
+                    font-size:12px;
+                }
+                .more{
+                    //margin-top:20px
+                }
+            }
+        } 
+    }
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+}
+
+
+
+
+

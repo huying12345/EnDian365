@@ -1,0 +1,128 @@
+﻿ 
+
+<!--左菜单-->
+<div region="west" split="true" title="栏目树" style="width: 180px;" id="west">
+    <div id="NodesTree">
+    </div>
+</div>
+<!--主面板-->
+<div id="mainPanle" region="center" border="false" style="padding: 10px;">
+    <div style="padding: 10px 0 10px 60px">
+        <form id="ff" method="post" action="" target="_blank">
+            <table class="mytable" cellpadding="1" width="98%" cellspacing="0" align="center">
+                <tr class="mytr">
+                    <td colspan="2" class="mytd">
+                        <a href="javascript:expandAll();" class="easyui-linkbutton">
+                            全部展开
+                        </a>
+                        <a href="javascript:collapseAll();" class="easyui-linkbutton">
+                            全部收缩
+                        </a>
+                        <input id="chkCheckAll" type="checkbox" value="1" onchange=" selectAll() " /><label for="chkCheckAll">全选/反选</label>
+                        <input id="chkCascadeCheck" type="checkbox" onchange=" jQuery('#NodesTree').tree({ cascadeCheck: jQuery(this).is(':checked') }) " /><label for="chkCascadeCheck">选中父级同时全选子级</label>
+                    </td>
+                </tr>
+                <tr class="mytr">
+                    <td class="mytd" width="100">
+                        生成列表页:
+                    </td>
+                    <td class="mytd">
+                        <input id="chkCreateList" type="checkbox" value="1" />
+                    </td>
+                </tr>
+                <tr class="mytr">
+                    <td class="mytd">
+                        生成内容页:
+                    </td>
+                    <td class="mytd">
+                        <input id="chkCreateInfo" type="checkbox" value="" />
+                    </td>
+                </tr>
+                <tr class="mytr">
+                    <td class="mytd" colspan="2" height="30px;">
+                        <a href="javascript:GetChecked()" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">
+                            生成
+                        </a> <a href="javascript:CreateHtml_Show_TopN()" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">
+                            生成最新100篇
+                            <a href="javascript:CreateAllInfoList();" class="easyui-linkbutton" data-options="iconCls:'icon-ok'"> 生成所有列表页</a>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" id="CategoryID" name="CategoryID" />
+        </form>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        var ResourcesPath = "/Resources/";
+        var nodeId = 0;
+        var model = "Information";
+        var _webUrl = "@(Yamon.Framework.Common.ConfigHelper.GetConfigString("WebUrl"))";
+        jQuery(function () {
+            jQuery("#NodesTree").tree({
+                lines: true,
+                checkbox: true,
+                cascadeCheck: false,
+                animate: true,
+                url: '/api/PortalIPS/Category/GetMyCategoryTreeJsonAction?ShowRoot=1',
+                onSelect: function (node) {
+                    if (node.checked) {
+                        jQuery("#NodesTree").tree('uncheck', node.target);
+                    } else {
+                        jQuery("#NodesTree").tree('check', node.target);
+                    }
+                },
+                onLoadSuccess: function (node, data) {
+                    jQuery("#NodesTree").tree('collapseAll');
+                }
+            });
+        });
+
+        function expandAll() {
+            jQuery('#NodesTree').tree('expandAll');
+            return;
+        }
+
+        function collapseAll() {
+            jQuery('#NodesTree').tree('collapseAll');
+        }
+
+        function selectAll() {
+            var check = jQuery('#chkCheckAll').is(':checked') ? 'check' : 'uncheck';
+            var roots = jQuery("#NodesTree").tree('getRoots');
+            for (var i = 0; i < roots.length; i++) {
+                jQuery("#NodesTree").tree(check, roots[i].target);
+                var child = jQuery("#NodesTree").tree('getChildren', roots[i].target);
+                for (var j = 0; j < child.length; j++) {
+                    jQuery("#NodesTree").tree(check, child[j].target);
+                }
+            }
+            // jQuery("#NodesTree").tree("check", jQuery("#NodesTree").tree('getRoot'));
+        }
+
+        function GetChecked() {
+            var nodes = jQuery("#NodesTree").tree("getChecked");
+            var s = '';
+            for (var i = 0; i < nodes.length; i++) {
+                if (s != '') s += ',';
+                s += nodes[i].id;
+            }
+            if (s == "") {
+                alert("请选择要生成的栏目！");
+                return;
+            }
+            jQuery('#CategoryID').val(s);
+            jQuery('#ff').attr('action', _webUrl + "Default/CreateInfoList?CreateList=" + jQuery('#chkCreateList').is(':checked') + "&CreateDetail=" + jQuery('#chkCreateInfo').is(':checked'));
+            jQuery('#ff').submit();
+        }
+
+        function CreateHtml_Show_TopN() {
+            window.open(_webUrl + "Default/CreateInfoTopN?top=100&CreateList=" + jQuery('#chkCreateList').is(':checked') + "&CreateDetail=" + jQuery('#chkCreateInfo').is(':checked'));
+        }
+
+        function CreateAllInfoList() {
+            window.open(_webUrl + "CreateAllInfoList");
+        }
+
+    </script>
+}

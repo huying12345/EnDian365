@@ -1,0 +1,22 @@
+﻿
+h1{
+    font-size:25px;
+    text-align:center;
+}
+
+td{
+    text-align:center;
+    min-width:100px;
+}
+
+.title td,.catalog td{
+    font-weight:bold;
+    font-size:14px;
+}
+
+.bold{
+    font-weight:bold;
+}
+.count_table {
+    margin:0 auto;
+}

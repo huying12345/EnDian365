@@ -1,0 +1,397 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Encyclopedias";
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category ksefxh = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ksefxh"));//寇绍恩分享汇
+    Category ttzwj = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ttzwj"));//天堂在我家
+    Category jthks = categoryDal.GetInfoByID(categoryDal.GetIdByKey("jthks"));//家庭会客室
+    Category edjh = categoryDal.GetInfoByID(categoryDal.GetIdByKey("edjh"));//恩典记号
+    Category smdwt = categoryDal.GetInfoByID(categoryDal.GetIdByKey("smdwt"));//生命的问题
+    Category tlzy = categoryDal.GetInfoByID(categoryDal.GetIdByKey("tlzy"));//天籁之音
+
+    Category categorytest1 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test11"));
+    Category categorytest2 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test12"));
+    Category categorytest3 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test11-1"));
+    Category categorytest4 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test12-1"));
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL(); 
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>人生百科</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Encyclopedias">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/Spiritual1-01.png" />
+        </div>
+       <!-----------寇绍恩分享汇:天堂在我家------------->
+        @{
+            List<vwInfoCategory> ttzwjList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { ttzwj.CategoryID }, "BackInt desc", 6);
+        }
+        @{
+            List<vwInfoCategory> jthksList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { jthks.CategoryID }, "BackInt desc", 6);
+        }
+        @{
+            List<vwInfoCategory> edjhList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { edjh.CategoryID }, "BackInt desc", 6);
+        }
+        @{
+            List<vwInfoCategory> smdwtList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { smdwt.CategoryID }, "BackInt desc", 6);
+        }
+        @{
+            List<vwInfoCategory> tlzyList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { tlzy.CategoryID }, "BackInt desc", 6);
+        }
+         <div id="tiantangAt">
+             @if (ttzwjList.Count > 0 || jthksList.Count > 0 || edjhList.Count > 0 || smdwtList.Count > 0 || tlzyList.Count>0)
+             {
+                <div class="areaItem row">
+                    <p class="col-lg-12 col-sm-12 col-md-12 col-xs-12">【@(ksefxh.DisplayName)】</p>
+                </div>
+             }
+
+        @if (ttzwjList.Count > 0)
+        {
+                <div class="row itemTitle">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                            <img src="@(ttzwj.imgSrc)" />
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                            <p>《 @(ttzwj.DisplayName) 》</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+                </div>
+                <div class="row itemContent">
+                    <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 iframe">
+                        <iframe id="js_video_1" class="js_videoCon" width="640" height="498" src="@ttzwjList[0].VideoUrl"></iframe>
+                        <article>
+                            <p class="title_1 Vedio_title">@(ttzwjList[0].Title)</p>
+                            <p class="content">@ttzwjList[0].Description</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
+                        <article>
+                            @foreach (vwInfoCategory vwInfo in ttzwjList)
+                            {
+                                <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                            }
+                            <p id="/Default/InfoList2?CategoryID=@(ttzwj.CategoryID)">>>更多</p>
+                        </article>
+                    </div>
+                </div>
+}
+            </div>
+       
+        <!-----------新增栏目1--------------->
+        @{
+            List<vwInfoCategory> test2List = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorytest3.CategoryID }, "BackInt desc");
+        }
+        @if (test2List.Count > 0)
+        {
+            <div id="categorygytest1">
+                <div class="areaItem row">
+                    <p class="col-lg-12 col-sm-12 col-md-12 col-xs-12">【@(categorytest1.DisplayName)】</p>
+                </div>
+                @{
+                    List<Category> test1List = categoryDal.GetEntityList("C_ParentID='530c1af1-5cf4-422c-b09b-ee010622a616'", null, "OrderNum asc");
+                }
+                @if (test1List.Count > 0)
+                {
+                    foreach (Category info in test1List)
+                    {
+                        <div class="row itemTitle">
+                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                                    <img src="~/assets/img/encyclopedias-01.jpg" />
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                                    <p>@(info.DisplayName)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+                        </div>
+                    }
+                    <div class="row itemContent">
+                        @if (test2List.Count > 0)
+                        {
+                            <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 iframe">
+                                @if (test2List[0].InfoType == "CommonInfo")
+                                {
+                                    <iframe id="js_video_1" class="js_videoCon" width="640" height="498" src="@(test2List[0].VideoUrl)"></iframe>
+                                    <article>
+                                        <p class="title_1 Audio_title">@(test2List[0].Title)</p>
+                                        <p class="content">@test2List[0].Description</p>
+                                    </article>
+                                }
+                                else if (test2List[0].InfoType == "audioInfo")
+                                {
+                                    <audio controls="controls" id="js_video_4" class="js_videoCon">
+                                        <source src="@test2List[0].VideoUrl" type="audio/mpeg" />
+                                    </audio>
+                                    <article>
+                                        <p class="title_1 Audio_title">@(test2List[0].Title)</p>
+                                        <p class="content">@test2List[0].Description</p>
+                                    </article>
+                                }
+                                else
+                                {
+                                    <div class="more">
+                                        @foreach (vwInfoCategory vwInfo in test2List)
+                                        {
+                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                        }
+                                        <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 ps">
+                                        <div class="scripture">@Html.Raw(test2List[0].Content)</div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        @if (test2List[0].InfoType == "audioInfo" || test2List[0].InfoType == "CommonInfo")
+                        {
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
+                                <article>
+                                    @foreach (vwInfoCategory vwInfo in test2List)
+                                    {
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                    }
+                                    <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
+                                </article>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+        <!-----------新增栏目2--------------->
+        @{
+            List<vwInfoCategory> test3List = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorytest4.CategoryID }, "BackInt desc");
+        }
+        @if (test3List.Count > 0)
+        {
+            <div id="categorygytest1">
+                <div class="areaItem row">
+                    <p class="col-lg-12 col-sm-12 col-md-12 col-xs-12">【@(categorytest2.DisplayName)】</p>
+                </div>
+                @{
+            List<Category> test1List = categoryDal.GetEntityList("C_ParentID='530c1af1-5cf4-422c-b09b-ee010622a616'", null, "OrderNum asc");
+                }
+                @if (test1List.Count > 0)
+                {
+                    foreach (Category info in test1List)
+                    {
+                        <div class="row itemTitle">
+                            <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                                    <img src="~/assets/img/encyclopedias-01.jpg" />
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                                    <p>@(info.DisplayName)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+                        </div>
+                    }
+                    <div class="row itemContent">
+                        @if (test3List.Count > 0)
+                        {
+                            <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 iframe">
+                                @if (test3List[0].InfoType == "CommonInfo")
+                                {
+                                    <iframe id="js_video_1" class="js_videoCon" width="640" height="498" src="@(test3List[0].VideoUrl)"></iframe>
+                                    <article>
+                                        <p class="title_1 Audio_title">@(test3List[0].Title)</p>
+                                        <p class="content">@test3List[0].Description</p>
+                                    </article>
+                                }
+                                else if (test3List[0].InfoType == "audioInfo")
+                                {
+                                    <audio controls="controls" id="js_video_4" class="js_videoCon">
+                                        <source src="@test3List[0].VideoUrl" type="audio/mpeg" />
+                                    </audio>
+                                    <article>
+                                        <p class="title_1 Audio_title">@(test3List[0].Title)</p>
+                                        <p class="content">@test3List[0].Description</p>
+                                    </article>
+                                }
+                                else
+                                {
+                                    <div class="more">
+                                        @foreach (vwInfoCategory vwInfo in test3List)
+                                        {
+                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                        }
+                                        <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 ps">
+                                        <div class="scripture">@Html.Raw(test3List[0].Content)</div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        @if (test3List[0].InfoType == "audioInfo" || test3List[0].InfoType == "CommonInfo")
+                        {
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
+                                <article>
+                                    @foreach (vwInfoCategory vwInfo in test3List)
+                                    {
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                    }
+                                    <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
+                                </article>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+            <!-----------寇绍恩分享汇:家庭会客室------------->
+      
+       @if (jthksList.Count > 0)
+            {
+                <div id="jiatinghuikeshi">
+                    <div class="row itemTitle">
+                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                                <img src="@(jthks.imgSrc)" />
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                                <p>《 @(jthks.DisplayName) 》</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+                    </div>
+                    <div class="row itemContent">
+                            <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 iframe">
+                                <iframe id="js_video_1" class="js_videoCon" width="640" height="498" src="@jthksList[0].VideoUrl"></iframe>
+                                <article>
+                                    <p class="title_1 Vedio_title">@(jthksList[0].Title)</p>
+                                    <p class="content">@jthksList[0].Description</p>
+                                </article>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
+                                <article>
+                                    @foreach (vwInfoCategory vwInfo in jthksList)
+                                    {
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                    }
+                                    <p id="/Default/InfoList2?CategoryID=@(jthks.CategoryID)">>>更多</p>
+                                </article>
+                            </div>
+                    </div>
+                </div>
+            }
+            <!-----------寇绍恩分享汇:恩典记号------------->
+         
+          @if (edjhList.Count > 0)
+          {
+            <div id="endianjihao" class="parents">
+                <div class="row itemTitle">
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                            <img src="@(edjh.imgSrc)" />
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                            <p>《 @(edjh.DisplayName) 》</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+                </div>
+                <div class="row itemContent">
+                    <div class="col-lg-5  col-md-5 col-sm-5 col-xs-12 iframe">
+                        <div class="more">
+                                @foreach (vwInfoCategory vwInfo in edjhList)
+                                {
+                                    <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                }
+                                <p id="/Default/InfoList2?CategoryID=@(edjh.CategoryID)">>>更多</p>
+                        </div>
+                    </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 ps">
+                            <div class="scripture">@Html.Raw(edjhList[0].Content)</div>
+                        </div>
+                </div>
+            </div>
+         }
+        <!-----------寇绍恩分享汇:生命的问题------------->
+@if (smdwtList.Count > 0)
+{
+        <div id="shengmingwenti" class="parents">
+            <div class="row itemTitle">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                        <img src="@(smdwt.imgSrc)" />
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                        <p>《 @(smdwt.DisplayName) 》</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+            </div>
+            <div class="row itemContent">
+                <div class="col-lg-5  col-md-5 col-sm-5 col-xs-12 iframe">
+                    <div class="more">
+                  @foreach (vwInfoCategory vwInfo in smdwtList)
+                        {
+                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                        }
+                        <p id="/Default/InfoList2?CategoryID=@(smdwt.CategoryID)">>>更多</p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 ps">
+                    <div class="scripture">@Html.Raw(smdwtList[0].Content)</div>
+                </div>
+            </div>
+        </div>
+} 
+ 
+            <!-----------寇绍恩分享汇:天籁之音------------->
+   @if (tlzyList.Count > 0)
+   {
+        <div id="tianlaizhiyin">
+            <div class="row itemTitle">
+                <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 title">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 img">
+                        <img src="@(tlzy.imgSrc)" />
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 content">
+                        <p>《 @(tlzy.DisplayName) 》</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 grey"></div>
+            </div>
+            <div class="row itemContent">
+                <div class="col-lg-6  col-md-6 col-sm-6 col-xs-12 iframe">
+                    <iframe id="js_video_1" class="js_videoCon" width="640" height="498" src="@(tlzyList[0].VideoUrl)"></iframe>
+                    <article>
+                        <p class="title_1 Audio_title">@(tlzyList[0].Title)</p>
+                        <p class="content">@tlzyList[0].Description</p>
+                    </article>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
+                    <article>
+                    @foreach (vwInfoCategory vwInfo in tlzyList)
+                        {
+                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                        }
+                        <p id="/Default/InfoList2?CategoryID=@(tlzy.CategoryID)">>>更多</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+   }   
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        //audioJs初始化
+        $('audio').audioPlayer();
+    </script>
+</body>
+</html>

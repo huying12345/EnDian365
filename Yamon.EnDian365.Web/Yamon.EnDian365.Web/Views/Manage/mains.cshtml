@@ -1,0 +1,114 @@
+﻿@{ ViewBag.Title = "header"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <title>后台管理页面</title>
+    @*<script src="/assets/manage/js/checkfrom.js"></script>*@
+</head>
+
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>
+                <a href="mains.php">首页</a>
+            </li>
+        </ul>
+    </div>
+    <div class="mainindex">
+        <div class="welinfo">
+            <b>admin，欢迎使用信息管理系统</b>
+            <a href="manager.php">帐号设置</a>
+        </div>
+        <div class="xline"></div>
+        <ul class="iconlist">
+            <table width='100%' height="351" border=1 cellpadding=1 cellspacing=0 bordercolorlight=#c0c0c0 bordercolordark=#FFFFFF>
+                <tr>
+                    <td height="27" colspan=2 align=center bgcolor=#ffffff class=red_3><strong>服务器的有关参数</strong></td>
+                </tr>
+                <tr>
+                    <td width="26%" height="23">&nbsp;服务器名：</td>
+                    <td width="74%" height="23">&nbsp; www.junyitech.net </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;服务器IP：</td>
+                    <td height="23">&nbsp; </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;服务器端口：</td>
+                    <td width="74%" height="23">
+                        &nbsp; 80
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;服务器时间：</td>
+                    <td height="23">&nbsp; 2017年02月10日12点31分16秒 </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;PHP版本：</td>
+                    <td height="23">
+                        &nbsp; 5.2.17
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;WEB服务器版本：</td>
+                    <td height="23">
+                        &nbsp; Apache
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;服务器操作系统：</td>
+                    <td height="23">
+                        &nbsp; Linux
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;脚本超时时间：</td>
+                    <td height="23">
+                        &nbsp; 30 秒
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;站点物理路径：</td>
+                    <td height="23">
+                        &nbsp; /data/home/bxu2343380095/htdocs
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;脚本上传文件大小限制：</td>
+                    <td height="23">
+                        &nbsp; 10M
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;POST提交内容限制：</td>
+                    <td height="23">
+                        &nbsp; 10M
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;服务器语种：</td>
+                    <td height="23">
+                        &nbsp; zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23">&nbsp;脚本运行时可占最大内存</td>
+                    <td height="23">
+                        &nbsp; 128M
+                    </td>
+                </tr>
+                <tr>
+                    <td height="23" colspan="2">&nbsp; </td>
+                </tr>
+            </table>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>恩典365首页</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body> 
+    <div class="container" id="home">
+        @RenderPage("~/Views/include/heads.cshtml")
+            <div class="title-img">
+                <img src="~/assets/img/11_03.jpg" />
+               
+                <p><img src="~/assets/img/video.jpg" />
+                    <!------------（信息读活）----------->
+                    <span>最新主日信息：</span>
+                    <span>20161225【幸福没有距离】</span>
+                </p>
+            </div>
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!------------（图片读活）----------->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/assets/img/index-01.jpg" />
+                </div>
+                <div class="item">
+                    <img src="~/assets/img/index-02.jpg" />
+                </div>
+                <div class="item">
+                    <img src="~/assets/img/index-03.jpg" />
+                </div>
+            </div>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+               《
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                》
+            </a>
+        </div>
+        <div class="row submenu" style="margin-top:10px;">
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/Home/Spiritual')">
+                <img src="~/assets/img/2.jpg" />
+                <p><span>属灵牧养</span></p>
+                <div class="mark1"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/Home/Encyclopedias')">
+                <img src="~/assets/img/3.jpg" />
+                <p><span>人生百科</span></p>
+                <div class="mark1"></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/Home/Interaction')">
+                <img src="~/assets/img/5.jpg" />
+                <p><span>互动天地</span></p>
+                <div class="mark1"></div>
+            </div>
+        </div>
+        <div class="row  clauses">
+            <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                <article>
+                    <p><a href="/Home/Spiritual/#endian365">>> 恩典365</a> </p>
+                    <p><a href="/Home/Spiritual/#everyday">>> 每日近亲神</a></p>
+                    <p><a href="/Home/Spiritual/#kouShiYuanZuanQu">>> 寇世远专区</a></p>
+                    <p><a href="/Home/Spiritual/#kouShaoEnZhiSheng">>> 寇绍恩之声</a></p>
+                </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                <article>
+                    <p><a href="/Home/Spiritual/#lingLiangGongJiZhan">>> 灵粮供给站</a></p>
+                    <p><a href="/Home/Encyclopedias/#endianjihao">>> 寇绍恩分享汇</a></p>
+                    <p><a href="/Home/Encyclopedias/#shengmingwenti">>> 生命的问题</a></p>
+                    <p><a href="/Home/Encyclopedias/#tianlaizhiyin">>> 天籁之音</a></p>
+                </article>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                <article>
+                    <p><a href="/Home/Interaction/#tianShengShop">>> 天声小店@微店</a></p>
+                    <p><a href="/Home/Interaction/#wenJuanDiaoCha">>> 问卷调查</a></p>
+                    <p><a href="/Home/Contact/#contactAndJoin">>> 联系我们</a></p>
+                    <p><a href="/Home/Contact/#zhiChiAndFengXian">>> 支持与奉献</a></p>
+                </article>
+            </div> 
+        </div>
+        <!------------（视频信息读活）----------->
+        <div class="videobox row">
+            <div class="video-img col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                <embed  class="js_videoCon" src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+            </div>
+            <div class="video_list col-lg-7 col-sm-7 col-md-7 col-xs-7">
+                <p class="videoTitle">恩典365</p>
+                <article class="videoMore">
+                    <p class="video_title">2016-12-31_（重播）爱的礼物：预备好自己迎接复兴的浪潮</p>
+                    <p>主讲：寇绍恩牧师</p>
+                    <p>经文出处：马太福音25:10</p>
+                </article>
+                <ul style="padding:0px" class="oul col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                    <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0">
+                        <img src="~/assets/img/6.jpg" />
+                        <p>2016-12-30</p>
+                    </li>
+                    <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="迎接神的到来" id="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0">
+                        <img src="~/assets/img/7.jpg" />
+                        <p>2016-12-30</p> 
+                    </li>
+                    <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="" id="">
+                        <img src="~/assets/img/8.jpg" />
+                        <p>2016-12-30</p>
+                    </li>
+                </ul>
+                <div class="more col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                    <article onclick="window.open('/Home/Search2')">
+                        <p>>></p>
+                        <p>更多</p>
+                        <p>more</p> 
+                    </article>
+                </div>
+            </div>
+        </div>
+      @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+        @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        $(function () {
+            $('.carousel').carousel({
+                interval:3000
+            }); 
+        })
+    </script>
+</body>
+</html>

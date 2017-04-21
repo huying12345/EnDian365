@@ -1,0 +1,15 @@
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Module.PortalIPS.Entity.dll
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Module.PortalIPS.Entity.pdb
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Newtonsoft.Json.dll
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Framework.Common.dll
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Newtonsoft.Json.xml
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\obj\Debug\Yamon.Module.PortalIPS.Entity.dll
+D:\git\EnDian365\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\obj\Debug\Yamon.Module.PortalIPS.Entity.pdb
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Module.PortalIPS.Entity.dll
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Module.PortalIPS.Entity.pdb
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Newtonsoft.Json.dll
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Yamon.Framework.Common.dll
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\bin\Debug\Newtonsoft.Json.xml
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\obj\Debug\Yamon.Module.PortalIPS.Entity.dll
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\obj\Debug\Yamon.Module.PortalIPS.Entity.pdb
+D:\git\EnDian365(2)\Source\PortalIPS\Yamon.Module.PortalIPS.Entity\obj\Debug\Yamon.Module.PortalIPS.Entity.csprojResolveAssemblyReference.cache

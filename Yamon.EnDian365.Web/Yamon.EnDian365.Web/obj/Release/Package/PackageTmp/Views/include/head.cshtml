@@ -1,0 +1,141 @@
+﻿@using System.Data
+@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categoryslmuy = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
+    Category categoryrsbk = categoryDal.GetInfoByID(categoryDal.GetIdByKey("encyclopedias"));
+    Category categorylxyfx = categoryDal.GetInfoByID(categoryDal.GetIdByKey("contact"));
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+}
+
+
+ <nav class="navbar navbar-default" role="navigation" id="head">
+      <div class="container-fluid" style="padding:0px;">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                 <span class="sr-only">切换导航</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="/Home/Index">
+                 恩典365基督之家
+             </a>
+         </div>
+          <div class="collapse navbar-collapse" id="example-navbar-collapse" style="padding:0px;">
+              <ul class="nav navbar-nav">
+                  <li class="Homepage"><a href="/default/Index?cid=8a39580c-daba-49f4-ba7a-46c9cc0ed875" target="_blank">首页</a></li>
+                  <li class="Abpage"><a href="/default/Index?cid=22982529-011f-434c-a192-fc1cf3d47108" target="_blank">关于我们</a></li>
+                  <li class="Slpage">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">属灵牧养<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          @*<li class=""><a href="/default/Index?cid=ae593665-c413-4dc5-a36f-c53f11e7b7d5" target="_blank">属灵牧养</a></li>*@
+                          @{
+                              List<Category> slmyList = categoryDal.GetEntityList("C_ParentID='ae593665-c413-4dc5-a36f-c53f11e7b7d5'", null, " OrderNum  asc");
+                          }
+                          @if (slmyList.Count > 0)
+                          {
+                            foreach (Category wvInfo in slmyList)
+                            {
+                                if (wvInfo.DisplayName != "新增栏目1" && wvInfo.DisplayName != "新增栏目2")
+                                {
+                                    <li class=""><a href="@categoryDal.GetPageUrl(wvInfo.C_ParentID)" target="_blank">@(wvInfo.DisplayName)</a></li>
+                                }
+                            }
+                          }
+                         
+                      </ul>
+                  </li>
+                  <li class="Rspage">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">人生百科<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          @*<li class=""><a href="/default/Index?cid=0aae2fec-86a3-451d-9439-ee43a88d294b" target="_blank">人生百科</a></li>*@
+                          @{
+                              List<Category> rsbkList = categoryDal.GetEntityList("C_ParentID='0aae2fec-86a3-451d-9439-ee43a88d294b'", null, " OrderNum  asc");
+                          }
+                          @if (rsbkList.Count > 0)
+                          {
+                            foreach (Category wvInfo in rsbkList)
+                            {
+                                if (wvInfo.DisplayName != "新增栏目1" && wvInfo.DisplayName != "新增栏目2")
+                                {
+                                    <li class=""><a href="@categoryDal.GetPageUrl(wvInfo.C_ParentID)" target="_blank">@(wvInfo.DisplayName)</a></li>
+                                }
+                            }
+                          }
+                      </ul>
+                  </li>
+                  <li class="Capage">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">联系与奉献<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          @*<li class=""><a href="/default/Index?cid=11f75f7c-4a3d-48aa-846c-2545f7f69eb3" target="_blank">联系与奉献</a></li>*@
+                          @{
+                              List<Category> lxyfxList = categoryDal.GetEntityList("C_ParentID='11f75f7c-4a3d-48aa-846c-2545f7f69eb3'", null, " OrderNum  asc");
+                          }
+                          @if (lxyfxList.Count > 0)
+                          {
+                            <li class=""><a href="/Default/Info?CategoryID=@(lxyfxList[0].CategoryID)" target="_blank">@(lxyfxList[0].DisplayName)</a></li>
+                            <li class=""><a href="@categoryDal.GetPageUrl(lxyfxList[1].C_ParentID)" target="_blank">@(lxyfxList[1].DisplayName)</a></li>
+                          }
+                      </ul>
+                  <li class="Searchpage"><a href="/default/Index?cid=a65e3d5e-2667-4bd1-91c7-4f9262afd9f5" target="_blank">查询</a></li>
+                  <li class="simplify" id="languge">
+                      <span onclick="convert(0);">简</span><br />—<br />
+                      <span onclick="convert(1)">繁</span>
+                  </li>
+              </ul>
+          </div>
+         @*<div class="collapse navbar-collapse" id="example-navbar-collapse" style="padding:0px">
+             <ul class="nav navbar-nav">
+                 @{
+                     List<Category> menuList1 = categoryDal.GetEntityList(" Flag='1' and IsJournal='2' and C_ParentID!='' ", null, " OrderNum  asc");
+                 }
+                 <li class="Homepage"><a href="/default/Index?cid=8a39580c-daba-49f4-ba7a-46c9cc0ed875" target="_blank">首页</a></li>
+                 <li class="Abpage"><a href="/default/Index?cid=22982529-011f-434c-a192-fc1cf3d47108" target="_blank">关于我们</a></li>
+                 <li class="Slpage">
+                     <a class="dropdown-toggle" href="/default/Index?cid=ae593665-c413-4dc5-a36f-c53f11e7b7d5" target="_blank">属灵牧养</a>
+                     <ul class="dropdown-menu">
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[2].CategoryID)" target="_blank">@(menuList1[2].DisplayName)</a></li>
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[4].CategoryID)" target="_blank">@(menuList1[4].DisplayName)</a></li>
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[5].CategoryID)" target="_blank">@(menuList1[5].DisplayName)</a></li>
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[5].CategoryID)" target="_blank">@(menuList1[6].DisplayName)</a></li>
+                     </ul>
+                 </li>
+                 <li class="Rspage">
+                     <a class="dropdown-toggle" href="/default/Index?cid=0aae2fec-86a3-451d-9439-ee43a88d294b" target="_blank">人生百科</a>
+                     <ul class="dropdown-menu">
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[0].CategoryID)" target="_blank">@(menuList1[0].DisplayName)</a></li>
+                     </ul>
+                 </li>
+                 <li class="Capage">
+                     <a class="dropdown-toggle" href="/default/Index?cid=11f75f7c-4a3d-48aa-846c-2545f7f69eb3" target="_blank">联系与奉献</a>
+                     <ul class="dropdown-menu">
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[3].C_ParentID)" target="_blank">@(menuList1[3].DisplayName)</a></li>
+                         <li class=""><a href="@categoryDal.GetPageUrl(menuList1[1].C_ParentID)" target="_blank">@(menuList1[1].DisplayName)</a></li>
+                     </ul>
+                 </li>
+                 <li class="Searchpage"><a href="/default/Index?cid=a65e3d5e-2667-4bd1-91c7-4f9262afd9f5" target="_blank">查询</a></li>
+                  <li class="simplify" id="languge">
+                      <span onclick="convert(0);">简</span><br/>—<br />
+                      <span onclick="convert(1)">繁</span>
+                  </li>
+             </ul>
+         </div>*@
+    </div>
+ </nav>
+  <script>
+      //$(function () {
+      //    $('li').mouseover(function () {
+      //        $(this).children('.dropdown-menu').stop().slideDown(300);
+      //    });
+      //    $('li').mouseout(function () {
+      //        $(this).children('.dropdown-menu').stop().slideUp(100);
+      //    });
+      //    $('.dropdown-menu li').mouseover(function () {
+      //        $(this).css('background', '#c73e3e !important').siblings().css('background', 'none!important');
+      //    })
+      ////})
+  </script>         
+             

@@ -1,0 +1,81 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Search1";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category365 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ed365"));
+
+    string CategoryID = ((Category)ViewBag.category).CategoryID;
+    if (vwInfo != null)
+    {
+        CategoryID = vwInfo.CategoryID;
+    }
+}
+<script type="text/javascript">
+    var CategoryID = '@(category365.CategoryID)';
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Search1">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/encyclopedias-01.jpg" />
+        </div>
+        @RenderPage("~/Views/Default/searchBox.cshtml")
+        <!----------------查询内容--------------->
+        <div class="searchContent" style="height:100%;margin-top:20px;">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <p class="title">查询结果：</p>
+                </div>
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <ul class="list-group searchList">
+                        <!--ko foreach: search-->
+                        <li class="list-group-item"><a data-bind="attr: { href: PageUrlExtend },text:Title "  target="_blank"></a></li>
+                        <!--/ko-->
+                    </ul>
+                </div>
+            </div>
+            <input type="hidden" id="start_page">
+            <input type="hidden" id="current_page" />
+            <input type="hidden" id="show_per_page" />
+            <input type="hidden" id="end_page">
+            <!------------分页----------------->
+            <div id="pageGro" class="col-lg-12 col-xs-12 cb">
+                <div class="pagestart" data-bind="click:first">首页</div>
+                <div class="pageUp" data-bind="click:previous">上一页</div>
+                <div class="pageList">
+                    <ul data-bind="foreach:pageNumbers">
+                        <li data-bind="text:number,click:$root.gotoPage,attr:{class:visible}"></li>
+                    </ul>
+                </div>
+                <div class="pageDown" data-bind="click:next">下一页</div>
+                <div class="pageend" data-bind="click:last">尾页</div>
+            </div>
+            <!------------end分页----------------->
+        </div>
+        
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    <!--[if IE]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        var searchViewModel = new SearchViewModel();
+        ko.applyBindings(searchViewModel, document.getElementById('Search1'));
+        jQuery("#CategoryID").val('0f4b33a2-be09-4ed5-80d3-c0fc58713680');
+        searchViewModel.refresh();
+        $('#btnsearchBox').click(function () {
+            searchViewModel.refresh();
+        })
+    </script>
+</body> 
+</html>

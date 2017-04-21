@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "MoreVideo";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>更多视频</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Search3">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/index.jpg" />
+        </div>       
+        <div class="row itmeTitle">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                <p>20170118《每日亲近神》以弗所书</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                <p class="P" style=""></p>
+            </div>
+        </div>
+        <div class="videobox row">
+            <div class="video-img col-lg-9 col-sm-9 col-md-8 col-xs-8">
+                <!--从二级页面跳转详情页面的视频--->
+                <embed id="js_videoCon_0" class="js_videoCon" src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                <!---详情页面视频切换，与下面视频列表地址对应，序号对应--->
+                <embed id="js_videoCon_1" class="js_videoCon" style="display:none;"  src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                <embed id="js_videoCon_2" class="js_videoCon" style="display:none;" src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                <embed id="js_videoCon_3" class="js_videoCon" style="display:none;" src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+            </div>
+            <div class="video-list col-lg-3 col-sm-3 col-md-4 col-xs-4">
+                <div class="text">
+                    <p>主讲：寇绍恩</p>
+                    <article>
+                        【经文：诗121：1-2】我要向山举目；我的帮助从何而来？我的帮助从造天地的耶和华而来。
+                    </article>
+                </div>
+                <ul style="padding:0px" class="oul">
+                    <li class="now row" id="" video="1" vid="1">
+                        <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                            <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="false" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                        </div>
+                        <div class="ins col-lg-7 col-sm-7 col-md-7 col-xs-7">
+                            <p class="title">（重播）20161212恩典</p>
+                            <p>635-隨時的幫助：神是避難</p>
+                            <span>自頻道：天聲傳播協會</span>
+                        </div>
+                    </li>
+                    <li id="" video="2" vid="2">
+                        <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                            <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="false" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                        </div>
+                        <div class="ins col-lg-7 col-sm-7 col-md-7 col-xs-7">
+                            <p class="title">（重播）20161213恩典</p>
+                            <p>635-隨時的幫助：神是避難</p>
+                            <span>自頻道：天聲傳播協會</span>
+                        </div>
+                    </li>
+                    <li id="" video="3" vid="3">
+                        <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5">
+                            <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="false" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+                        </div>
+                        <div class="ins col-lg-7 col-sm-7 col-md-7 col-xs-7">
+                            <p class="title">（重播）20161214恩典</p>
+                            <p>635-隨時的幫助：神是避難</p>
+                            <span>自頻道：天聲傳播協會</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="article">
+            <p>恩典365,三百六十五天，我们天天一起活在神的爱和恩典里。</p>
+            <article>
+                《圣经》对于各项正当的事务，无不提供必需的准备。其中所论关于殷勤、诚实、俭约、节制与廉洁等原理，乃为真成功的秘诀。这些原理记载在箴言书上，构成了一个实际智慧的宝库。一般商人、技师，以及任何部门事业的领袖，除了从这位智慧者所说的箴言之外，还能从何处为自己和自己所雇拥的职工找到更好的格言呢?
+                "你看见办事殷勤的人么?他必站在君王面前，必不站在下贱人面前。"(箴22:29)
+                "诸般勤劳都有益处，嘴上多言乃致穷乏。"(箴14:23)
+                "懒惰人羡慕，却无所得。""好酒贪食的，必致贫穷，好睡觉的，必穿破烂衣服。"(箴13:4;23:21)
+                "往来传舌的泄漏密事，大张嘴的，不可与他结交。"(箴20:19)
+                "寡少言语的有知识;"但"愚妄人都爱争闹。"(箴17:27;20:3)
+                "不可行恶人的路"，"人若在火炭上走，脚岂能不烫呢?"(箴4:14;6:28)
+                "与智慧人同行的，必得智慧。"(箴13:20)
+                "滥交朋友的，自取败坏，但有一朋友，比弟兄更亲密。"(箴18:24)
+                我们与人相互间的全部义务，都包括在基督的这句话中："所以，无论何事，你们愿意人怎样待你们，你们也要怎样待人。"(太7:12)
+            </article>
+        </div>
+       
+        @RenderPage("~/Views/Home/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+        @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

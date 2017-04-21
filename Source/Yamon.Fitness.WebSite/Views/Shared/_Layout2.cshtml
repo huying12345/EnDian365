@@ -1,0 +1,73 @@
+﻿@using System.Collections
+@using Yamon.Module.SiteManage.DAL
+@using Yamon.Module.SiteManage.Entity
+@using Yamon.Module.UCenter.DAL
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewBag.Title - @(ViewBag.Config.SiteName)</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="/Resources/JsLib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Resources/JsLib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Static/AdminLTE2/css/AdminLTE.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/Resources/JsLib/jquery-easyui/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="/Resources/JsLib/jquery-easyui/themes/icon.css" />
+    <link href="/Static/v1/css/common.css" rel="stylesheet" />
+    <link href="/Static/AdminLTE2/css/skins/_all-skins.min.css" rel="stylesheet" />
+    <link href="/Static/Home/css/Public.css" rel="stylesheet" />
+    <script src="/Resources/JsLib/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("styles", required: false)
+    <script type="text/javascript">
+        var config = {};
+        config.ResourcesPath = "@Url.Content("/Resources/")";
+        config.ViewPath = "@Url.Content("/Static/")";
+        config.BaseURI = "@Url.Content("/")";
+        config.RootURI = "@RequestHelper.GetRootURI()";
+
+        var myPage = {};
+        myPage.action = '@(ViewContext.RouteData.Values["action"].ToString())';
+        myPage.controller = '@(ViewContext.RouteData.Values["controller"].ToString())';
+        myPage.id = '@(ViewContext.RouteData.Values["id"])';
+        myPage.frame = '@(Request["Frame"])';
+
+    </script>
+</head>
+<body class="hold-transition @(CookieHelper.GetCookie("SkinName")) layout-top-nav">
+    <div class="wrapper">
+        
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Main content -->
+            <section class="content">
+                @RenderBody()
+            </section>
+        </div>
+            <!-- /.content-wrapper -->
+            
+
+        </div>
+    <script src="/Resources/JsLib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Resources/JsLib/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="/Resources/JsLib/fastclick/fastclick.min.js"></script>
+    <script src="/Static/AdminLTE2/js/app.js"></script>
+    <script src="/Static/AdminLTE2/js/demo.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery-easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <!--弹出窗体-->
+    <div id="dialogDiv" style="overflow:hidden">
+    </div>
+    <script src="/Static/v1/js/common.js"></script>
+    @RenderSection("scripts", required: false)
+    @RenderSection("scripts2", required: false)
+    @RenderSection("scripts_toolbar", required: false)
+</body>
+</html>

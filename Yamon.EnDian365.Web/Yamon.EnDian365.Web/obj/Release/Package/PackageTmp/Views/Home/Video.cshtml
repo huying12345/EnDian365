@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Video";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>视频详情页</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Search2">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/index.jpg" />
+        </div>
+       
+        <div class="row itmeTitle">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                <p>20170118《每日亲近神》以弗所书</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                <p class="P" style=""></p>
+            </div>
+        </div>
+        <div class="videobox row">
+            <div class="video-img col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <!--从二级页面跳转详情页面的视频--->
+                <embed id="js_videoCon_0" class="js_videoCon" src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=u0356e9jger&auto=0" allowfullscreen="true" quality="high" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"></embed>
+            </div>
+        </div>
+        <div class="article">
+            <p>恩典365,三百六十五天，我们天天一起活在神的爱和恩典里。</p>
+            <article>
+                《圣经》对于各项正当的事务，无不提供必需的准备。其中所论关于殷勤、诚实、俭约、节制与廉洁等原理，乃为真成功的秘诀。这些原理记载在箴言书上，构成了一个实际智慧的宝库。一般商人、技师，以及任何部门事业的领袖，除了从这位智慧者所说的箴言之外，还能从何处为自己和自己所雇拥的职工找到更好的格言呢?
+                "你看见办事殷勤的人么?他必站在君王面前，必不站在下贱人面前。"(箴22:29)
+                "诸般勤劳都有益处，嘴上多言乃致穷乏。"(箴14:23)
+                "懒惰人羡慕，却无所得。""好酒贪食的，必致贫穷，好睡觉的，必穿破烂衣服。"(箴13:4;23:21)
+                "往来传舌的泄漏密事，大张嘴的，不可与他结交。"(箴20:19)
+                "寡少言语的有知识;"但"愚妄人都爱争闹。"(箴17:27;20:3)
+                "不可行恶人的路"，"人若在火炭上走，脚岂能不烫呢?"(箴4:14;6:28)
+                "与智慧人同行的，必得智慧。"(箴13:20)
+                "滥交朋友的，自取败坏，但有一朋友，比弟兄更亲密。"(箴18:24)
+                我们与人相互间的全部义务，都包括在基督的这句话中："所以，无论何事，你们愿意人怎样待你们，你们也要怎样待人。"(太7:12)
+            </article>
+        </div>
+        <div class="row" style="margin:20px 10px;">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 jingwen">
+                <p><span>【经文：诗121:7】</span>耶和华要保护你，免受一切的灾害；他要保护你的性命。</p>
+            </div>
+            <div class ="col-lg-12 col-sm-12 col-md-12 col-xs-12 copyRight">
+                <p>影像及音乐版权均属天声传播协会所有</p>
+                <p><a href="javascript:;" onclick="window.open('http://www.hvfhoc.com/')">天声传播协会：http://www.hvfhoc.com/</a></p>
+                <p><a href="javascript:;" onclick="window.open('http://www.tpehoc.org.tw/')">台北基督之家：http://www.tpehoc.org.tw/</a></p>
+            </div>
+        </div>
+        @RenderPage("~/Views/Home/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+        @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

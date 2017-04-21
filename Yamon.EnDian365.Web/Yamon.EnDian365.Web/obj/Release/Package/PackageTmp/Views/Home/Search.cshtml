@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询信息</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+    <!--[if IE]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container" id="Search1">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/encyclopedias-01.jpg" />
+        </div>
+        @RenderPage("~/Views/Home/searchBox.cshtml")
+        <!----------------查询内容（读活）--------------->
+        <div class="searchContent" style="min-height:500px;margin-top:20px">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <p class="title">查询结果：</p>
+                </div>
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <ul class="list-group searchList">
+                        <li class="list-group-item">
+                            <a href="">搜索内容</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!----------------end--------------->
+        @RenderPage("~/Views/Home/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+        @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        //音频
+        $(function () {
+            $('audio').audioPlayer();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿@using System.Data
+@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Contact";
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>留言给我们</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Contact">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/dedication-01.jpg" />
+        </div>
+        <div id="contactAndJoin">
+            <hr />
+            <p>谢谢你浏览EnDian365网站！我们深切盼望这个网站可以成为你信仰路上的祝福!</p>
+            <p>若你有任何疑问或回馈，欢迎填妥一下留言表与我们联络。我们希望听见你的声音！</p>
+            <p>
+                Thank you for visiting our EnDian365 Website!
+                It is our greatest hope that this website can be a blessing to your spiritual walk with Christ.
+                If you have any enquiries or feedback, feel free to email us at <a href="javascript:;">information@hvsha.com</a>  or using the form below.
+                We would love to hear from you!
+            </p>
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom:20px;">
+                   <p class="emaileTo">留言给我们：</p>
+                </div>
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <form id="ContactForm" name="ContactForm" class="form-horizontal" role="form" >
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-11">
+                                <input type="text" class="form-control" id="GuestName" name="GuestName" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-11">
+                                <input type="text" class="form-control" id="GuestEmail" name="GuestEmail" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-8 col-sm-8 col-md-8 col-xs-11">
+                                <textarea class="form-control" rows="3" placeholder="内容" name="GuestContent" id="GuestContent"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-5 col-sm-5 col-md-5 col-xs-4">
+                            </div>
+                            <div class="col-sm-offset-3 col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                                <button type="button" class="btn btn-default" id="Contactsubmit">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                @*<div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom:20px;">
+                        <p class="emaileTo">奉献支持：</p>
+                    </div>
+                    @{
+                        List<vwInfoCategory> fxzcList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryfxzc.CategoryID }, "CreateTime desc", 5);
+                    }
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        @Html.Raw(fxzcList[0].Content == "" ? "感谢您的支持！" : fxzcList[0].Content)
+                    </div>
+                </div>*@
+            </div>
+        </div>
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+   
+    <script src="~/assets/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery.form.js"></script>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>
+
+
+

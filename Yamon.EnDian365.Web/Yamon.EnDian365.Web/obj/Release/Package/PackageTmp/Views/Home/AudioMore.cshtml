@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "AudioMore";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>音频详情页</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+    @*<link href="http://s1.xmcdn.com/css/web.css?v=20170117161926" rel="stylesheet" type="text/css" />*@
+    <!--[if IE]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container" id="Search">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/encyclopedias-01.jpg" />
+        </div>
+        <div class="row itmeTitle">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                <p>20170118《每日亲近神》以弗所书</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList"></div>
+        </div>
+        <div class="row audio">
+            <div class="col-lg-12 col-xs-12">
+                <audio preload="auto" controls>
+                    <source src="http://www.jq22.com/demo/bofq/audio.mp3" />
+                </audio>
+            </div>
+        </div>
+        <div class="scriptureList">
+            <img src="~/assets/img/Encyclopedias-01.png" />
+            <ul class="list-group">
+                <li class="list-group-item" style="font-size:25px;font-weight:700;color:#588ed9">【经文】</li>
+                <li id="http://www.jq22.com/demo/bofq/audio.mp3" class="list-group-item audio_list">5:15&nbsp;你们要谨慎行事，不要像愚昧人，当像智慧人。</li>
+                <li id="http://www.jq22.com/demo/bofq/audio.mp3" class="list-group-item audio_list">5:16&nbsp;要爱惜光阴，因为现今的时代邪恶。</li>
+                <li id="http://www.jq22.com/demo/bofq/audio.mp3" class="list-group-item audio_list">5:17&nbsp;不要作糊涂人，要明白主的旨意如何。</li>
+            </ul>
+        </div>
+        <div class="article">
+            <img src="~/assets/img/Encyclopedias-02.png" />
+            <article>
+                《圣经》对于各项正当的事务，无不提供必需的准备。其中所论关于殷勤、诚实、俭约、节制与廉洁等原理，乃为真成功的秘诀。这些原理记载在箴言书上，构成了一个实际智慧的宝库。一般商人、技师，以及任何部门事业的领袖，除了从这位智慧者所说的箴言之外，还能从何处为自己和自己所雇拥的职工找到更好的格言呢?
+                "你看见办事殷勤的人么?他必站在君王面前，必不站在下贱人面前。"(箴22:29)
+                "诸般勤劳都有益处，嘴上多言乃致穷乏。"(箴14:23)
+                "懒惰人羡慕，却无所得。""好酒贪食的，必致贫穷，好睡觉的，必穿破烂衣服。"(箴13:4;23:21)
+                "往来传舌的泄漏密事，大张嘴的，不可与他结交。"(箴20:19)
+                "寡少言语的有知识;"但"愚妄人都爱争闹。"(箴17:27;20:3)
+                "不可行恶人的路"，"人若在火炭上走，脚岂能不烫呢?"(箴4:14;6:28)
+                "与智慧人同行的，必得智慧。"(箴13:20)
+                "滥交朋友的，自取败坏，但有一朋友，比弟兄更亲密。"(箴18:24)
+                我们与人相互间的全部义务，都包括在基督的这句话中："所以，无论何事，你们愿意人怎样待你们，你们也要怎样待人。"(太7:12)
+            </article>
+        </div>
+        @RenderPage("~/Views/Home/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+        @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        //音频
+        $(function () {
+            $('audio').audioPlayer();
+        })
+    </script>
+</body>
+</html>

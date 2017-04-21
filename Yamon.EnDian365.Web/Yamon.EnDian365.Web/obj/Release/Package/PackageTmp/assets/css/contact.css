@@ -1,0 +1,85 @@
+#Contact #contactAndJoin, #fengxian #contactAndJoin {
+  margin-top: 10px;
+}
+
+#Contact #contactAndJoin p, #fengxian #contactAndJoin p {
+  font-size: 16px;
+}
+
+#Contact #contactAndJoin .emaileTo, #fengxian #contactAndJoin .emaileTo {
+  border-bottom: 1px dashed #999;
+  padding-bottom: 10px;
+}
+
+#Contact #zhiChiAndFengXian .emaileTo, #fengxian #zhiChiAndFengXian .emaileTo {
+  border-bottom: 1px dashed #999;
+  padding-bottom: 10px;
+}
+
+#Contact #zhiChiAndFengXian ul, #fengxian #zhiChiAndFengXian ul {
+  width: 100%;
+}
+
+#Contact #zhiChiAndFengXian ul li, #fengxian #zhiChiAndFengXian ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#Contact #zhiChiAndFengXian ul li a, #fengxian #zhiChiAndFengXian ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#Contact #zhiChiAndFengXian ul .active, #fengxian #zhiChiAndFengXian ul .active {
+  background: #a52929;
+}
+
+#Contact #zhiChiAndFengXian ul .active a, #fengxian #zhiChiAndFengXian ul .active a {
+  color: #fff;
+}
+
+#Contact #zhiChiAndFengXian table, #fengxian #zhiChiAndFengXian table {
+  width: 100%;
+  margin-left: 30px;
+}
+
+#Contact #zhiChiAndFengXian table tr, #fengxian #zhiChiAndFengXian table tr {
+  width: 100%;
+}
+
+#Contact #zhiChiAndFengXian table tr th, #Contact #zhiChiAndFengXian table tr td, #fengxian #zhiChiAndFengXian table tr th, #fengxian #zhiChiAndFengXian table tr td {
+  text-align: center;
+  height: 35px;
+}
+
+#Contact #zhiChiAndFengXian #payMoney2 tr td, #fengxian #zhiChiAndFengXian #payMoney2 tr td {
+  text-align: left;
+}
+
+#Contact #zhiChiAndFengXian input[type=number], #fengxian #zhiChiAndFengXian input[type=number] {
+  width: 100px;
+}
+
+#Contact input[type=button], #fengxian input[type=button] {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+#Contact input[type=button]:hover, #fengxian input[type=button]:hover {
+  background: #ddd;
+}
+
+#Contact .joinUs, #fengxian .joinUs {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #Contact #contactAndJoin p, #fengxian #contactAndJoin p {
+    font-size: 14px;
+  }
+}

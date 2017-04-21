@@ -1,0 +1,89 @@
+﻿@{ ViewBag.Title = "manager"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>管理员</title>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <script src="/assets/manage/js/checkfrom.js"></script>
+</head>
+
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>
+                <a href="/Views/Manage/mains">首页</a>
+            </li>
+            <li>管理员信息</li>
+            <li>信息管理</li>
+        </ul>
+    </div>
+
+    <div class="rightinfo">
+        <form name="formlist" method="post" action="manager.php?action=del">
+
+            <div class="tools">
+
+                <ul class="toolbar">
+                    <a href="?"><img src="/assets/manage/img/sx.jpg" /></a>
+                    <li>&nbsp;<input type="checkbox" name="all" onclick="CheckAll(this);" /> 全选</li>
+                    <a href="manager_add.php"><img src="/assets/manage/img/add.jpg" /></a>
+                    <input type="image" src="/assets/manage/img/del.jpg" onclick="return checkData();" name="ok" value="删 除" />
+                </ul>
+
+            </div>
+
+            <table class="tablelist">
+                <thead>
+                    <tr>
+                        <th width="5%">选择</th>
+                        <th width="8%">编号</th>
+                        <th width="29%">维护人员帐号</th>
+                        <th width="14%">维护人员姓名</th>
+                        <th width="11%">维护人员类型</th>
+                        <th width="6%">是否审核</th>
+                        <th width="16%">发布时间</th>
+                        <th width="11%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="1" /></td>
+                        <td>1</td>
+                        <td>超级管理员</td>
+                        <td>admin</td>
+                        <td>超级管理员</td>
+                        <td>
+                            <a href='?action=confirm&id=1'>
+                                <font color='red'>已审核</font>
+                            </a>
+                        </td>
+                        <td>2016-12-14 15:42:52</td>
+                        <td>
+                            <a href="manager_edit.php?id=1" class="tablelink">修改</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="fy">
+                <a href="javascript:void()">首页</a>
+                <a href="javascript:void()">上一页</a>
+                <a href="javascript:void()" id="active1">1</a>
+                <a href="javascript:void()">下一页</a>
+                <a href="javascript:void()">末页</a>
+            </div>
+        </form>
+
+    </div>
+
+    <script type="text/javascript">
+        $('.tablelist tbody tr:odd').addClass('odd');
+    </script>
+
+</body>
+
+</html>

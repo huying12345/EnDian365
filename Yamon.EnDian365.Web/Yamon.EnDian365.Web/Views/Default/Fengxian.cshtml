@@ -1,0 +1,46 @@
+﻿@using System.Data
+@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Fengxian";
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categoryfxzc = categoryDal.GetInfoByID(categoryDal.GetIdByKey("fxzc"));
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>支持与奉献</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="fengxian">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/dedication-01.jpg" />
+        </div>
+        <div id="contactAndJoin">
+            <div class="row">
+                @{
+                    List<vwInfoCategory> fxzcList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryfxzc.CategoryID }, "BackInt desc", 5);
+                }
+                @if (fxzcList.Count>0)
+                {
+                    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                        @Html.Raw(fxzcList[0].Content == "" ? "感谢您的支持！" : fxzcList[0].Content)
+                    </div>
+                }
+               
+            </div>
+        </div>
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    <script src="~/assets/libs/jquery.min.js"></script>
+    <script type="text/javascript" src="/Resources/JsLib/jquery.form.js"></script>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>
+
+
+

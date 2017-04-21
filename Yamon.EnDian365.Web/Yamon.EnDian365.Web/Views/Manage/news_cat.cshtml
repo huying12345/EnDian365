@@ -1,0 +1,602 @@
+﻿@{
+    ViewBag.Title = "news_cat";
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>s栏目管理</title>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <script src="/assets/manage/js/checkfrom.js"></script>
+</head>
+
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="/Views/Manage/mains">首页</a></li>
+            <li>栏目管理</li>
+        </ul>
+    </div>
+
+    <div class="rightinfo">
+        <div class="tools">
+            <ul class="toolbar2">
+                <li><a href="#" class="current">管理栏目</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <table style="width:100%;" cellpadding="0" cellspacing="0" class="cast_list">
+                <tr>
+                    <th width="11%">栏目ID</th>
+                    <th width="31%">栏目名称</th>
+                    <th width="14%">栏目类型</th>
+                    <th width="12%">数据量</th>
+                    <th width="32%">管理操作</th>
+                </tr>
+
+                <tr>
+                    <td width="11%">64</td>
+                    <td width="31%" align="left" class="tl">【典型案例】</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">15</td>
+                    <td width="32%"> </td>
+                </tr>
+                <tr>
+                    <td width="11%">65</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├综合布线系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=65">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=65&id=65" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">69</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└地铁自动化系统集成方案</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=69">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=65&tty=69&id=69" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">71</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└智能小区解决方案</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=71">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=65&tty=71&id=71" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">72</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└校园一卡通解决方案</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=72">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=65&tty=72&id=72" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">73</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└医疗行业智能化解决方案</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=73">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=65&tty=73&id=73" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">66</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├智能化停车场系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=66">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=66&id=66" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">70</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└车位引导系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=70">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=66&tty=70&id=70" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">74</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└区位引导系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=74">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=66&tty=74&id=74" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">75</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└综合车辆引导系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=75">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=66&tty=75&id=75" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">76</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└停车场综合智能化</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=76">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=66&tty=76&id=76" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">67</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├通信网络系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=67">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=67&id=67" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">77</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└网络工程</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=77">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=67&tty=77&id=77" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">78</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└数据中心</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=78">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=67&tty=78&id=78" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">79</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└容灾</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=79">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=67&tty=79&id=79" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">80</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└安全服务</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">4</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=80">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=67&tty=80&id=80" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">68</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├安全防范系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">3</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=68">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=68&id=68" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">81</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└数字视频安防监控</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">3</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=81">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=68&tty=81&id=81" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">82</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└模拟视频安防监控</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">3</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=82">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=68&tty=82&id=82" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">83</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└周界防范、电子巡更系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">3</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=83">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=64&ty=68&tty=83&id=83" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">1</td>
+                    <td width="31%" align="left" class="tl">【关于珺意】</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">5</td>
+                    <td width="32%"> </td>
+                </tr>
+                <tr>
+                    <td width="11%">7</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├公司介绍</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">1</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=7">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=1&ty=7&id=7" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">10</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├资质荣誉</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">1</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=10">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=1&ty=10&id=10" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">11</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├人才招聘</td>
+                    <td width="14%">招聘模块</td>
+                    <td width="12%">1</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=11">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=1&ty=11&id=11" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">12</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├联系我们</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">1</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=12">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=1&ty=12&id=12" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">2</td>
+                    <td width="31%" align="left" class="tl">【自主产品】</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">0</td>
+                    <td width="32%"> </td>
+                </tr>
+
+                <tr>
+                    <td width="11%">3</td>
+                    <td width="31%" align="left" class="tl">【解决方案】</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">29</td>
+                    <td width="32%"> </td>
+                </tr>
+                <tr>
+                    <td width="11%">59</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├智能化系统</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=59">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&id=59" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">13</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└考勤系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=13">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=13&id=13" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">14</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└门禁系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=14">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=14&id=14" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">15</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└就餐系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=15">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=15&id=15" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">20</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└水控系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=20">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=20&id=20" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">21</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└电控系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=21">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=21&id=21" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">23</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└巡更系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=23">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=23&id=23" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">26</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└访客系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=26">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=26&id=26" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">29</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└班车系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=29">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=29&id=29" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">32</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└梯控系统</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=32">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=59&tty=32&id=32" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">60</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├行业软件</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=60">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&id=60" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">16</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└出入管理</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=16">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=16&id=16" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">19</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└场馆消费</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=19">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=19&id=19" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">22</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└会议签到</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=22">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=22&id=22" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">24</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└自助洗衣</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=24">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=24&id=24" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">25</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└宿舍管理</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=25">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=25&id=25" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">27</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└停车管理</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=27">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=27&id=27" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">28</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└人力资源</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=28">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=28&id=28" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">30</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└自动售货</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=30">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=30&id=30" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">33</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└证卡制作</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">9</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=33">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=60&tty=33&id=33" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">63</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├解决方案</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=63">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&id=63" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">34</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└视频监控</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=34">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=34&id=34" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">35</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└防盗报警</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=35">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=35&id=35" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">36</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└电子围栏</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=36">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=36&id=36" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">37</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└综合布线</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=37">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=37&id=37" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">38</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└楼宇自控</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=38">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=38&id=38" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">40</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└无线网络</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=40">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=40&id=40" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">41</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└集中抄表</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=41">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=41&id=41" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">42</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└照明系统</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=42">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=42&id=42" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">43</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└机房工程</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=43">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=43&id=43" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">44</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└智能家居</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=44">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=44&id=44" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">45</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└公共广播</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=45">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=45&id=45" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">46</td>
+                    <td width="31%" align="left" class="tl">&nbsp;&nbsp;└└视频会议</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">11</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=46">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=3&ty=63&tty=46&id=46" onclick="return ConfirmDelSmall1();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">4</td>
+                    <td width="31%" align="left" class="tl">【成功案例】</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">12</td>
+                    <td width="32%"> </td>
+                </tr>
+                <tr>
+                    <td width="11%">47</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├政府机关</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">2</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=47">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=4&ty=47&id=47" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">48</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├医疗卫生</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">1</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=48">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=4&ty=48&id=48" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">49</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├外资企业</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">2</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=49">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=4&ty=49&id=49" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">50</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├国有企业</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">5</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=50">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=4&ty=50&id=50" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">51</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├教育行业</td>
+                    <td width="14%">图片列表</td>
+                    <td width="12%">2</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=51">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=4&ty=51&id=51" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+
+                <tr>
+                    <td width="11%">5</td>
+                    <td width="31%" align="left" class="tl">【新闻中心】</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">5</td>
+                    <td width="32%"> </td>
+                </tr>
+                <tr>
+                    <td width="11%">52</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├行业动态</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">3</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=52">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=5&ty=52&id=52" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">53</td>
+                    <td width="31%" align="left" class="tl">&nbsp;├公司新闻</td>
+                    <td width="14%">新闻列表</td>
+                    <td width="12%">2</td>
+                    <td width="32%"><a href="news_cat_edit.php?id=53">修改</a>&nbsp;|&nbsp;<a href="?action=del&pid=5&ty=53&id=53" onclick="return ConfirmDelSmall();">删除</a></td>
+                </tr>
+
+                <tr>
+                    <td width="11%">57</td>
+                    <td width="31%" align="left" class="tl">【智慧珺意】</td>
+                    <td width="14%">单一内容</td>
+                    <td width="12%">0</td>
+                    <td width="32%"> </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>
+
+

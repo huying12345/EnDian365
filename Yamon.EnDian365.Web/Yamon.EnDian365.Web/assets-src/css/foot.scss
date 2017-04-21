@@ -1,0 +1,75 @@
+﻿.footer{
+    background:#262625;
+    color:#fff;
+    margin-top:30px;
+    position:relative;
+    .row{
+        padding-left:30px;
+        padding-top:30px;
+        .title{
+            margin-bottom:20px;
+        }
+        p{
+            font-size:14px;
+        }
+        
+        .FriendStaion p a{
+            color:#fff;
+        }
+        .friendTitleImg{
+            img{
+                width:100%;
+            }
+            p{
+                font-size:14px;
+                margin-top:10px;
+            }
+        }
+    }
+    .backUp{
+        position:fixed;
+        bottom:20px;
+        left:70%;
+        width:40px;
+        height:40px;
+        margin-left:100px;
+        background:rgba(0,0,0,0.5);
+        text-align:center;
+        border-radius:50%;
+        padding: 10px 0px;
+        display:none;
+        a{
+            font-size:12px;
+            padding:10px 0px;
+            color:#fff;
+            text-decoration:none;
+        }
+    }
+    @media screen and (min-width: 1201px) { 
+        .friendTitle,
+        .FriendStaion > p > a{
+            font-size:14px;
+        }
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+        
+    } 
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+    @media screen and (max-width: 900px) { 
+         .backUp{
+             left:70%;
+         }
+
+    } 
+    /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+    @media screen and (max-width: 500px) { 
+         .backUp{
+             left:50%;
+         }
+    } 
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+}

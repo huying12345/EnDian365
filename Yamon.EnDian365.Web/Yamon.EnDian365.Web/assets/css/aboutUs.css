@@ -1,0 +1,25 @@
+#aboutUs .content {
+  min-height: 500px;
+  margin-top: 20px;
+}
+
+#aboutUs .content p {
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  line-height: 25px;
+  width: 100%;
+  text-indent: 32px;
+}
+
+#aboutUs .content img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media screen and (max-width: 500px) {
+  #aboutUs .content p {
+    font-size: 15px;
+    text-indent: 30px;
+  }
+}

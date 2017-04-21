@@ -1,0 +1,77 @@
+@charset "UTF-8";
+.footer {
+  background: #262625;
+  color: #fff;
+  margin-top: 30px;
+  position: relative;
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+.footer .row {
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.footer .row .title {
+  margin-bottom: 20px;
+}
+
+.footer .row p {
+  font-size: 14px;
+}
+
+.footer .row .FriendStaion p a {
+  color: #fff;
+}
+
+.footer .row .friendTitleImg img {
+  width: 100%;
+}
+
+.footer .row .friendTitleImg p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer .backUp {
+  position: fixed;
+  bottom: 20px;
+  left: 70%;
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 0px;
+  display: none;
+}
+
+.footer .backUp a {
+  font-size: 12px;
+  padding: 10px 0px;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1201px) {
+  .footer .friendTitle,
+  .footer .FriendStaion > p > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer .backUp {
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer .backUp {
+    left: 50%;
+  }
+}

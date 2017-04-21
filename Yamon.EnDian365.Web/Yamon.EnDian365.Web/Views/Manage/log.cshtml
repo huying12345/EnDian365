@@ -1,0 +1,197 @@
+﻿@{
+    ViewBag.Title = "log";
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>操作日志</title>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <script src="/assets/manage/js/checkfrom.js"></script>
+</head>
+
+<body>
+
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li><a href="/Views/Manage/mains">首页</a></li>
+            <li>操作日志</li>
+        </ul>
+    </div>
+    <div class="rightinfo">
+        <form name="formlist" method="post" action="news.php?action=del&pid=&ty=&tty=">
+            <div class="tools">
+                <ul class="toolbar">
+                    <li>&nbsp;<a href="?action=alldel" onclick="return confirm('确定清空所有操作日志吗？\n\n清空后不能恢复！');" class="Botton"> 清空日志</a></li>
+                    <a href="news.php?pid=&ty=&tty=&"><img src="/assets/manage/img/sx.jpg" /></a>
+                    <li>&nbsp;<input type="checkbox" name="all" onclick="CheckAll(this);"> 全选</li>
+                    <input type="image" src="/assets/manage/img/del.jpg" onclick="return checkData();" name="ok" value="删 除" />
+                </ul>
+
+            </div>
+
+
+            <table class="tablelist">
+                <thead>
+                    <tr>
+                        <th width="6%">选择</th>
+                        <th width="7%">编号</th>
+                        <th width="15%">用户名</th>
+                        <th width="47%">操作内容</th>
+                        <th width="12%">IP</th>
+                        <th width="13%">操作时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="370"></td>
+                        <td>370</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 12:31:16</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="369"></td>
+                        <td>369</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 12:18:52</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="368"></td>
+                        <td>368</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 11:45:22</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="367"></td>
+                        <td>367</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 11:34:47</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="366"></td>
+                        <td>366</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 10:28:54</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="365"></td>
+                        <td>365</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 10:25:53</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="364"></td>
+                        <td>364</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 10:25:11</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="363"></td>
+                        <td>363</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2017-02-10 10:24:57</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="362"></td>
+                        <td>362</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-28 15:43:56</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="361"></td>
+                        <td>361</td>
+                        <td>admin</td>
+                        <td>编辑广告信息</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-23 13:29:36</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="360"></td>
+                        <td>360</td>
+                        <td>admin</td>
+                        <td>编辑广告信息</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-23 13:29:22</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="359"></td>
+                        <td>359</td>
+                        <td>admin</td>
+                        <td>编辑广告信息</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-23 13:29:09</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="358"></td>
+                        <td>358</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-23 13:28:51</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="357"></td>
+                        <td>357</td>
+                        <td>admin</td>
+                        <td>编辑单页面内容</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-22 13:02:24</td>
+                    </tr>
+                    <tr>
+                        <td><input name="checkid[]" type="checkbox" id="checkid[]" value="356"></td>
+                        <td>356</td>
+                        <td>admin</td>
+                        <td>登录管理后台</td>
+                        <td>180.166.151.214</td>
+                        <td>2016-12-22 13:01:33</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="fy">
+                <a href="javascript:void()">首页</a>
+                <a href="javascript:void()">上一页</a>
+                <a href="javascript:void()" id="active1">1</a>
+                <a href="?&page=2">2</a>
+                <a href="?&page=3">3</a>
+                <a href="?&page=4">4</a>
+                <a href="?&page=5">5</a>
+                <a href="?&page=6">6</a>
+                <a href="?&page=7">7</a>
+                <a href="?&page=8">8</a>
+                <a href='?&page=2'>下一页</a>
+                <a href='?&page=25'>末页</a>
+            </div>
+        </form>
+
+
+    </div>
+
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+    </script>
+
+</body>
+
+</html>
+

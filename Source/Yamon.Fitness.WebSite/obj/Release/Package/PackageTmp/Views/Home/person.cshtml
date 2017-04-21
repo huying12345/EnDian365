@@ -1,0 +1,49 @@
+﻿@{ ViewBag.Title = "person"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>密码修改</title>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <script src="/Static/manage/js/checkfrom.js"></script>
+</head>
+
+<body>
+    <div class="place">
+        <span>位置：</span>
+        <ul class="placeul">
+            <li>
+                <a href="mains.php">首页</a>
+            </li>
+            <li>密码修改</li>
+        </ul>
+    </div>
+
+    <div class="formbody">
+        <div id="usual1" class="usual">
+            <div class="itab">
+                <ul>
+                    <li>
+                        <a href="#tab1" class="selected">密码修改</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab1" class="tabson">
+                <div class="formtext">Hi，<b>admin</b>，欢迎您使用信息发布功能！</div>
+                <ul class="forminfo">
+                    <form name="form" method="post" action="" onsubmit="return checkperson(this);">
+                        <ul>
+                            <li><label>原密码<b>*</b></label><input name="pwd_old" type="password" class="dfinput" value="" /></li>
+                            <li><label>新密码<b>*</b></label><input name="pwd_new" type="password" class="dfinput" value="" /></li>
+                            <li><label>确认密码<b>*</b></label><input name="pwd_new1" type="password" class="dfinput" value="" /></li>
+                            <li><label>&nbsp;</label><input name="update" type="submit" class="btn" value="马上修改" /></li>
+                        </ul>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

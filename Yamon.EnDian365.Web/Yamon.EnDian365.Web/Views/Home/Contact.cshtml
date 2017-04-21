@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>联系与奉献</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Contact">
+        @RenderPage("~/Views/include/heads.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/dedication-01.jpg" />
+        </div>
+        @* 联系&加入我们 *@
+        <div id="contactAndJoin">
+            <hr />
+            <p>谢谢你浏览EnDian365网站！我们深切盼望这个网站可以成为你信仰路上的祝福!</p>
+            <p>若你有任何疑问或回馈，欢迎填妥一下留言表与我们联络。我们希望听见你的声音！</p>
+            <p>
+                Thank you for visiting our EnDian365 Website!
+                It is our greatest hope that this website can be a blessing to your spiritual walk with Christ.
+                If you have any enquiries or feedback, feel free to email us at <a href="javascript:;">information@hvsha.com</a>  or using the form below.
+                We would love to hear from you!
+            </p>
+            <hr />
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom:20px;">
+                   <p class="emaileTo">留言给我们：</p>
+                </div>
+                <!-------------------表单提交--------------------->
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                <input type="text" class="form-control" id="name" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                <input type="text" class="form-control" id="email" placeholder="邮箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-2 control-label"></label>
+                            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                                <textarea class="form-control" rows="3" placeholder="内容" id="content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-4 col-sm-4 col-md-4 col-xs-4">
+                            </div>
+                            <div class="col-sm-offset-3 col-lg-2 col-sm-2 col-md-2 col-xs-2">
+                                <button type="button" class="btn btn-default" id="submit">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @* 支持与奉献 *@
+        @*<div id="zhiChiAndFengXian">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom:20px;">
+                    <p class="emaileTo">奉献支持：</p>
+                </div>
+                <ul id="payMoney">
+                    <li class="active"><a href="javascript:;">单次线上捐款</a></li>
+                    <li><a href="javascript:;">银行卡定期定额</a></li>
+                </ul>
+                <div id="payMoney1" class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                    <table>
+                        <tr>
+                            <th>勾选</th>  
+                            <th>捐款项目</th> 
+                            <th colspan="4">捐款金额</th> 
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkbox" value="" /></td>
+                            <td>单笔自由奉献</td>
+                            <td>最低金额:100元 <input type="number" name="num" value=" " />元</td>
+                        </tr>
+                    </table>
+                </div>*@
+                @*<div id="payMoney2" class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="display:none;">
+                    <table>
+                        <tr>
+                            <td rowspan="4"><input type="checkbox" name="checkbox" value=" " />勾选</td>
+                            <td>捐款项目</td>
+                            <td>定期定额奉献</td>
+                        </tr>
+                        <tr>
+                            <td>捐款金额</td>
+                            <td><input type="number" name="num" value=" "/>元（最低金额：100元）</td>
+                        </tr>
+                        <tr>
+                            <td>捐款间隔</td>
+                            <td>
+                                每 <select>
+                                    <option value="value">1</option>
+                                    <option value="value">2</option>
+                                </select>
+                                月捐款一次
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>捐款期间</td>
+                            <td>
+                                从 <a id="payStartTime" href="javascript:;">2017年3月</a>捐款至 <input type="radio" name="name" value=" " />
+                                <select>
+                                    <option value="value">1</option>
+                                    <option value="value">2</option>
+                                    <option value="value">3</option>
+                                </select>
+                                月结束&nbsp;或&nbsp;<input type="radio" name="name" value=" " />&nbsp;银行卡到期日
+                            </td>
+                        </tr>
+                    </table>
+                </div>*@
+            @*</div>*@
+            @*<hr />  
+            <div class="row">
+                <div class="col-lg-5 col-sm-5 col-md-5 col-xs-5"></div>
+                <input type="button" name="btn" value="下一步" id="next" />
+            </div>
+        </div>*@
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

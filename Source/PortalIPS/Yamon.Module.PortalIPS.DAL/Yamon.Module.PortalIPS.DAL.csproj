@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEA75362-FAE2-4183-87ED-452A1E4FF359}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yamon.Module.PortalIPS.DAL</RootNamespace>
+    <AssemblyName>Yamon.Module.PortalIPS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Yamon.Framework.Common">
+      <HintPath>..\..\..\Lib\Yamon.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DAL, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Yamon.Framework.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DBUtility">
+      <HintPath>..\..\..\Lib\Yamon.Framework.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DBUtility.SqlServer">
+      <HintPath>..\..\..\Lib\Yamon.Framework.DBUtility.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.Common">
+      <HintPath>..\..\..\Lib\Yamon.Module.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.DAL">
+      <HintPath>..\..\Modules\Yamon.Module.SiteManage.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.DAL">
+      <HintPath>..\..\Modules\Yamon.Module.UCenter.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.Entity">
+      <HintPath>..\..\Modules\Yamon.Module.UCenter.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvertisementDAL.cs" />
+    <Compile Include="AttachmentDAL.cs" />
+    <Compile Include="CategoryDAL.cs" />
+    <Compile Include="CategoryTypeDAL.cs" />
+    <Compile Include="GuestBookDAL.cs" />
+    <Compile Include="InformationDAL.cs" />
+    <Compile Include="InfoTypeDAL.cs" />
+    <Compile Include="PLinksDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteCommonIPS.cs" />
+    <Compile Include="SMB_InformationDAL.cs" />
+    <Compile Include="VoteDAL.cs" />
+    <Compile Include="VoteItemDAL.cs" />
+    <Compile Include="VoteResultDAL.cs" />
+    <Compile Include="vwInfoCategoryDAL.cs" />
+    <Compile Include="_\_AdvertisementDAL.cs" />
+    <Compile Include="_\_AttachmentDAL.cs" />
+    <Compile Include="_\_CategoryDAL.cs" />
+    <Compile Include="_\_CategoryTypeDAL.cs" />
+    <Compile Include="_\_GuestBookDAL.cs" />
+    <Compile Include="_\_InfoTypeDAL.cs" />
+    <Compile Include="_\_PLinksDAL.cs" />
+    <Compile Include="_\_SMB_InformationDAL.cs" />
+    <Compile Include="_\_VoteDAL.cs" />
+    <Compile Include="_\_VoteItemDAL.cs" />
+    <Compile Include="_\_VoteResultDAL.cs" />
+    <Compile Include="_\_vwInfoCategoryDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Yamon.Module.PortalIPS.Entity\Yamon.Module.PortalIPS.Entity.csproj">
+      <Project>{20b5e9b8-ddb5-4501-9389-db9b988b36d6}</Project>
+      <Name>Yamon.Module.PortalIPS.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Yamon.Module.PortalIPS.DAL.dll" />
+    <Content Include="bin\Debug\Yamon.Module.PortalIPS.DAL.pdb" />
+    <Content Include="bin\Release\log4net.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\Yamon.Framework.Common.dll" />
+    <Content Include="bin\Release\Yamon.Framework.DAL.dll" />
+    <Content Include="bin\Release\Yamon.Framework.DBUtility.dll" />
+    <Content Include="bin\Release\Yamon.Framework.DBUtility.SqlServer.dll" />
+    <Content Include="bin\Release\Yamon.Framework.Log4Net.dll" />
+    <Content Include="bin\Release\Yamon.Module.Common.dll" />
+    <Content Include="bin\Release\Yamon.Module.PortalIPS.DAL.dll" />
+    <Content Include="bin\Release\Yamon.Module.PortalIPS.DAL.pdb" />
+    <Content Include="bin\Release\Yamon.Module.PortalIPS.Entity.dll" />
+    <Content Include="bin\Release\Yamon.Module.PortalIPS.Entity.pdb" />
+    <Content Include="bin\Release\Yamon.Module.SiteManage.DAL.dll" />
+    <Content Include="bin\Release\Yamon.Module.SiteManage.Entity.dll" />
+    <Content Include="bin\Release\Yamon.Module.UCenter.DAL.dll" />
+    <Content Include="bin\Release\Yamon.Module.UCenter.Entity.dll" />
+    <Content Include="obj\Debug\Yamon.Module.PortalIPS.DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Yamon.Module.PortalIPS.DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Yamon.Module.PortalIPS.DAL.dll" />
+    <Content Include="obj\Release\Yamon.Module.PortalIPS.DAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Yamon.Module.PortalIPS.DAL.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Yamon.Module.PortalIPS.DAL.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1 @@
+$(function(){$(".Vedio p").click(function(){var i=$(this),o=i.attr("id");if(void 0==o)window.open("");else{{i.text()}window.open(o)}}),$(".Audio p").click(function(){var i=$(this),o=i.attr("id");if(void 0==o)window.open("");else{{i.text()}window.open(o)}}),$(".more p").click(function(){var i=$(this),o=i.attr("id");if(void 0==o)window.open("");else{{i.text()}window.open(o)}})});

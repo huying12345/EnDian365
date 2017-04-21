@@ -1,0 +1,314 @@
+﻿@{ ViewBag.Title = "lefts"; }
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <title>网站信息</title>
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(function () {
+                $(".menuson li.active").removeClass("active")
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+        })
+    </script>
+</head>
+
+<body style="background:#f0f9fd;">
+    <div class="lefttop"><span></span>网 站 信 息</div>
+    <dl class="leftmenu" style="height:100%; overflow-y:auto; padding-bottom:0px;">
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>典型案例</div>
+            <ul class="menuson">
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">综合布线系统</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=65&tty=69" target="rightFrame">地铁自动化系统集成方案</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=65&tty=71" target="rightFrame">智能小区解决方案</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=65&tty=72" target="rightFrame">校园一卡通解决方案</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=65&tty=73" target="rightFrame">医疗行业智能化解决方案</a>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">智能化停车场系统</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=66&tty=70" target="rightFrame">车位引导系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=66&tty=74" target="rightFrame">区位引导系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=66&tty=75" target="rightFrame">综合车辆引导系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=66&tty=76" target="rightFrame">停车场综合智能化</a>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">通信网络系统</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=67&tty=77" target="rightFrame">网络工程</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=67&tty=78" target="rightFrame">数据中心</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=67&tty=79" target="rightFrame">容灾</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=67&tty=80" target="rightFrame">安全服务</a>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">安全防范系统</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=68&tty=81" target="rightFrame">数字视频安防监控</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=68&tty=82" target="rightFrame">模拟视频安防监控</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=64&ty=68&tty=83" target="rightFrame">周界防范、电子巡更系统</a>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>关于珺意</div>
+            <ul class="menuson">
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="content.php?pid=1&ty=7" target="rightFrame">公司介绍</a><i></i>
+                </li>
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="content.php?pid=1&ty=10" target="rightFrame">资质荣誉</a><i></i>
+                </li>
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="job.php?pid=1&ty=11" target="rightFrame">人才招聘</a><i></i>
+                </li>
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="content.php?pid=1&ty=12" target="rightFrame">联系我们</a><i></i>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>自主产品</div>
+            <ul class="menuson"></ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>解决方案</div>
+            <ul class="menuson">
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">智能化系统</a><i></i>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=13" target="rightFrame">考勤系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=14" target="rightFrame">门禁系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=15" target="rightFrame">就餐系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=20" target="rightFrame">水控系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=21" target="rightFrame">电控系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=23" target="rightFrame">巡更系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=26" target="rightFrame">访客系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=29" target="rightFrame">班车系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=59&tty=32" target="rightFrame">梯控系统</a>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">行业软件</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=16" target="rightFrame">出入管理</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=19" target="rightFrame">场馆消费</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=22" target="rightFrame">会议签到</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=24" target="rightFrame">自助洗衣</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=25" target="rightFrame">宿舍管理</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=27" target="rightFrame">停车管理</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=28" target="rightFrame">人力资源</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=30" target="rightFrame">自动售货</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="content.php?pid=3&ty=60&tty=33" target="rightFrame">证卡制作</a>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="javascript:void()" target="rightFrame">解决方案</a><i></i>
+                </li>
+
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=34" target="rightFrame">视频监控</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=35" target="rightFrame">防盗报警</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=36" target="rightFrame">电子围栏</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=37" target="rightFrame">综合布线</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=38" target="rightFrame">楼宇自控</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=40" target="rightFrame">无线网络</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=41" target="rightFrame">集中抄表</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=42" target="rightFrame">照明系统</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=43" target="rightFrame">机房工程</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=44" target="rightFrame">智能家居</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=45" target="rightFrame">公共广播</a>
+                </li>
+                <li class="pro_type2" style="margin-left:-30px;">
+                    <a href="news.php?pid=3&ty=63&tty=46" target="rightFrame">视频会议</a>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>成功案例</div>
+            <ul class="menuson">
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=4&ty=47" target="rightFrame">政府机关</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=4&ty=48" target="rightFrame">医疗卫生</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=4&ty=49" target="rightFrame">外资企业</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=4&ty=50" target="rightFrame">国有企业</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=4&ty=51" target="rightFrame">教育行业</a><i></i>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>新闻中心</div>
+            <ul class="menuson">
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=5&ty=52" target="rightFrame">行业动态</a><i></i>
+                </li>
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="news.php?pid=5&ty=53" target="rightFrame">公司新闻</a><i></i>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>辅助栏目</div>
+            <ul class="menuson">
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="ad.php?pid=6&ty=54" target="rightFrame">首页轮播</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="banner.php" target="rightFrame">栏目图片</a><i></i>
+                </li>
+
+                <li style="margin-left:-30px;">
+                    <cite></cite>
+                    <a href="message.php" target="rightFrame">留言管理</a><i></i>
+                </li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="/assets/manage/img/leftico01.png" /></span>智慧珺意</div>
+            <ul class="menuson"></ul>
+        </dd>
+
+    </dl>
+
+</body>
+
+</html>

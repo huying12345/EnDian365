@@ -1,0 +1,127 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Search";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category = (Category)ViewBag.category;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@category.DisplayName</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="Search">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/encyclopedias-01.jpg" />
+        </div>
+        <div class="row itmeTitle">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                <p id="audioTitle" style="text-align:center">@(vwInfo.Title)</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList"></div>
+        </div>
+        <div class="row audio">
+            <!--------------音频切换---------------->
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <audio preload="auto" controls>
+                    <source id="js_audioCon_1" src="@(vwInfo.VideoUrl)" />
+                </audio>
+            </div>
+            <div class="video-img col-lg-9 col-sm-9 col-md-8 col-xs-12">
+               @if (vwInfo.Description.Trim().Length != 0)
+               {
+                <div class="row answer">
+                    <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+                        @(vwInfo.Description)
+                    </div>
+                </div>
+               }
+               else
+               {
+                <div class="row answer" style="border:3px solid  #fff !important;">
+                    <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+
+                    </div>
+                </div>
+               }
+
+            @if (vwInfo.Content.Trim().Length != 0)
+            {
+                <div class="article">
+                    <article>
+                        @Html.Raw(vwInfo.Content)
+                    </article>
+                </div>
+            }
+            else
+            {
+                <div class="article" style="border:3px solid  #fff !important;">
+                    <article></article>
+                </div>
+            }
+            </div>
+            @{
+                List<vwInfoCategory> everyList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED'", new object[] { category.CategoryID }, "CreateTime desc", 5);
+            }
+            @if (everyList.Count > 0)
+            {
+                <div class="video-list col-lg-3 col-sm-3 col-md-4 col-xs-12">
+                    <ul class="oul" style="list-style:none;">
+                        <li class="oulTitle">【经文】</li>
+                        @foreach (vwInfoCategory vwInfos in everyList)
+                        {
+                            <li><a href="javascript:;" id="@(vwInfos.Description == "" ? "" : vwInfos.Description)" value="@Html.Raw(vwInfos.Content == "" ? "" : vwInfos.Content) " value1="@vwInfos.VideoUrl" value2="@vwInfos.Title">@vwInfos.Title</a></li>
+                        }
+                    </ul>
+                </div>
+            }
+            <!--------------end---------------->
+        </div>
+        @RenderPage("~/Views/Default/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    <!--[if IE]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        //audioJs初始化
+        $('audio').audioPlayer();
+
+        var articleViewModel = new ArticleViewModel();
+        ko.applyBindings(articleViewModel, document.getElementById("article"));
+        articleViewModel.refresh();
+
+        $(function () {
+            $('.oul li a').click(function () {
+                var id = $(this).attr('id'),
+                value = $(this).attr('value'),
+                value1 = $(this).attr('value1');
+                value2 = $(this).attr('value2');
+                if (id.toString().trim() == "") {
+                    $('.answer').hide();
+                } else {
+                    $('.answer').show();
+                    $('.answer').attr('style', '')
+                }
+                if (value.toString().trim() == "") {
+                    $('.article').hide();
+                } else {
+                    $('.article').show();
+                    $('.article').attr('style', '')
+                }
+                $('.answer div').text(id);
+                $('#audioTitle').text(value2);
+                $('#js_audioCon_1').attr('src', value1);
+                $('.article article').html(value);
+            })
+        })
+    </script>
+</body>
+</html>

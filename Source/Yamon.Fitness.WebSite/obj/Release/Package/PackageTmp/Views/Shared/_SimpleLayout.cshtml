@@ -1,0 +1,32 @@
+﻿@using Yamon.Module.SiteManage.Entity
+@using Yamon.Module.SiteManage.DAL
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @(ViewBag.Config.SiteName)</title>
+    <script type="text/javascript" src="/Resources/JsLib/jquery.min.js"></script>
+    @RenderSection("styles", required: false)
+    <script type="text/javascript">
+    var config = {};
+    config.ResourcesPath = "@Url.Content("/Resources/")";
+    config.ViewPath = "@Url.Content("/Static/")";
+    config.BaseURI = "@Url.Content("/")";
+    config.RootURI = "@RequestHelper.GetRootURI()";
+
+    var myPage = {};
+    myPage.action = '@(ViewContext.RouteData.Values["action"].ToString())';
+    myPage.controller = '@(ViewContext.RouteData.Values["controller"].ToString())';
+    myPage.id = '@(ViewContext.RouteData.Values["id"])';
+    </script>
+</head>
+<body>
+    @RenderBody()
+    <!--弹出窗体-->
+    <div id="dialogDiv">
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

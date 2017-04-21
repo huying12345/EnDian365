@@ -1,0 +1,81 @@
+a {
+    color: #34495e;
+    cursor: pointer;
+}
+
+body {
+    overflow-x: hidden;
+    font: 12px/1.5 "Microsoft Yahei","Î¢ÈíÑÅºÚ",Tahoma,Arial,Helvetica,STHeiti;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.sidebar {
+    display: block;
+    float: left;
+    width: 220px;
+}
+
+.content {
+    display: block;
+    margin: 0 10px 0 230px;
+}
+
+#side-menu {
+    background: #f7f9fa none repeat scroll 0 0;
+    border-right: 1px solid #e4e5e7;
+}
+
+.nav {
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+#side-menu li a {
+    color: #6a6c6f;
+    font-weight: 700;
+    padding: 15px 20px;
+    text-transform: uppercase;
+}
+
+#side-menu li {
+    border-bottom: 1px solid #e4e5e7;
+}
+
+    #side-menu li:first-child {
+        border-top: 1px solid #e4e5e7;
+    }
+
+    #side-menu li.active a, #side-menu li:hover a {
+        color: #34495e;
+    }
+
+    #side-menu li .nav-second-level li a {
+        color: #6a6c6f;
+        font-weight: 600;
+        padding: 10px 10px 10px 30px;
+        text-transform: none;
+    }
+
+    #side-menu li .nav-second-level li.active a {
+        color: #34495e;
+    }
+
+    #side-menu li .nav-second-level li {
+        background: #fff none repeat scroll 0 0;
+    }
+
+#side-menu.nav > li > a:hover, #side-menu.nav > li > a:focus {
+    background: #fff none repeat scroll 0 0;
+}
+.navbar-nav > li > input, .navbar-nav > li > select{
+    margin-top: 15px;
+    padding-right: 5px;
+}
+
+.navbar-right > li{
+    padding-right: 5px;
+}

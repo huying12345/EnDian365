@@ -1,0 +1,51 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "enDianMark";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category = (Category)ViewBag.category;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@category.DisplayName</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="enDianMark">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/03_03.jpg" />
+        </div>
+        <div class="row itmeTitle">
+            <div class="col-lg-12 xol-xs-12">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                    <p style="text-align:center">【 @category.DisplayName 】</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                    <p class="P" style=""></p>
+                </div>
+            </div>
+        </div>
+        <div class="article">
+            <div class="title">
+                <span class="title1">@vwInfo.Title</span><span class="title2">@(vwInfo.Author)</span>
+            </div>
+            <div>
+                @Html.Raw(vwInfo.Content == "" ? "敬请期待" : vwInfo.Content)
+            </div>
+        </div> 
+        @RenderPage("~/Views/Default/article.cshtml")       
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        var articleViewModel = new ArticleViewModel();
+        ko.applyBindings(articleViewModel, document.getElementById("article"));
+        articleViewModel.refresh();
+    </script>
+</body>
+</html>

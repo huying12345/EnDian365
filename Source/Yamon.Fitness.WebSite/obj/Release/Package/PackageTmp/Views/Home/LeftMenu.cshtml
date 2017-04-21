@@ -1,0 +1,130 @@
+﻿@using System.Data
+@using Yamon.Framework.Common
+@using Yamon.Module.SiteManage.Entity
+@{
+    List<Menu> menuList = (List<Menu>)ViewBag.LeftMenuList;
+}
+<div class="sjjk_left">
+
+    <div class="sjjk_con">
+        @foreach (Menu menu in menuList)
+        {
+            //int level = DataConverter.ToInt(menu["Level"]);
+            string menuId = menu.MenuID;
+
+            if (menu.Children == null)
+            {
+                <div url="@(menu.LinkUrl)" class="sjjk_left_list location" menuid="@menuId">
+                    <div class="left_icon"><span>@(menu.MenuName)</span></div>
+                </div>
+            }
+            else
+            {
+                <div class="sjjk_left_list" menuid="@menuId">
+                    <div class="left_icon"><span>@(menu.MenuName)</span></div>
+                </div>
+                <ul class="sjjk_list" id="menu_@menuId">
+                    @foreach (Menu subMenu in menu.Children)
+                    {
+                        <li url="@(subMenu.LinkUrl)" menuid="@(subMenu.MenuID)" class="location">
+                            <div class="border_center">@(subMenu.MenuName)</div>
+                        </li>
+                        if (subMenu.Children != null)
+                        {
+                            <ul class="sjjk_list" id="menu_@(subMenu.MenuID)" style="padding-left: 20px;">
+                                @foreach (Menu subMenu2 in subMenu.Children)
+                                {
+                                    <li url="@(subMenu2.LinkUrl)" menuid="@(subMenu2.MenuID)" class="location">
+                                        <div class="border_center">@(subMenu2.MenuName)</div>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    }
+                </ul>
+            }
+        }
+    </div>
+</div>
+
+@section styles
+{
+    <link href="~/Static/Home/css/shcommon.css" rel="stylesheet" />
+}
+@section scripts
+{
+    <script type="text/javascript">
+        var parentId = "SystemManage";
+        jQuery(function () {
+            if (navigator.userAgent.indexOf("MSIE") > 0) {
+                jQuery('.sjjk_list').css('paddingLeft', '5px');
+            }
+            jQuery("#btnToggleMenu").click(function () {
+                parent.toggleMenu();
+            });
+            //左侧菜单#416AA3
+            jQuery('.sjjk_list li').click(function () {
+                jQuery('.sjjk_list li').children('.border_center').css('color', '#ea5283');
+                jQuery(this).children('.border_center').css('color', '#416AA3');
+
+                //隐藏其他ul
+                //jQuery(this).next('ul').slideDown("slow").siblings("ul").hide();
+            });
+            initState();
+            jQuery(".sjjk_con .sjjk_list:not(:first)").hide();
+            jQuery(".sjjk_con .sjjk_left_list").click(function () {
+                jQuery(this).next('ul').slideDown("slow").siblings("ul").hide();
+            });
+
+            jQuery(".sjjk_list li").click(function () {
+                var name = jQuery(this).next("ul").text();
+                if (name.length > 25) {
+                    if (jQuery(this).attr('id') == 'close') {
+                        jQuery(this).css('background', 'url(/Static/Home/images/bg.fw_r2_c1.png) no-repeat 25px center').attr("id", 'open');
+                        jQuery(this).next('ul').slideDown('slow');
+                    } else {
+                        jQuery(this).css('background', 'url(/Static/Home/images/bg.fw_r2_c2.png) no-repeat 25px center').attr("id", 'close');
+                        jQuery(this).next('ul').slideUp("slow");
+                    }
+                }
+                liclick(jQuery(this));
+            });
+            resizeWin();
+            window.onresize = resizeWin;
+            var firstli = jQuery('body').find(".location")[0];
+            if (jQuery(firstli).attr("url")) {
+                liclick(firstli);
+            }
+
+            jQuery('.sjjk_left_list').click(function () {
+                if (jQuery(this).next('ul').children("li").size() == 0) {
+                    parent.addTab(jQuery(this).text(), jQuery(this).attr("url"), jQuery(this).attr("menuId") + "_Frame");
+                }
+            });
+            function liclick(obj) {
+                jQuery(".sjjk_list li .border_center").removeClass("select_list");
+                jQuery(obj).children(".border_center").addClass("select_list")
+                var name = jQuery(obj).next("ul").text();
+                if (name.length <= 25) {
+                    parent.addTab(jQuery(obj).text().trim(), jQuery(obj).attr("url"), jQuery(obj).attr("menuId") + "_Frame");
+                }
+            }
+
+            function initState() {
+                jQuery('.sjjk_list ul').each(function () {
+                    var txt = jQuery(this).children("li").children("div").text();
+                    if (txt.length > 0) {
+                        jQuery(this).prev('li').css('background', 'url(/Static/Home/images/bg.fw_r2_c2.png) no-repeat 25px center').attr('id', 'close');
+                    }
+                });
+            }
+        });
+        function resizeWin() {
+            var bodyHeight = jQuery(window).height(); //浏览器当前窗口文档body的高度
+            var bodyWidth = jQuery(window).width();
+            jQuery(".sjjk_left").css("height", bodyHeight);
+            jQuery(".sjjk_con").css("height", bodyHeight + 5);
+        }
+
+    </script>
+}

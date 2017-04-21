@@ -1,0 +1,213 @@
+﻿@using System.Data
+@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "Index";
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categorylunbo = categoryDal.GetInfoByID(categoryDal.GetIdByKey("lunbo"));
+    Category categoryvideo = categoryDal.GetInfoByID(categoryDal.GetIdByKey("video"));
+    Category category365 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ed365"));
+    Category categorygyzrcbxl = categoryDal.GetInfoByID(categoryDal.GetIdByKey("gyzrcbxl"));
+    Category categoryspiritual = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
+    Category categoryencyclopedias = categoryDal.GetInfoByID(categoryDal.GetIdByKey("encyclopedias"));
+    Category categorycontact = categoryDal.GetInfoByID(categoryDal.GetIdByKey("contact"));
+    
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+   
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>恩典365基督之家首页</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="home">
+        @RenderPage("~/Views/include/head.cshtml")
+        @{
+            List<vwInfoCategory> zrcbList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorygyzrcbxl.CategoryID }, "CreateTime desc", 1);
+        }
+        @if (zrcbList.Count > 0)
+        {
+            <div class="title-img">
+                <img src="~/assets/img/11_03.jpg" />
+                <p onclick="window.open('@infoDal.GetPageUrl(zrcbList[0])')"><img src="~/assets/img/video.jpg" /><span>最新主日信息：</span><span>@(zrcbList[0].CreateTime.Value.ToString("yyyyMMdd"))【@zrcbList[0].Title】</span></p>
+            </div>
+        }
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            @{
+                List<vwInfoCategory> vwList0 = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorylunbo.CategoryID }, "CreateTime desc", 3);
+            }
+          
+            <div class="carousel-inner">
+                <div class="item active">
+                    @if (vwList0[0].MediaFileName == "")
+                    {
+                        <img src="~/assets/img/index-01.jpg" />
+                    }
+                    else
+                    {
+                        <img src="@vwList0[0].MediaFileName" />
+                    }
+                </div>
+                <div class="item">
+                    @if (vwList0[0].MediaFileName == "")
+                    {
+                        <img src="~/assets/img/index-02.jpg" />
+                    }
+                    else
+                    {
+                        <img src="@vwList0[1].MediaFileName" />
+                    }
+                </div>
+                <div class="item">
+                    @if (vwList0[0].MediaFileName == "")
+                    {
+                        <img src="~/assets/img/index-03.jpg" />
+                    }
+                    else
+                    {
+                        <img src="@vwList0[2].MediaFileName" />
+                    }
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                《
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                》
+            </a>
+        </div>
+        <div class="row submenu" style="margin-top:10px;">
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/default/Index?cid=ae593665-c413-4dc5-a36f-c53f11e7b7d5')">
+                <img src="~/assets/img/2.jpg" />
+                <p><span>属灵牧养</span></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/default/Index?cid=0aae2fec-86a3-451d-9439-ee43a88d294b')">
+                <img src="~/assets/img/3.jpg" />
+                <p><span>人生百科</span></p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-md-6" onclick="window.open('/default/Index?cid=11f75f7c-4a3d-48aa-846c-2545f7f69eb3')">
+                <img src="~/assets/img/5.jpg" />
+                <p><span>联系奉献</span></p>
+            </div>
+        </div>
+        @{
+            List<Category> menuList = categoryDal.GetEntityList("C_ParentID='ae593665-c413-4dc5-a36f-c53f11e7b7d5'", null, " OrderNum  asc");
+        }
+        @{
+            List<Category> menuList1 = categoryDal.GetEntityList("C_ParentID='0aae2fec-86a3-451d-9439-ee43a88d294b'", null, " OrderNum  asc");
+        }
+        @{
+            List<Category> menuList2 = categoryDal.GetEntityList("C_ParentID='11f75f7c-4a3d-48aa-846c-2545f7f69eb3'", null, " OrderNum  asc");
+        }
+       
+        <div class="row  clauses">
+            @if (menuList.Count > 0)
+            {
+                <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                    <article>
+                        @foreach (Category info1 in menuList)
+                        {
+                            if (info1.DisplayName != "新增栏目1" && info1.DisplayName != "新增栏目2")
+                            {
+                                <p>>> @(info1.DisplayName)</p>
+                            }
+                        }
+                    </article>
+                </div>
+            }
+            @if (menuList1.Count>0)
+            {
+                <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                    <article>
+                        @foreach (Category info1 in menuList1)
+                    {
+                        if (info1.DisplayName != "新增栏目1" && info1.DisplayName != "新增栏目2")
+                        {
+                            <p>>> @(info1.DisplayName)</p>
+                        }
+                    }
+                    </article>
+                </div>
+            }
+           @if (menuList2.Count > 0)
+           {
+            <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
+                <article>
+                    @foreach (Category info1 in menuList2)
+                    {
+                        if (info1.DisplayName != "新增栏目1" && info1.DisplayName != "新增栏目2")
+                        {
+                            <p>>> @(info1.DisplayName)</p>
+                        }
+                    }
+                </article>
+            </div>
+           }
+        </div>
+        <div class="videobox row">
+            @{
+                List<vwInfoCategory> vwList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { category365.CategoryID }, "BackInt desc", 3);
+            }
+            @if (vwList.Count >0)
+            {
+                vwInfoCategory ifc = vwList[0];
+                <div class="video-img col-lg-5 col-sm-5 col-md-5 col-xs-12" style="padding-right:0px;">
+                    <iframe class="js_videoCon" frameborder="0" src="@ifc.VideoUrl"></iframe>
+                </div>
+                <div class="video_list col-lg-7 col-sm-7 col-md-7 col-xs-12">
+                    <p class="videoTitle">@(category365.DisplayName)</p>
+                    <article class="videoMore" onclick="window.open('@infoDal.GetPageUrl(ifc)')">
+                        <p class="video_title"> @(ifc.Title)</p>
+                        <p class="video_author">主讲：@(ifc.Author)</p>
+                        <p class="video_source">经文出处：@(ifc.Source)</p>
+                    </article>
+                    <ul style="padding:0px;" class="oul col-lg-12 col-md-12 col-sm-12 col-xs-12 Video">
+                        @foreach (vwInfoCategory info in vwList)
+                        {
+                            <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(info)" value="@(info.VideoUrl)" value1="@(info.Author)" value2="@(info.Source)" value3="@(info.CreateTime.Value.ToString("yyyy-MM-dd")) @(info.Title)">
+                                <img src='@(info.MediaFileName)' />
+                                <p>@(info.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
+                            </li>
+                        }
+                        @*<li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc2)" value="@(ifc2.VideoUrl)" value1="@(ifc2.Author)" value2="@(ifc2.Source)" value3="@(ifc2.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc2.Title)">
+                            <img src='@(ifc2.MediaFileName)' />
+                            <p>@(ifc2.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
+                        </li>
+                        <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc3)" value="@(ifc3.VideoUrl)" value1="@(ifc3.Author)" value2="@(ifc3.Source)" value3="@(ifc3.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc3.Title)">
+                            <img src='@(ifc3.MediaFileName)' />
+                            <p>@(ifc3.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
+                        </li>*@
+                    </ul>
+                    <div class="col-lg-10 col-xs-10 col-sm-10 col-md-10"></div>
+                    <div class="more col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        <article>
+                            <p id='/Default/InfoList2?CategoryID=@(category365.CategoryID)' style="text-decoration:underline;">>>更多</p>
+                        </article>
+                    </div>
+                </div>
+            }
+        </div>
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+  
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        $(function () {
+            $('.carousel').carousel({
+                interval: 3000
+            });
+        })
+    </script>
+</body>
+</html>

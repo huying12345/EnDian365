@@ -1,0 +1,1 @@
+$(function(){$(".Video li").click(function(){var i=$(this),n=i.attr("id");if(void 0==n)window.open("");else{{i.text()}window.open(n)}})});

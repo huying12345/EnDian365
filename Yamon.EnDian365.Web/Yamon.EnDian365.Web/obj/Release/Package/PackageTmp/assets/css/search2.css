@@ -1,0 +1,250 @@
+@charset "UTF-8";
+#Search2, #Search3 {
+  /* videobox */
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#Search2 .row, #Search3 .row {
+  margin: 0px;
+}
+
+#Search2 .col-lg-1, #Search2 .col-lg-3, #Search2 .col-lg-2, #Search2 .col-lg-5, #Search2 .col-lg-7, #Search2 .col-lg-8, #Search2 .col-lg-4, #Search2 .col-lg-12, #Search2 .col-lg-6, #Search2 .col-lg-9, #Search3 .col-lg-1, #Search3 .col-lg-3, #Search3 .col-lg-2, #Search3 .col-lg-5, #Search3 .col-lg-7, #Search3 .col-lg-8, #Search3 .col-lg-4, #Search3 .col-lg-12, #Search3 .col-lg-6, #Search3 .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#Search2 .searchBox, #Search3 .searchBox {
+  padding: 0px;
+  height: 65px;
+  margin-top: 20px;
+}
+
+#Search2 .searchBox .col-lg-1, #Search2 .searchBox .col-lg-3, #Search2 .searchBox .col-lg-2, #Search3 .searchBox .col-lg-1, #Search3 .searchBox .col-lg-3, #Search3 .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#Search2 .searchBox input, #Search2 .searchBox select, #Search3 .searchBox input, #Search3 .searchBox select {
+  border: 2px solid #9A9A9A;
+  /*background:#ac2b2b;*/
+}
+
+#Search2 .searchBox button, #Search3 .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#Search2 .itmeTitle, #Search3 .itmeTitle {
+  background: #403B3B;
+  margin-bottom: 10px;
+}
+
+#Search2 .itmeTitle p, #Search3 .itmeTitle p {
+  width: 100%;
+}
+
+#Search2 .itmeTitle .video, #Search3 .itmeTitle .video {
+  background: #ac2b2b;
+}
+
+#Search2 .itmeTitle .video p, #Search3 .itmeTitle .video p {
+  color: #fff;
+  padding: 10px 0px;
+  font-size: 22px;
+  /*box-shadow:0px 6px 10px #848181;*/
+  /*height:45px;*/
+  text-align: center;
+}
+
+#Search2 .article, #Search3 .article {
+  margin-top: 10px;
+}
+
+#Search2 .article .p1, #Search3 .article .p1 {
+  width: 100%;
+  padding: 20px 0px;
+  padding-left: 54px;
+  border: 4px solid #4397e2;
+}
+
+#Search2 .article article, #Search3 .article article {
+  font-size: 16px;
+  line-height: 32px;
+  text-indent: 32px;
+  border: 4px solid #ef5b1d;
+  padding: 10px;
+}
+
+#Search2 .jingwen, #Search3 .jingwen {
+  border: 1px solid #888;
+  border-radius: 25px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#Search2 .jingwen p, #Search3 .jingwen p {
+  font-size: 22px;
+  color: #ab3ec9;
+  border: 3px solid #000;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#Search2 .jingwen p span, #Search3 .jingwen p span {
+  font-weight: bold;
+}
+
+#Search2 .copyRight p, #Search3 .copyRight p {
+  color: orange;
+  font-weight: 600;
+}
+
+#Search2 .copyRight p a, #Search3 .copyRight p a {
+  color: orange;
+}
+
+#Search2 .footer, #Search3 .footer {
+  margin-top: 0px;
+}
+
+#Search2 .footer .col-lg-4, #Search2 .footer .col-lg-6, #Search3 .footer .col-lg-4, #Search3 .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#Search2 .videobox .video-img, #Search3 .videobox .video-img {
+  overflow: hidden;
+}
+
+#Search2 .videobox .video-img iframe, #Search3 .videobox .video-img iframe {
+  width: 100%;
+  height: 550px;
+  border: 1px solid #ccc;
+}
+
+#Search2 .videobox .video-list, #Search3 .videobox .video-list {
+  height: 78px;
+  padding-left: 10px;
+}
+
+#Search2 .videobox .video-list .oul, #Search3 .videobox .video-list .oul {
+  height: 452px;
+  overflow: hidden;
+}
+
+#Search2 .videobox .video-list .oul iframe, #Search3 .videobox .video-list .oul iframe {
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+
+#Search2 .videobox .video-list .oul .ins, #Search3 .videobox .video-list .oul .ins {
+  display: inline-block;
+  padding-left: 5px;
+  line-height: 15px;
+}
+
+#Search2 .videobox .video-list .oul .ins p, #Search3 .videobox .video-list .oul .ins p {
+  font-size: 14px;
+}
+
+#Search2 .videobox .video-list .oul .ins span, #Search3 .videobox .video-list .oul .ins span {
+  font-size: 12px;
+  color: #888;
+}
+
+#Search2 .videobox .video-list li, #Search3 .videobox .video-list li {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+
+#Search2 .videobox .video-list li .icon-video, #Search3 .videobox .video-list li .icon-video {
+  position: absolute;
+  left: 45px;
+  top: 25px;
+  width: 33px;
+  height: 33px;
+  z-index: 99;
+}
+
+#Search2 .videobox .video-list li .now .icon-video, #Search3 .videobox .video-list li .now .icon-video {
+  display: none;
+}
+
+@media screen and (min-width: 1201px) {
+  #Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+    font-size: 18px;
+  }
+  #Search2 .article p, #Search3 .article p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Search2 .searchBox span, #Search2 .searchBox input, #Search2 .searchBox select, #Search2 .searchBox button, #Search3 .searchBox span, #Search3 .searchBox input, #Search3 .searchBox select, #Search3 .searchBox button {
+    font-size: 16px;
+  }
+  #Search2 .videobox .video-list li .icon-video, #Search3 .videobox .video-list li .icon-video {
+    left: 25px;
+  }
+  #Search2 .article p, #Search3 .article p {
+    font-size: 16px;
+  }
+  #Search2 .article article, #Search3 .article article {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  #Search2 .searchBox, #Search3 .searchBox {
+    margin-bottom: 82px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Search2 .carousel-indicators, #Search3 .carousel-indicators {
+    width: 80%;
+  }
+  #Search2 .videobox .video-list, #Search3 .videobox .video-list {
+    height: 520px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #Search2 .searchBox, #Search3 .searchBox {
+    margin-bottom: 220px;
+  }
+  #Search2 .article .p1, #Search3 .article .p1 {
+    padding: 15px 0px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  #Search2 .article article, #Search3 .article article {
+    overflow-x: hidden;
+  }
+  #Search2 .article article span, #Search2 .article article p, #Search3 .article article span, #Search3 .article article p {
+    font-size: 14px;
+  }
+  #Search2 .itmeTitle .video p, #Search3 .itmeTitle .video p {
+    font-size: 15px;
+    padding: 0px;
+    padding-top: 5px;
+  }
+  #Search2 .jingwen p, #Search3 .jingwen p {
+    font-size: 16px;
+  }
+  #Search2 .copyRight p, #Search3 .copyRight p {
+    font-size: 13px;
+  }
+}

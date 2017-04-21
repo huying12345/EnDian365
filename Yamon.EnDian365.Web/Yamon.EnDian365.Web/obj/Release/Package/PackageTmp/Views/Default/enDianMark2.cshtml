@@ -1,0 +1,60 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "enDianMark2";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category = (Category)ViewBag.category;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@category.CategoryName</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="enDianMark2">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/03_03.jpg" />
+        </div>
+        @{
+            List<vwInfoCategory> endianList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED'", new object[] { category.CategoryID }, "BackInt desc");
+        }
+        <div class="row itmeTitle">
+            <div class="col-lg-12 xol-xs-12">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                    <p style="text-align:center">【 @(category.CategoryName) 】</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                    <p class="P" style=""></p>
+                </div>
+            </div>
+        </div>
+        @if (endianList.Count > 0)
+        {
+            <div class="article">
+                <div class="title">
+                    <span class="title1">@endianList[0].Title</span><span class="title2">@(endianList[0].Author)</span>
+                </div>
+                <p>
+                    @Html.Raw(endianList[0].Content == "" ? "敬请期待" : endianList[0].Content)
+                </p>
+            </div>
+        }
+        @RenderPage("~/Views/Default/article.cshtml")
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+   
+    <script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
+    @RenderPage("~/Views/include/footjs.cshtml")
+    <script>
+        $(function () {
+            var articleViewModel = new ArticleViewModel();
+            ko.applyBindings(articleViewModel, document.getElementById("article"));
+            articleViewModel.refresh();
+        })
+    </script>
+</body>
+</html>

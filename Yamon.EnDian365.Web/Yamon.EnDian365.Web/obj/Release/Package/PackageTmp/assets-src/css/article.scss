@@ -1,0 +1,96 @@
+﻿#article{
+    .pageUl{width:100%}
+    .pageUl li{ width:50%;}
+    .reviewVideos{
+        margin-top:10px!important;
+        .list-group{
+            /*margin:0px 5px;*/
+            /*background:#262625;*/
+            /*color:#fff;*/
+            /*padding: 15px 10px;*/
+           
+            li{
+                 cursor:pointer;
+            }
+            li:hover{
+                text-decoration:underline;
+            }
+        }
+         /*.list-group:hover :first-child{
+             text-decoration:underline;
+         }*/
+        .list-group-item{
+            background:none;
+            border:none;
+            font-size:16px;
+            /*height:55px;*/
+        }
+   /*分页*/
+      #pageGro {
+	        width: 100%;
+	        margin: 20px 0px;
+            text-align:center;
+            div,
+            div ul li {
+	            color: #999;
+	            display:inline-block;
+                text-align:center;
+            }
+            div ul{
+                padding:0px;
+            }
+            div ul li {
+                width:30px;
+                list-style:none;
+	            text-align: center;
+	            cursor: pointer;
+            }
+             .on {
+	            color: red;
+	            text-decoration:underline;
+                font-size:20px;
+             }
+            .pageUp,
+            .pageDown,
+            .pagestart,
+            .pageend {
+	            cursor: pointer;
+                width:50px;
+            }
+        }
+    }
+    @media screen and (min-width: 1201px) { 
+           .reviewVideos .list-group-item{
+             font-size:16px !important;
+         }
+           #pageGro  div ul li, #pageGro div{
+             font-size:15px;
+         }
+
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+        
+    } 
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+    @media screen and (max-width: 900px) { 
+         .carousel-indicators {
+            width: 80%;
+        }
+         .reviewVideos .list-group-item{
+             font-size:14px!important;
+         }
+         #pageGro  div ul li, #pageGro div{
+             font-size:16px;
+         }
+    } 
+    /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+    @media screen and (max-width: 500px) { 
+
+    }
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+}   
+ 

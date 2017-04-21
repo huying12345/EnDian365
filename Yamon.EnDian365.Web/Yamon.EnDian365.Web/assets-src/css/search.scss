@@ -1,0 +1,341 @@
+﻿#Search,#Search1,#AudioMore{
+    .row{
+        margin:0px;
+    }
+    .col-lg-1,.col-lg-3,.col-lg-2,.col-lg-8,.col-lg-4,.col-lg-12,.col-lg-6,.col-lg-9{
+        padding:0px;
+        margin:0px;
+    }
+    .searchBox{
+        padding:0px;
+        /*height:65px;*/
+        margin-top:20px;
+        .col-lg-1,.col-lg-3,.col-lg-2{
+             padding: 0px 2px;
+        }
+        span,input,select,button{
+            width:100%;
+            font-size:22px;
+            height: 45px;
+        }
+        input,select{
+            border: 2px solid #9A9A9A;
+        }
+        button{
+             background: #3C68A5;
+             color: #fff;
+        }
+     }
+    .itmeTitle{
+         background:#403B3B;
+         margin-top:10px;
+        p{
+            width:100%;
+        }
+        .video{
+             background:#ac2b2b;
+            p{
+                color:#fff;
+                padding-left:20px !important;
+            }
+            iframe{
+                width:100%;
+                height:550px;
+            }
+        }
+        .videoList{
+            .list-group{
+                max-height:550px;
+                overflow-y:auto;
+                .list-group-item{
+                    border:none;
+                }
+            }
+            .hoster{
+                font-size:20px;
+            }
+            .tips{
+                font-size:18px;
+            }
+            .text{
+                font-size:16px;
+                padding-left:10px;
+            }
+            .source{
+                font-size: 12px;
+                padding-left: 10px;
+                color: #807a7a;
+            }
+        }
+    }
+    .audio{
+         width:100%;
+    }
+      .itmeTitle .video p{
+            font-size:22px;
+            padding:10px 0px;
+        }
+    .scriptureList{
+        width:100%;
+        position:relative;
+        border:3px solid #8db4e6;
+       
+        img{
+            position:absolute;
+            margin-top:-105px;
+            width:100%;
+            z-index:-1;
+        }
+       .list-group-item{
+           font-size: 25px;
+           border:none;
+           cursor:pointer;
+       }
+        .list-group-item:hover{
+            text-decoration:underline;
+        }
+    }
+    .article{
+        margin-top:10px;
+        position:relative;
+        overflow-y:hidden;
+        border:3px solid orange;
+        
+        img{
+            position:absolute;
+            width:100%;
+            z-index:-1;
+        }
+        p{
+            width:100%;
+            font-size: 25px;
+        }
+        article{
+            font-size: 22px;
+            line-height: 25px;
+            text-indent: 32px;
+            padding: 10px 10px;
+        }
+    }
+    .answer{
+            padding:10px 20px;
+            border:2px solid #fcd793;
+            margin-top:20px;
+            /*margin-bottom:40px;
+            border-radius:20px;*/  
+            h3{
+                color:orange;
+                font-weight:bold;
+            } 
+            p{
+                font-size:18px;
+            }
+        .callback{
+            margin-bottom:30px;
+        }
+        .daodu{
+            border-top:1px solid #ccc;
+            ul>li{
+                list-style:none;
+                font-size:18px;
+            }
+        }
+    }
+    #pageGro {
+	        width: 100%;
+	        margin: 20px 0px;
+            text-align:center;
+            div,
+            div ul li {
+	            color: #999;
+	            display:inline-block;
+                text-align:center;
+            }
+            div ul{
+                padding:0px;
+            }
+            div ul li {
+                width:30px;
+                list-style:none;
+	            text-align: center;
+	            cursor: pointer;
+            }
+             .on {
+	            color: red;
+	            text-decoration:underline;
+                font-size:20px;
+             }
+            .pageUp,
+            .pageDown,
+            .pagestart,
+            .pageend {
+	            cursor: pointer;
+                width:50px;
+            }
+        }
+    .footer{
+        margin-top:0px;
+        .col-lg-4,.col-lg-6{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    @media screen and (min-width: 1201px) { 
+         #pageGro  div ul li, #pageGro div{
+             font-size:15px;
+         }
+        .scriptureList{
+             .list-group-item{
+                font-size:18px;
+              } 
+              .list-group-item:first-child{
+                  font-size:25px;
+              }
+        }
+         .article article{
+             font-size:18px;
+         }
+         .article{
+             article{
+                 overflow-y:auto;
+                 line-height:30px;
+                 padding,span{
+                     font-size:18px;
+                 }
+             }
+         }
+          .searchBox span, .searchBox input, .searchBox select,.searchBox button{
+              font-size:18px;
+         }
+          .video-list .oul{
+              line-height:50px;
+              padding-top:10px;
+              .oulTitle{
+                  font-size: 22px;
+                  font-weight: bold;
+                  color: #319df1;
+              }
+          }
+         .answer,.oul>li>a{
+             font-size:18px;
+         }
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+         .scriptureList{
+             .list-group-item{
+                font-size:16px;
+              }
+             .list-group-item:first-child{
+                  font-size:20px;
+              }
+         }
+         .article article{
+             font-size:16px;
+              p,span{
+                  font-size:16px;
+              }
+         }
+          .searchBox span, .searchBox input, .searchBox select,.searchBox button{
+              font-size:16px;
+         }
+          .scriptureList .list-group,.scriptureList .list-group{
+            /*padding: 20px 45px;*/
+        }
+           .answer,.oul>li>a{
+             font-size:16px;
+         }
+           .video-list .oul{
+              line-height:40px;
+              padding-top:10px;
+              .oulTitle{
+                  font-size: 20px;
+                  font-weight: bold;
+                  color: #319df1;
+              }
+          }
+    } 
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+    @media screen and (max-width: 1200px)  and (min-width:900px){ 
+         .carousel-indicators {
+            width: 80%;
+        }
+          .article article{
+              padding:20px 20px;
+         }
+           .article img,  .article img{
+               height:100%;
+           }
+             #pageGro  div ul li, #pageGro div{
+             font-size:16px;
+         }
+    } 
+    @media screen and (max-width: 900px) { 
+         .carousel-indicators {
+            width: 80%;
+        }
+          .article article{
+            font-size:14px;
+         }
+           .article img,  .article img{
+               height:100%;
+           }
+           .answer{
+               font-size:14px;
+           }
+    } 
+     @media screen and (max-width: 768px) {
+           .video-list{
+            display:none;
+        }
+     }
+    @media screen and (max-width: 500px) { 
+         .scriptureList img, .scriptureList img{
+            height:100%;
+         }
+          .scriptureList{
+             .list-group-item{
+                font-size:14px;
+              }
+             .list-group-item:first-child{
+                  font-size:16px;
+              }
+         }
+         .answer p,.answer .daodu ul > li{
+             font-size:15px;
+         }
+         h3{
+             font-size:18px;
+         }
+          .itmeTitle{
+        .video{
+            p{
+                font-size:15px;
+                padding:0px;
+                padding-top:5px;
+            }
+        }
+    } 
+   .article{
+       article{
+           p,span{
+               font-size:14px;
+           }
+       }
+   }
+
+     }
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+}
+#Search1{
+    .title{
+        border-bottom:1px dashed #ccc;
+        padding-bottom:10px;
+    }
+    .searchList{
+        li{
+            border:none;
+        }
+    }
+}

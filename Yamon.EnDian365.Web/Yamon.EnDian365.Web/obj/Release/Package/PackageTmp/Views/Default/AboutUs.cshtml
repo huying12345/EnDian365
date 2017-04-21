@@ -1,0 +1,31 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    ViewBag.Title = "AboutUs";
+    CategoryDAL categoryDal = new CategoryDAL();
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    Category gywm = categoryDal.GetInfoByID(categoryDal.GetIdByKey("gywm"));
+    List<vwInfoCategory> zixunlist = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { gywm.CategoryID }, "CreateTime desc", 10);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>关于我们</title>
+    @RenderPage("~/Views/include/headcss.cshtml")
+</head>
+<body>
+    <div class="container" id="aboutUs">
+        @RenderPage("~/Views/include/head.cshtml")
+        <div class="title-img">
+            <img src="~/assets/img/11_03.jpg" />
+        </div>
+        <div class="row content">
+            <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                <p>@Html.Raw(zixunlist[0].Content)</p>
+            </div>
+        </div>
+        @RenderPage("~/Views/include/foot.cshtml")
+    </div>
+    @RenderPage("~/Views/include/footjs.cshtml")
+</body>
+</html>

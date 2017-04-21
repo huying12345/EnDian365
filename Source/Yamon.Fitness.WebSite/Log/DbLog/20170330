@@ -1,0 +1,3 @@
+2017-03-30 11:45:21,261|ExecuteDataTable|select  AppKey,AppSecretKey from SiteManage_Applications  
+2017-03-30 11:45:22,274|ExecuteDataTable|select ConfigKey,ConfigValue from SiteManage_Config
+2017-03-30 11:45:22,953|ExecuteDataTable|select Purview from UC_RolePurview where RoleID in('SystemManage')

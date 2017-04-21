@@ -1,0 +1,244 @@
+@charset "UTF-8";
+#spiritual, #Encyclopedias {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#spiritual .row, #Encyclopedias .row {
+  margin-left: 0px;
+}
+
+#spiritual .itemTitle, #Encyclopedias .itemTitle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#spiritual .itemTitle .title, #Encyclopedias .itemTitle .title {
+  background: #AC2B2B;
+  margin-left: 15px;
+  padding-left: 0px;
+  box-shadow: 0px 6px 10px #848181;
+  margin: 0px;
+  height: 50px;
+}
+
+#spiritual .itemTitle .title .img, #Encyclopedias .itemTitle .title .img {
+  padding-left: 0px;
+}
+
+#spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+  width: 100%;
+  border: 4px solid #645757;
+  box-shadow: 3px 0px 10px #47474B;
+  margin-top: -35px;
+}
+
+#spiritual .itemTitle .title p, #Encyclopedias .itemTitle .title p {
+  color: #fff;
+  text-align: center;
+  padding: 8px 0px;
+  font-size: 20px;
+}
+
+#spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+  background: #403B3B;
+  padding: 0px;
+  border-left: 2px solid #383131;
+  box-shadow: 0px 6px 10px #848181;
+  height: 50px;
+}
+
+#spiritual .itemContent audio, #Encyclopedias .itemContent audio {
+  width: 100%;
+}
+
+#spiritual .itemContent iframe, #Encyclopedias .itemContent iframe {
+  width: 100%;
+  height: 270px;
+  border: 4px solid #403B3B;
+}
+
+#spiritual .itemContent article, #Encyclopedias .itemContent article {
+  background: #403B3B;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#spiritual .itemContent .iframe, #Encyclopedias .itemContent .iframe {
+  height: 410px;
+  padding-right: 0px;
+  background: #403b3b;
+  padding: 0px;
+}
+
+#spiritual .itemContent .iframe article, #Encyclopedias .itemContent .iframe article {
+  margin-top: -5px;
+  height: 140px;
+}
+
+#spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+  font-size: 18px;
+}
+
+#spiritual .itemContent .iframe .more, #Encyclopedias .itemContent .iframe .more {
+  background: #403B3B;
+  color: #fff;
+  padding: 10px 20px;
+  height: 100%;
+  line-height: 40px;
+}
+
+#spiritual .itemContent .iframe .more p, #Encyclopedias .itemContent .iframe .more p {
+  cursor: pointer;
+}
+
+#spiritual .itemContent .iframe .more p:hover, #Encyclopedias .itemContent .iframe .more p:hover {
+  text-decoration: underline;
+}
+
+#spiritual .itemContent .ps, #Encyclopedias .itemContent .ps {
+  padding-left: 5px;
+}
+
+#spiritual .itemContent .ps article, #Encyclopedias .itemContent .ps article {
+  border: 4px solid #645757;
+  height: 410px;
+  line-height: 40px;
+}
+
+#spiritual .itemContent .ps article p:hover, #Encyclopedias .itemContent .ps article p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#spiritual .itemContent .ps .scripture, #Encyclopedias .itemContent .ps .scripture {
+  overflow-y: scroll;
+  height: 410px;
+  padding: 10px 20px;
+}
+
+#spiritual .itemContent .ps .scripture p, #Encyclopedias .itemContent .ps .scripture p {
+  font-size: 15px;
+  padding-top: 20px;
+  text-indent: 30px;
+}
+
+#spiritual .itemContent .ps .scripture .scriptureTitle, #Encyclopedias .itemContent .ps .scripture .scriptureTitle {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  margin-top: 20px;
+}
+
+#spiritual .itemContent .ps .scripture .scripturetime, #Encyclopedias .itemContent .ps .scripture .scripturetime {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#spiritual .itemContent .ps .scripture .statement, #Encyclopedias .itemContent .ps .scripture .statement {
+  display: block;
+  text-indent: 30px;
+}
+
+#spiritual .areaItem, #Encyclopedias .areaItem {
+  width: 100%;
+  background: #6C1717;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 20px #595454;
+}
+
+@media screen and (min-width: 1201px) {
+  #spiritual p, #Encyclopedias p {
+    font-size: 16px;
+  }
+  #spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+    height: 100px;
+  }
+  #spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+    font-size: 16px;
+  }
+  #spiritual .areaItem p, #Encyclopedias .areaItem p {
+    font-size: 30px;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 7%;
+  }
+  #spiritual .itemContent .smallShop a, #Encyclopedias .itemContent .smallShop a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #spiritual p, #Encyclopedias p {
+    font-size: 14px;
+  }
+  #spiritual .itemTitle .title img, #Encyclopedias .itemTitle .title img {
+    height: 94px;
+  }
+  #spiritual .itemContent .iframe article p, #Encyclopedias .itemContent .iframe article p {
+    font-size: 14px;
+  }
+  #spiritual .areaItem p, #Encyclopedias .areaItem p {
+    font-size: 25px;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 7%;
+  }
+  #spiritual .itemContent .smallShop a, #Encyclopedias .itemContent .smallShop a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #spiritual .carousel-indicators, #Encyclopedias .carousel-indicators {
+    width: 80%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 6.2%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #spiritual .carousel-indicators, #Encyclopedias .carousel-indicators {
+    width: 80%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    width: 16%;
+  }
+  #spiritual .itemContent .iframe, #spiritual .itemContent .Vedio, #spiritual .itemContent .Audio, #spiritual .itemContent .ps, #Encyclopedias .itemContent .iframe, #Encyclopedias .itemContent .Vedio, #Encyclopedias .itemContent .Audio, #Encyclopedias .itemContent .ps {
+    /*width:100%;*/
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #spiritual .itemTitle, #Encyclopedias .itemTitle {
+    margin-top: 25px;
+  }
+  #spiritual .itemTitle .img, #Encyclopedias .itemTitle .img {
+    display: none;
+  }
+  #spiritual .itemTitle .title, #Encyclopedias .itemTitle .title {
+    width: 96%;
+  }
+  #spiritual .itemTitle .content, #Encyclopedias .itemTitle .content {
+    width: 100%;
+  }
+  #spiritual .itemTitle .grey, #Encyclopedias .itemTitle .grey {
+    display: none;
+  }
+  #spiritual .itemTitle .title p, #Encyclopedias .itemTitle .title p {
+    font-size: 16px;
+    padding: 15px 0px;
+  }
+}
+
+#spiritual .areaItem p, #Encyclopedias .areaItem p {
+  font-size: 20px;
+}

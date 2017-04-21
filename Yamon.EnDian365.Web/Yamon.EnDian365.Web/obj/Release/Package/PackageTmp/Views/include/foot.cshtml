@@ -1,0 +1,44 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
+    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categoryerweima = categoryDal.GetInfoByID(categoryDal.GetIdByKey("erweima"));
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+}
+<footer class="footer">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <p class="contactTitle">联系方式：</p>
+            <p>邮箱：information@hvsha.com</p>
+            <p class="joinUs" style="margin-top:30px;cursor:pointer;" onclick="window.open('/Default/Index?cid=11f75f7c-4a3d-48aa-846c-2545f7f69eb3#contactAndJoin')">留言给我们：</p>
+        </div>
+        @{
+            List<vwInfoCategory> erweimabList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryerweima.CategoryID }, "CreateTime desc", 2);
+        }
+       @if (erweimabList.Count > 0)
+       {
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 friendTitleImg" style="text-align:center;">
+            @foreach (vwInfoCategory Info in erweimabList)
+            {
+                <div class="col-lg-6 col-sm-4 col-md-6 col-xs-4">
+                    <img src="@Info.MediaFileName" />
+                    <p>@Info.Title</p>
+                </div>
+            }
+        </div>
+       }
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <p class="friendTitle">友站连结：</p>
+            <div class="FriendStaion">
+                <p><a href="#" onclick="window.open('http://www.tpehoc.org.tw/')">台北基督之家</a></p>
+                <p><a href="#" onclick="window.open('https://www.hvfhoc.com/')">财团法人天声传播协会</a></p>
+                <p><a href="#" onclick="window.open('http://new.fmlccc.org/wordpress/')">曙光华人基督教会</a></p>
+                <p><a href="#" onclick="window.open('http://www.lmsfstudio.org/')">晨星之光基金会</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="backUp" id="backUp">
+        <a href="javascript:;">返回</a>
+    </div>
+</footer>

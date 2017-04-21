@@ -1,0 +1,34 @@
+﻿@using Yamon.Framework.Common
+@using Yamon.Module.PortalIPS.DAL
+@{
+    SMB_InformationDAL infoDal = new SMB_InformationDAL();
+}
+<div class="row searchBox">
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12" style="text-align:left;padding:10px 0px">
+        <span>快速查询：</span>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <input type="text" id="keyword" name="keyword" value="" placeholder="关键字,请用空格或逗号隔开"/>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+        <select id="Series" class="easyui-combobox" name="Series" >
+            <option value="">全部系列</option>
+            @Html.Raw(MyHtmlHelper2.ShowSelectOptions(infoDal.NameValue_Series, ""))
+        </select>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+        <select id="CategoryID" class="easyui-combobox" name="CategoryID">
+            <option value="">全部类别</option>
+            @Html.Raw(MyHtmlHelper2.ShowSelectOptions(infoDal.NameValue_CategoryID, ""))
+        </select>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+        <select id="Author" class="easyui-combobox" name="Author">
+            <option value="">全部讲者/牧师</option>
+            @Html.Raw(MyHtmlHelper2.ShowSelectOptions(infoDal.NameValue_Author, ""))
+        </select>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-6 col-xs-12">
+        <button type="button" class="btn btn-default" id="btnsearchBox">搜索</button>
+    </div>
+</div>

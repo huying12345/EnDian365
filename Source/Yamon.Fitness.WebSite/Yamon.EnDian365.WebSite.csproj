@@ -1,0 +1,2538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6C4F7DA-00F7-479F-B11F-A0EAF42948EB}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yamon.EnDian365.WebSite</RootNamespace>
+    <AssemblyName>Yamon.EnDian365.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>82da7a72</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PrecompiledMvcViewEngineContrib, Version=1.0.0.26413, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PrecompiledMvcViewEngineContrib.1.0\lib\net40\PrecompiledMvcViewEngineContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RazorGenerator.Mvc.2.4.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.Common, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Yamon.Framework.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DAL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Yamon.Framework.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DBUtility, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Yamon.Framework.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.DBUtility.SqlServer">
+      <HintPath>..\..\Lib\Yamon.Framework.DBUtility.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.Log4Net, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Yamon.Framework.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.MVC, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Framework.MVC.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Framework.NVelocity">
+      <HintPath>..\..\Lib\Yamon.Framework.NVelocity.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.App.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.App.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.App.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.App.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.App.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.App.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.App.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.App.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.Common, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Yamon.Module.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.SiteManage.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.SiteManage.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.SiteManage.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.SiteManage.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.SiteManage.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.UCenter.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.UCenter.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.UCenter.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Yamon.Module.UCenter.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Modules\Yamon.Module.UCenter.WebApi.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ads.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ads.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Blank.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blank.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\config.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>config.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\content.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>content.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\header.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>header.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomePage.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\LeftMenu.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeftMenu.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\lefts.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lefts.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\log.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>log.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Login.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\mains.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mains.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\manager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>manager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\news_cat.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>news_cat.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\person.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>person.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Test.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\includeM\head.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>head.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Error.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Error.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Navigation.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Navigation.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout1.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout1.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout21.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout2.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_SimpleLayout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SimpleLayout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ViewStart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ViewStart.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Resources\JsLib\artTemplate\template.js" />
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap.css" />
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resources\JsLib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\JsLib\bootstrap\js\bootstrap.js" />
+    <Content Include="Resources\JsLib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resources\JsLib\bootstrap\js\npm.js" />
+    <Content Include="Resources\JsLib\citypicker\css\city-picker.css" />
+    <Content Include="Resources\JsLib\citypicker\css\main.css" />
+    <Content Include="Resources\JsLib\citypicker\images\drop-arrow.png" />
+    <Content Include="Resources\JsLib\citypicker\js\city-picker.data.js" />
+    <Content Include="Resources\JsLib\citypicker\js\city-picker.js" />
+    <Content Include="Resources\JsLib\citypicker\js\main.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addons.min.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\comment\comment.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\comment\continuecomment.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\dialog\dialog.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\dialog\dialog.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\display\fullscreen.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\display\fullscreen.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\display\panel.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\display\placeholder.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\display\rulers.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\closebrackets.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\closetag.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\continuelist.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\matchbrackets.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\matchtags.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\edit\trailingspace.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\brace-fold.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\comment-fold.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\foldcode.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\foldgutter.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\foldgutter.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\indent-fold.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\markdown-fold.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\fold\xml-fold.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\anyword-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\css-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\html-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\javascript-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\show-hint.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\show-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\sql-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\hint\xml-hint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\coffeescript-lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\css-lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\javascript-lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\json-lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\lint.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\lint\yaml-lint.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\merge\merge.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\merge\merge.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\mode\loadmode.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\mode\multiplex.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\mode\multiplex_test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\mode\overlay.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\mode\simple.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\runmode\colorize.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\runmode\runmode-standalone.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\runmode\runmode.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\runmode\runmode.node.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\scroll\annotatescrollbar.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\scroll\scrollpastend.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\scroll\simplescrollbars.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\scroll\simplescrollbars.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\search\match-highlighter.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\search\matchesonscrollbar.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\search\matchesonscrollbar.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\search\search.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\search\searchcursor.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\selection\active-line.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\selection\mark-selection.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\selection\selection-pointer.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\tern\tern.css" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\tern\tern.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\tern\worker.js" />
+    <Content Include="Resources\JsLib\CodeMirror\addon\wrap\hardwrap.js" />
+    <Content Include="Resources\JsLib\CodeMirror\codemirror.min.css" />
+    <Content Include="Resources\JsLib\CodeMirror\codemirror.min.js" />
+    <Content Include="Resources\JsLib\CodeMirror\keymap\emacs.js" />
+    <Content Include="Resources\JsLib\CodeMirror\keymap\sublime.js" />
+    <Content Include="Resources\JsLib\CodeMirror\keymap\vim.js" />
+    <Content Include="Resources\JsLib\CodeMirror\lib\codemirror.css" />
+    <Content Include="Resources\JsLib\CodeMirror\lib\codemirror.js" />
+    <Content Include="Resources\JsLib\CodeMirror\modes.min.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\apl\apl.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\apl\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\asciiarmor\asciiarmor.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\asciiarmor\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\asterisk\asterisk.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\asterisk\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\clike\clike.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\clike\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\clike\scala.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\clojure\clojure.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\clojure\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cmake\cmake.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cmake\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cobol\cobol.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cobol\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\coffeescript\coffeescript.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\coffeescript\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\commonlisp\commonlisp.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\commonlisp\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\css.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\less.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\less_test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\scss.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\scss_test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\css\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cypher\cypher.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\cypher\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dart\dart.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dart\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\diff\diff.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\diff\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\django\django.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\django\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dockerfile\dockerfile.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dockerfile\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dtd\dtd.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dtd\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dylan\dylan.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\dylan\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\d\d.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\d\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ebnf\ebnf.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ebnf\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ecl\ecl.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ecl\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\eiffel\eiffel.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\eiffel\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\erlang\erlang.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\erlang\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\forth\forth.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\forth\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\fortran\fortran.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\fortran\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gas\gas.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gas\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gfm\gfm.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gfm\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gfm\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gherkin\gherkin.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\gherkin\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\go\go.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\go\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\groovy\groovy.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\groovy\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haml\haml.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haml\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haml\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\handlebars\handlebars.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\handlebars\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haskell\haskell.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haskell\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haxe\haxe.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\haxe\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\htmlembedded\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\htmlmixed\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\http\http.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\http\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\idl\idl.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\idl\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\jade\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\jade\jade.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\javascript\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\javascript\javascript.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\javascript\json-ld.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\javascript\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\javascript\typescript.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\jinja2\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\jinja2\jinja2.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\julia\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\julia\julia.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\kotlin\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\kotlin\kotlin.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\livescript\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\livescript\livescript.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\lua\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\lua\lua.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\markdown\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\markdown\markdown.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\markdown\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\meta.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mirc\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mirc\mirc.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mllike\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mllike\mllike.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\modelica\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\modelica\modelica.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mumps\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\mumps\mumps.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\nginx\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\nginx\nginx.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ntriples\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ntriples\ntriples.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\octave\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\octave\octave.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pascal\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pascal\pascal.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pegjs\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pegjs\pegjs.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\perl\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\perl\perl.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\php\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\php\php.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\php\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pig\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\pig\pig.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\properties\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\properties\properties.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\puppet\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\puppet\puppet.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\python\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\python\python.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\q\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\q\q.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rpm\changes\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rpm\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rpm\rpm.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rst\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rst\rst.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ruby\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ruby\ruby.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\ruby\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rust\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\rust\rust.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\r\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\r\r.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sass\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sass\sass.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\scheme\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\scheme\scheme.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\shell\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\shell\shell.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\shell\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sieve\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sieve\sieve.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\slim\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\slim\slim.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\slim\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smalltalk\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smalltalk\smalltalk.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smartymixed\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smartymixed\smartymixed.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smarty\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\smarty\smarty.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\solr\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\solr\solr.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\soy\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\soy\soy.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sparql\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sparql\sparql.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\spreadsheet\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\spreadsheet\spreadsheet.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sql\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\sql\sql.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\stex\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\stex\stex.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\stex\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\stylus\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\stylus\stylus.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tcl\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tcl\tcl.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\textile\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\textile\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\textile\textile.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiddlywiki\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiki\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiki\tiki.css" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tiki\tiki.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\toml\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\toml\toml.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tornado\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\tornado\tornado.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\troff\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\troff\troff.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\turtle\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\turtle\turtle.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\vbscript\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\vbscript\vbscript.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\vb\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\vb\vb.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\velocity\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\velocity\velocity.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\verilog\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\verilog\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\verilog\verilog.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xml\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xml\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xml\xml.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xquery\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xquery\test.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\xquery\xquery.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\yaml\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\yaml\yaml.js" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\z80\index.html" />
+    <Content Include="Resources\JsLib\CodeMirror\mode\z80\z80.js" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\3024-day.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\3024-night.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\ambiance-mobile.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\ambiance.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\base16-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\base16-light.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\blackboard.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\cobalt.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\colorforth.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\eclipse.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\elegant.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\erlang-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\lesser-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\liquibyte.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\mbo.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\mdn-like.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\midnight.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\monokai.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\neat.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\neo.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\night.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\paraiso-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\paraiso-light.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\pastel-on-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\rubyblue.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\solarized.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\the-matrix.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\tomorrow-night-bright.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\tomorrow-night-eighties.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\twilight.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\vibrant-ink.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\xq-dark.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\xq-light.css" />
+    <Content Include="Resources\JsLib\CodeMirror\theme\zenburn.css" />
+    <Content Include="Resources\JsLib\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Resources\JsLib\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="Resources\JsLib\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Resources\JsLib\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Resources\JsLib\colorpicker\img\alpha-horizontal.png" />
+    <Content Include="Resources\JsLib\colorpicker\img\alpha.png" />
+    <Content Include="Resources\JsLib\colorpicker\img\hue-horizontal.png" />
+    <Content Include="Resources\JsLib\colorpicker\img\hue.png" />
+    <Content Include="Resources\JsLib\colorpicker\img\saturation.png" />
+    <Content Include="Resources\JsLib\datatables\dataTables.bootstrap.css" />
+    <Content Include="Resources\JsLib\datatables\dataTables.bootstrap.js" />
+    <Content Include="Resources\JsLib\datatables\dataTables.bootstrap.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\License.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\License.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\License.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\complexHeader.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\fixedHeader.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\styling\compact.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\examples\styling\scrolling.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\License.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Resources\JsLib\datatables\images\sort_asc.png" />
+    <Content Include="Resources\JsLib\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Resources\JsLib\datatables\images\sort_both.png" />
+    <Content Include="Resources\JsLib\datatables\images\sort_desc.png" />
+    <Content Include="Resources\JsLib\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Resources\JsLib\datatables\jquery.dataTables.css" />
+    <Content Include="Resources\JsLib\datatables\jquery.dataTables.js" />
+    <Content Include="Resources\JsLib\datatables\jquery.dataTables.min.css" />
+    <Content Include="Resources\JsLib\datatables\jquery.dataTables.min.js" />
+    <Content Include="Resources\JsLib\datatables\jquery.dataTables_themeroller.css" />
+    <Content Include="Resources\JsLib\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Resources\JsLib\daterangepicker\daterangepicker.js" />
+    <Content Include="Resources\JsLib\daterangepicker\moment.js" />
+    <Content Include="Resources\JsLib\daterangepicker\moment.min.js" />
+    <Content Include="Resources\JsLib\dropzone\basic.css" />
+    <Content Include="Resources\JsLib\dropzone\dropzone-amd-module.js" />
+    <Content Include="Resources\JsLib\dropzone\dropzone.css" />
+    <Content Include="Resources\JsLib\dropzone\dropzone.js" />
+    <Content Include="Resources\JsLib\dropzone\min\basic.min.css" />
+    <Content Include="Resources\JsLib\dropzone\min\dropzone-amd-module.min.js" />
+    <Content Include="Resources\JsLib\dropzone\min\dropzone.min.css" />
+    <Content Include="Resources\JsLib\dropzone\min\dropzone.min.js" />
+    <Content Include="Resources\JsLib\dtree\dtree.css" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\base.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\calendar.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\cd.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\empty.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\folder.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\folderopen.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\globe.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\imgfolder.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\join.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\joinbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\line.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\minusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\musicfolder.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\nolines_minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\nolines_plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\page.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\plusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\question.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\default\trash.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\base.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\empty.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\folder.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\folderopen.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\join.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\joinbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\line.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\minusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\nolines_minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\nolines_plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\page.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\plusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\base.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\empty.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\folder.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\folderopen.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\join.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\joinbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\line.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\minusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\nolines_minus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\nolines_plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\page.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\plus.gif" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\plusbottom.gif" />
+    <Content Include="Resources\JsLib\dtree\wtree.js" />
+    <Content Include="Resources\JsLib\echarts\echarts.min.js" />
+    <Content Include="Resources\JsLib\editable\css\bootstrap-editable.css" />
+    <Content Include="Resources\JsLib\editable\img\clear.png" />
+    <Content Include="Resources\JsLib\editable\img\loading.gif" />
+    <Content Include="Resources\JsLib\editable\js\bootstrap-editable.js" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.css" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.logo.css" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.logo.min.css" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.min.css" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.preview.css" />
+    <Content Include="Resources\JsLib\editormd\css\editormd.preview.min.css" />
+    <Content Include="Resources\JsLib\editormd\editormd.js" />
+    <Content Include="Resources\JsLib\editormd\editormd.min.js" />
+    <Content Include="Resources\JsLib\editormd\fonts\editormd-logo.svg" />
+    <Content Include="Resources\JsLib\editormd\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\JsLib\editormd\images\loading%402x.gif" />
+    <Content Include="Resources\JsLib\editormd\images\loading%403x.gif" />
+    <Content Include="Resources\JsLib\editormd\images\loading.gif" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-favicon-16x16.ico" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-favicon-24x24.ico" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-favicon-32x32.ico" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-favicon-48x48.ico" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-favicon-64x64.ico" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-114x114.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-120x120.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-144x144.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-16x16.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-180x180.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-240x240.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-24x24.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-320x320.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-32x32.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-48x48.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-57x57.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-64x64.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-72x72.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\editormd-logo-96x96.png" />
+    <Content Include="Resources\JsLib\editormd\images\logos\vi.png" />
+    <Content Include="Resources\JsLib\editormd\plugins\code-block-dialog\code-block-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\emoji-dialog\emoji-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\goto-line-dialog\goto-line-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\help-dialog\help-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\html-entities-dialog\html-entities-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\image-dialog\image-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\link-dialog\link-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\plugin-template.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\preformatted-text-dialog\preformatted-text-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\reference-link-dialog\reference-link-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\table-dialog\table-dialog.js" />
+    <Content Include="Resources\JsLib\editormd\plugins\test-plugin\test-plugin.js" />
+    <Content Include="Resources\JsLib\fastclick\fastclick.js" />
+    <Content Include="Resources\JsLib\fastclick\fastclick.min.js" />
+    <Content Include="Resources\JsLib\FlexPaper\Diyflexpaper.swf" />
+    <Content Include="Resources\JsLib\FlexPaper\FlexPaperViewer.swf" />
+    <Content Include="Resources\JsLib\FlexPaper\js\flexpaper_flash.js" />
+    <Content Include="Resources\JsLib\FlexPaper\js\flexpaper_flash_debug.js" />
+    <Content Include="Resources\JsLib\FlexPaper\playerProductInstall.swf" />
+    <Content Include="Resources\JsLib\FlexPaper\Sample.swf" />
+    <Content Include="Resources\JsLib\font-awesome\css\font-awesome.css" />
+    <Content Include="Resources\JsLib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Resources\JsLib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resources\JsLib\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Resources\JsLib\Highcharts\gfx\vml-radial-gradient.png" />
+    <Content Include="Resources\JsLib\Highcharts\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Resources\JsLib\Highcharts\graphics\skies.jpg" />
+    <Content Include="Resources\JsLib\Highcharts\graphics\snow.png" />
+    <Content Include="Resources\JsLib\Highcharts\graphics\sun.png" />
+    <Content Include="Resources\JsLib\highlight\default.min.css" />
+    <Content Include="Resources\JsLib\highlight\highlight.min.js" />
+    <Content Include="Resources\JsLib\highlight\monokai_sublime.min.css" />
+    <Content Include="Resources\JsLib\Highcharts\index.htm" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\mootools-adapter.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\mootools-adapter.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\prototype-adapter.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\prototype-adapter.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\standalone-framework.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\adapters\standalone-framework.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts-3d.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts-3d.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts-all.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts-more.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts-more.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\highcharts.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\canvas-tools.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\canvas-tools.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\data.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\data.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\drilldown.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\drilldown.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\exporting.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\exporting.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\funnel.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\funnel.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\heatmap.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\heatmap.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\no-data-to-display.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\no-data-to-display.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\solid-gauge.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\modules\solid-gauge.src.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\dark-blue.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\dark-green.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\dark-unica.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\gray.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\grid-light.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\grid.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\sand-signika.js" />
+    <Content Include="Resources\JsLib\Highcharts\js\themes\skies.js" />
+    <Content Include="Resources\JsLib\html5shiv.min.js" />
+    <Content Include="Resources\JsLib\iCheck\all.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\aero%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\aero.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\aero.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\blue%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\blue.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\blue.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\flat%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\flat.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\flat.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\green%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\green.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\green.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\grey%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\grey.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\grey.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\orange%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\orange.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\orange.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\pink%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\pink.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\pink.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\purple%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\purple.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\purple.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\red%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\red.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\red.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\yellow%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\yellow.css" />
+    <Content Include="Resources\JsLib\iCheck\flat\yellow.png" />
+    <Content Include="Resources\JsLib\iCheck\flat\_all.css" />
+    <Content Include="Resources\JsLib\iCheck\futurico\futurico%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\futurico\futurico.css" />
+    <Content Include="Resources\JsLib\iCheck\futurico\futurico.png" />
+    <Content Include="Resources\JsLib\iCheck\icheck.js" />
+    <Content Include="Resources\JsLib\iCheck\icheck.min.js" />
+    <Content Include="Resources\JsLib\iCheck\line\aero.css" />
+    <Content Include="Resources\JsLib\iCheck\line\blue.css" />
+    <Content Include="Resources\JsLib\iCheck\line\green.css" />
+    <Content Include="Resources\JsLib\iCheck\line\grey.css" />
+    <Content Include="Resources\JsLib\iCheck\line\line%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\line\line.css" />
+    <Content Include="Resources\JsLib\iCheck\line\line.png" />
+    <Content Include="Resources\JsLib\iCheck\line\orange.css" />
+    <Content Include="Resources\JsLib\iCheck\line\pink.css" />
+    <Content Include="Resources\JsLib\iCheck\line\purple.css" />
+    <Content Include="Resources\JsLib\iCheck\line\red.css" />
+    <Content Include="Resources\JsLib\iCheck\line\yellow.css" />
+    <Content Include="Resources\JsLib\iCheck\line\_all.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\aero%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\aero.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\aero.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\blue%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\blue.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\blue.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\green%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\green.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\green.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\grey%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\grey.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\grey.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\minimal%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\minimal.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\minimal.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\orange%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\orange.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\orange.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\pink%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\pink.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\pink.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\purple%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\purple.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\purple.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\red%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\red.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\red.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\yellow%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\yellow.css" />
+    <Content Include="Resources\JsLib\iCheck\minimal\yellow.png" />
+    <Content Include="Resources\JsLib\iCheck\minimal\_all.css" />
+    <Content Include="Resources\JsLib\iCheck\polaris\polaris%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\polaris\polaris.css" />
+    <Content Include="Resources\JsLib\iCheck\polaris\polaris.png" />
+    <Content Include="Resources\JsLib\iCheck\square\aero%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\aero.css" />
+    <Content Include="Resources\JsLib\iCheck\square\aero.png" />
+    <Content Include="Resources\JsLib\iCheck\square\blue%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\blue.css" />
+    <Content Include="Resources\JsLib\iCheck\square\blue.png" />
+    <Content Include="Resources\JsLib\iCheck\square\green%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\green.css" />
+    <Content Include="Resources\JsLib\iCheck\square\green.png" />
+    <Content Include="Resources\JsLib\iCheck\square\grey%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\grey.css" />
+    <Content Include="Resources\JsLib\iCheck\square\grey.png" />
+    <Content Include="Resources\JsLib\iCheck\square\orange%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\orange.css" />
+    <Content Include="Resources\JsLib\iCheck\square\orange.png" />
+    <Content Include="Resources\JsLib\iCheck\square\pink%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\pink.css" />
+    <Content Include="Resources\JsLib\iCheck\square\pink.png" />
+    <Content Include="Resources\JsLib\iCheck\square\purple%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\purple.css" />
+    <Content Include="Resources\JsLib\iCheck\square\purple.png" />
+    <Content Include="Resources\JsLib\iCheck\square\red%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\red.css" />
+    <Content Include="Resources\JsLib\iCheck\square\red.png" />
+    <Content Include="Resources\JsLib\iCheck\square\square%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\square.css" />
+    <Content Include="Resources\JsLib\iCheck\square\square.png" />
+    <Content Include="Resources\JsLib\iCheck\square\yellow%402x.png" />
+    <Content Include="Resources\JsLib\iCheck\square\yellow.css" />
+    <Content Include="Resources\JsLib\iCheck\square\yellow.png" />
+    <Content Include="Resources\JsLib\iCheck\square\_all.css" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.date.extensions.js" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.extensions.js" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.js" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="Resources\JsLib\input-mask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="Resources\JsLib\input-mask\phone-codes\readme.txt" />
+    <Content Include="Resources\JsLib\jquery-easyui-extends\datagrid-detailview.js" />
+    <Content Include="Resources\JsLib\jquery-easyui-extends\datagrid-groupview.js" />
+    <Content Include="Resources\JsLib\jquery-easyui-extends\easyui-optionmange.js" />
+    <Content Include="Resources\JsLib\jquery-easyui-extends\jquery.easyui.extends.js" />
+    <Content Include="Resources\JsLib\jquery-easyui-extends\jquery.edatagrid.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\easyloader.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\jquery.easyui.min.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\jquery.easyui.mobile.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-af.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-am.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-ar.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-bg.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-ca.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-cs.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-cz.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-da.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-de.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-el.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-en.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-es.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-fr.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-it.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-jp.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-ko.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-nl.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-pl.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-pt_BR.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-ru.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-sv_SE.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-tr.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\locale\easyui-lang-zh_TW.js" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\black\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\bootstrap\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\color.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\default\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\gray\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icon.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\08_mb5ucom.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\17_mb5ucom.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\18_mb5ucom.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\19_mb5ucom.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\20_mb5ucom.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\add.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\addnew.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\all.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\app.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\aremove.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\back.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\cache.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\calendar.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\calendar1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\cancel.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\clear.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\close.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\color.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\com.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\cut.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data2.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data3.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data4.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data5.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\data6.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\date_new.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\db.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\directory.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\do.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\doc.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\download.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\edit_add.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\edit_remove.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\et.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\ett.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\exam.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\file.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\files.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\filesave.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\filter.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\folder.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\framework.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\globe.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\guestbook.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\help.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\home.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\home1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\html.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\img.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\import.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\insert.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\interface_dialog.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\jingpin.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\large_chart.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\large_clipart.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\large_picture.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\large_shapes.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\large_smartart.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\link.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\list_users.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\lock.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\log.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mail.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mail1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\man.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mdb.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mde.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mini_add.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mini_edit.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\mini_refresh.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\more.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\new1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\new2.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\new3.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\new4.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\no.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\note_delete.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\note_new.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\notice.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\ok.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\other.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_deny.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_down.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_dynamic.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_edit.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_extension.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_find.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_new.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_right.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_sound.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_tick.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_up.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\page_user_light.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\part.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\password.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\paste.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\pc.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\pen.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\pen1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\pencil.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\phone.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\photo.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\ppt.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\preview.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\print.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\pub.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\redo.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\reload.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\rename.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\rtf.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\search.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\search.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\search1.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\settings.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\sharedir.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\sitemap.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\sum.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\sys.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\system.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\table.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\tables.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\task.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\template.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\theme.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\tip.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\txt.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\undo.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\upload.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\url.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\user.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\user1.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\user2.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\userclass.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\usergrade.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\usergroup.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\users.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\users2.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\icons\vss.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\material\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\accordion.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\calendar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\combo.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\combobox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\datagrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\datalist.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\datebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\dialog.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\easyui.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\filebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\accordion_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\blank.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\calendar_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\combo_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\datagrid_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\datebox_arrow.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\layout_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\loading.gif" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\menu_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\messager_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\pagination_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\panel_tools.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\searchbox_button.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\slider_handle.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\spinner_arrows.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\tabs_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\tree_icons.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\images\validatebox_warning.png" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\layout.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\linkbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\menu.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\menubutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\messager.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\numberbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\pagination.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\panel.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\progressbar.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\propertygrid.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\searchbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\slider.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\spinner.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\splitbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\switchbutton.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\tabs.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\textbox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\tooltip.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\tree.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\validatebox.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\metro\window.css" />
+    <Content Include="Resources\JsLib\jquery-easyui\themes\mobile.css" />
+    <Content Include="Resources\JsLib\jquery-editable\index.html" />
+    <Content Include="Resources\JsLib\jquery-editable\jquery.editable.js" />
+    <Content Include="Resources\JsLib\jquery-editable\jquery.editable.min.js" />
+    <Content Include="Resources\JsLib\jquery-fullPage\jquery.fullPage.css" />
+    <Content Include="Resources\JsLib\jquery-fullPage\jquery.fullPage.js" />
+    <Content Include="Resources\JsLib\jquery-fullPage\jquery.fullPage.min.js" />
+    <Content Include="Resources\JsLib\jquery-validation\additional-methods.js" />
+    <Content Include="Resources\JsLib\jquery-validation\additional-methods.min.js" />
+    <Content Include="Resources\JsLib\jquery-validation\jquery.validate.js" />
+    <Content Include="Resources\JsLib\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Resources\JsLib\jquery-validation\localization\messages_zh.js" />
+    <Content Include="Resources\JsLib\jquery-validation\localization\messages_zh.min.js" />
+    <Content Include="Resources\JsLib\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="Resources\JsLib\jquery-validation\localization\messages_zh_TW.min.js" />
+    <Content Include="Resources\JsLib\jquery-weui\css\jquery-weui.css" />
+    <Content Include="Resources\JsLib\jquery-weui\js\jquery-weui.js" />
+    <Content Include="Resources\JsLib\jquery-weui\lib\jquery-2.1.4.js" />
+    <Content Include="Resources\JsLib\jquery-weui\lib\weui.css" />
+    <Content Include="Resources\JsLib\jquery-weui\lib\weui.min.css" />
+    <Content Include="Resources\JsLib\jquery.bootgrid\jquery.bootgrid.css" />
+    <Content Include="Resources\JsLib\jquery.bootgrid\jquery.bootgrid.js" />
+    <Content Include="Resources\JsLib\jquery.bootgrid\jquery.bootgrid.min.css" />
+    <Content Include="Resources\JsLib\jquery.bootgrid\jquery.bootgrid.min.js" />
+    <Content Include="Resources\JsLib\jquery.bootstrap-growl.min.js" />
+    <Content Include="Resources\JsLib\jquery.cookie.js" />
+    <Content Include="Resources\JsLib\jquery.form.js" />
+    <Content Include="Resources\JsLib\jquery.goup.min.js" />
+    <Content Include="Resources\JsLib\jquery.hotkeys.js" />
+    <Content Include="Resources\JsLib\jquery.min.js" />
+    <Content Include="Resources\JsLib\jquery.pagination\jquery.pagination.css" />
+    <Content Include="Resources\JsLib\jquery.pagination\jquery.pagination.js" />
+    <Content Include="Resources\JsLib\jquery.query.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\jquery.metadata.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\jquery.tablesorter.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\jquery.tablesorter.min.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\pager\jquery.tablesorter.pager.css" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\pager\jquery.tablesorter.pager.js" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\blue\asc.gif" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\blue\bg.gif" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\blue\desc.gif" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\blue\style.css" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\green\asc.png" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\green\bg.png" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\green\desc.png" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\green\style.css" />
+    <Content Include="Resources\JsLib\json2.js" />
+    <Content Include="Resources\JsLib\knockout\knockout.validation.min.js" />
+    <Content Include="Resources\JsLib\marked.min.js" />
+    <Content Include="Resources\JsLib\metisMenu\metisMenu.css" />
+    <Content Include="Resources\JsLib\metisMenu\metisMenu.min.js" />
+    <Content Include="Resources\JsLib\My97DatePicker\calendar.js" />
+    <Content Include="Resources\JsLib\My97DatePicker\lang\en.js" />
+    <Content Include="Resources\JsLib\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Resources\JsLib\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Resources\JsLib\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Resources\JsLib\My97DatePicker\WdatePicker.js" />
+    <Content Include="Resources\JsLib\prettify.min.js" />
+    <Content Include="Resources\JsLib\respond.min.js" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2-bootstrap.css" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2-spinner.gif" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2.css" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2.min.js" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2.png" />
+    <Content Include="Resources\JsLib\select2-bootstrap\select2x2.png" />
+    <Content Include="Resources\JsLib\select2\i18n\az.js" />
+    <Content Include="Resources\JsLib\select2\i18n\bg.js" />
+    <Content Include="Resources\JsLib\select2\i18n\ca.js" />
+    <Content Include="Resources\JsLib\select2\i18n\cs.js" />
+    <Content Include="Resources\JsLib\select2\i18n\da.js" />
+    <Content Include="Resources\JsLib\select2\i18n\de.js" />
+    <Content Include="Resources\JsLib\select2\i18n\en.js" />
+    <Content Include="Resources\JsLib\select2\i18n\es.js" />
+    <Content Include="Resources\JsLib\select2\i18n\et.js" />
+    <Content Include="Resources\JsLib\select2\i18n\eu.js" />
+    <Content Include="Resources\JsLib\select2\i18n\fa.js" />
+    <Content Include="Resources\JsLib\select2\i18n\fi.js" />
+    <Content Include="Resources\JsLib\select2\i18n\fr.js" />
+    <Content Include="Resources\JsLib\select2\i18n\gl.js" />
+    <Content Include="Resources\JsLib\select2\i18n\he.js" />
+    <Content Include="Resources\JsLib\select2\i18n\hi.js" />
+    <Content Include="Resources\JsLib\select2\i18n\hr.js" />
+    <Content Include="Resources\JsLib\select2\i18n\hu.js" />
+    <Content Include="Resources\JsLib\select2\i18n\id.js" />
+    <Content Include="Resources\JsLib\select2\i18n\is.js" />
+    <Content Include="Resources\JsLib\select2\i18n\it.js" />
+    <Content Include="Resources\JsLib\select2\i18n\ko.js" />
+    <Content Include="Resources\JsLib\select2\i18n\lt.js" />
+    <Content Include="Resources\JsLib\select2\i18n\lv.js" />
+    <Content Include="Resources\JsLib\select2\i18n\mk.js" />
+    <Content Include="Resources\JsLib\select2\i18n\nb.js" />
+    <Content Include="Resources\JsLib\select2\i18n\nl.js" />
+    <Content Include="Resources\JsLib\select2\i18n\pl.js" />
+    <Content Include="Resources\JsLib\select2\i18n\pt-BR.js" />
+    <Content Include="Resources\JsLib\select2\i18n\pt.js" />
+    <Content Include="Resources\JsLib\select2\i18n\ro.js" />
+    <Content Include="Resources\JsLib\select2\i18n\ru.js" />
+    <Content Include="Resources\JsLib\select2\i18n\sk.js" />
+    <Content Include="Resources\JsLib\select2\i18n\sr.js" />
+    <Content Include="Resources\JsLib\select2\i18n\sv.js" />
+    <Content Include="Resources\JsLib\select2\i18n\th.js" />
+    <Content Include="Resources\JsLib\select2\i18n\tr.js" />
+    <Content Include="Resources\JsLib\select2\i18n\uk.js" />
+    <Content Include="Resources\JsLib\select2\i18n\vi.js" />
+    <Content Include="Resources\JsLib\select2\i18n\zh-CN.js" />
+    <Content Include="Resources\JsLib\select2\i18n\zh-TW.js" />
+    <Content Include="Resources\JsLib\select2\select2.css" />
+    <Content Include="Resources\JsLib\select2\select2.full.js" />
+    <Content Include="Resources\JsLib\select2\select2.full.min.js" />
+    <Content Include="Resources\JsLib\select2\select2.js" />
+    <Content Include="Resources\JsLib\select2\select2.min.css" />
+    <Content Include="Resources\JsLib\select2\select2.min.js" />
+    <Content Include="Resources\JsLib\tts\fingerprint.js" />
+    <Content Include="Resources\JsLib\tts\tts.min.js" />
+    <Content Include="Resources\JsLib\tts\tts_demo.js" />
+    <Content Include="Resources\JsLib\Underscore\underscore-min.js" />
+    <Content Include="Resources\JsLib\Underscore\underscore.js" />
+    <Content Include="Static\Home\css\Public.css" />
+    <Content Include="Static\Home\css\select.css" />
+    <Content Include="Static\Home\css\style.css" />
+    <Content Include="Static\Home\img\365logo.png" />
+    <Content Include="Static\Home\img\add.jpg" />
+    <Content Include="Static\Home\img\btnbg.png" />
+    <Content Include="Static\Home\img\buttonbg.png" />
+    <Content Include="Static\Home\img\cloud.png" />
+    <Content Include="Static\Home\img\del.jpg" />
+    <Content Include="Static\Home\img\help.png" />
+    <Content Include="Static\Home\img\icon01.png" />
+    <Content Include="Static\Home\img\icon02.png" />
+    <Content Include="Static\Home\img\icon03.png" />
+    <Content Include="Static\Home\img\icon05.png" />
+    <Content Include="Static\Home\img\icon06.png" />
+    <Content Include="Static\Home\img\icon07.png" />
+    <Content Include="Static\Home\img\icon09.png" />
+    <Content Include="Static\Home\img\inputbg.gif" />
+    <Content Include="Static\Home\img\itabbg.png" />
+    <Content Include="Static\Home\img\itabbg1.png" />
+    <Content Include="Static\Home\img\leftico.png" />
+    <Content Include="Static\Home\img\leftico01.png" />
+    <Content Include="Static\Home\img\leftline.gif" />
+    <Content Include="Static\Home\img\leftmenubg.gif" />
+    <Content Include="Static\Home\img\lefttop.gif" />
+    <Content Include="Static\Home\img\left\leftico.png" />
+    <Content Include="Static\Home\img\left\leftico01.png" />
+    <Content Include="Static\Home\img\left\leftline.gif" />
+    <Content Include="Static\Home\img\left\leftmenubg.gif" />
+    <Content Include="Static\Home\img\left\lefttop.gif" />
+    <Content Include="Static\Home\img\left\li4.jpg" />
+    <Content Include="Static\Home\img\left\list.gif" />
+    <Content Include="Static\Home\img\li4.jpg" />
+    <Content Include="Static\Home\img\light.png" />
+    <Content Include="Static\Home\img\line.gif" />
+    <Content Include="Static\Home\img\list.gif" />
+    <Content Include="Static\Home\img\loginbg1.png" />
+    <Content Include="Static\Home\img\loginbg2.png" />
+    <Content Include="Static\Home\img\loginbg3.png" />
+    <Content Include="Static\Home\img\logininfo.png" />
+    <Content Include="Static\Home\img\loginpassword.png" />
+    <Content Include="Static\Home\img\loginsj.png" />
+    <Content Include="Static\Home\img\loginuser.png" />
+    <Content Include="Static\Home\img\logo.png" />
+    <Content Include="Static\Home\img\navbg.png" />
+    <Content Include="Static\Home\img\righttop.gif" />
+    <Content Include="Static\Home\img\right\btnbg.png" />
+    <Content Include="Static\Home\img\right\del.jpg" />
+    <Content Include="Static\Home\img\right\righttop.gif" />
+    <Content Include="Static\Home\img\right\sx.jpg" />
+    <Content Include="Static\Home\img\right\th.gif" />
+    <Content Include="Static\Home\img\right\toolbg.gif" />
+    <Content Include="Static\Home\img\rlist.gif" />
+    <Content Include="Static\Home\img\sx.jpg" />
+    <Content Include="Static\Home\img\th.gif" />
+    <Content Include="Static\Home\img\toolbg.gif" />
+    <Content Include="Static\Home\img\topbg.gif" />
+    <Content Include="Static\Home\img\topleft.jpg" />
+    <Content Include="Static\Home\img\topright.jpg" />
+    <Content Include="Static\Home\img\top\add.jpg" />
+    <Content Include="Static\Home\img\top\help.png" />
+    <Content Include="Static\Home\img\top\icon01.png" />
+    <Content Include="Static\Home\img\top\icon02.png" />
+    <Content Include="Static\Home\img\top\icon03.png" />
+    <Content Include="Static\Home\img\top\icon05.png" />
+    <Content Include="Static\Home\img\top\icon06.png" />
+    <Content Include="Static\Home\img\top\icon07.png" />
+    <Content Include="Static\Home\img\top\icon09.png" />
+    <Content Include="Static\Home\img\top\inputbg.gif" />
+    <Content Include="Static\Home\img\top\itabbg.png" />
+    <Content Include="Static\Home\img\top\itabbg1.png" />
+    <Content Include="Static\Home\img\top\line.gif" />
+    <Content Include="Static\Home\img\top\logo.png" />
+    <Content Include="Static\Home\img\top\navbg.png" />
+    <Content Include="Static\Home\img\top\rlist.gif" />
+    <Content Include="Static\Home\img\top\topbg.gif" />
+    <Content Include="Static\Home\img\top\topleft.jpg" />
+    <Content Include="Static\Home\img\top\topright.jpg" />
+    <Content Include="Static\Home\img\top\ub1.png" />
+    <Content Include="Static\Home\img\top\user.png" />
+    <Content Include="Static\Home\img\ub1.png" />
+    <Content Include="Static\Home\img\user.png" />
+    <Content Include="Static\Home\img\yamon.png" />
+    <Content Include="Static\Home\js\checkfrom.js" />
+    <Content Include="Static\Home\js\cloud.js" />
+    <Content Include="Static\Home\js\jquery.js" />
+    <Content Include="Static\Home\manage.min.css" />
+    <Content Include="Static\Home\manage.min.js" />
+    <Content Include="Static\PortalIPS\js\categoryTree.js" />
+    <Content Include="Static\PortalIPS\js\vwInfoCategoryGrid.js" />
+    <Content Include="Static\SiteManage\js\APIForm.js" />
+    <Content Include="Static\SiteManage\js\ErrorParamModel.js" />
+    <Content Include="Static\SiteManage\js\RequestParamModel.js" />
+    <Content Include="Static\SiteManage\js\APIShow.js" />
+    <Content Include="Resources\JsLib\slimScroll\jquery.slimscroll.js" />
+    <Content Include="Resources\JsLib\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Resources\JsLib\timepicker\bootstrap-timepicker.css" />
+    <Content Include="Resources\JsLib\timepicker\bootstrap-timepicker.js" />
+    <Content Include="Resources\JsLib\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Resources\JsLib\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\attachment.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\alignicon.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\bg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\file-icons.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\icons.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\image.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\progress.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\success.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\attachment\images\success.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\background\background.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\background\background.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\background\background.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\background\images\bg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\background\images\success.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\chart.config.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\charts.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\charts.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\charts.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts0.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts1.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts2.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts3.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts4.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\charts\images\charts5.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\help\help.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\help\help.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\help\help.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\image.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\image.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\image.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\alignicon.jpg" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\bg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\icons.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\image.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\progress.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\success.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\image\images\success.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\internal.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\link\link.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\map\map.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\map\show.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\music\music.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\music\music.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\music\music.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\preview\preview.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\dragicon.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\edittable.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\edittable.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\edittable.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\edittd.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\table\edittip.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\config.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\template.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\template.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\template\template.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\bg.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\file-icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\file-icons.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\icons.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\image.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\progress.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\success.gif" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\images\success.png" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\video.css" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\video.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\video\video.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\wordimage\tangram.js" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="Resources\JsLib\ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="Resources\JsLib\ueditor\index.html" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\en.js" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\addimage.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\background.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\button.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\copy.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\localimage.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\music.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\en\images\upload.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="Resources\JsLib\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\css\ueditor.min.css" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\dialogbase.css" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\arrow.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\charts.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\filescan.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\icons.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\icons.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\loaderror.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\loading.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\lock.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\scale.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\sortable.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\upload.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\word.gif" />
+    <Content Include="Resources\JsLib\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="Resources\JsLib\ueditor\themes\iframe.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\jquery-1.10.2.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Resources\JsLib\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\video-js.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\video.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.css" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="Resources\JsLib\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="Resources\JsLib\ueditor\ueditor.all.js" />
+    <Content Include="Resources\JsLib\ueditor\ueditor.all.min.js" />
+    <Content Include="Resources\JsLib\ueditor\ueditor.config.js" />
+    <Content Include="Resources\JsLib\ueditor\ueditor.parse.js" />
+    <Content Include="Resources\JsLib\ueditor\ueditor.parse.min.js" />
+    <Content Include="Static\AdminLTE2\css\AdminLTE.css" />
+    <Content Include="Static\AdminLTE2\css\AdminLTE.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-black-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-black-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-black.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-black.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-blue-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-blue-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-blue.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-blue.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-green-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-green-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-green.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-green.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-purple-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-purple-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-purple.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-purple.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-red-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-red-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-red.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-red.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-yellow-light.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-yellow.css" />
+    <Content Include="Static\AdminLTE2\css\skins\skin-yellow.min.css" />
+    <Content Include="Static\AdminLTE2\css\skins\_all-skins.css" />
+    <Content Include="Static\AdminLTE2\css\skins\_all-skins.min.css" />
+    <Content Include="Static\AdminLTE2\img\avatar.png" />
+    <Content Include="Static\AdminLTE2\img\avatar04.png" />
+    <Content Include="Static\AdminLTE2\img\avatar2.png" />
+    <Content Include="Static\AdminLTE2\img\avatar3.png" />
+    <Content Include="Static\AdminLTE2\img\avatar5.png" />
+    <Content Include="Static\AdminLTE2\img\boxed-bg.jpg" />
+    <Content Include="Static\AdminLTE2\img\boxed-bg.png" />
+    <Content Include="Static\AdminLTE2\img\credit\american-express.png" />
+    <Content Include="Static\AdminLTE2\img\credit\cirrus.png" />
+    <Content Include="Static\AdminLTE2\img\credit\mastercard.png" />
+    <Content Include="Static\AdminLTE2\img\credit\mestro.png" />
+    <Content Include="Static\AdminLTE2\img\credit\paypal.png" />
+    <Content Include="Static\AdminLTE2\img\credit\paypal2.png" />
+    <Content Include="Static\AdminLTE2\img\credit\visa.png" />
+    <Content Include="Static\AdminLTE2\img\default-50x50.gif" />
+    <Content Include="Static\AdminLTE2\img\icons.png" />
+    <Content Include="Static\AdminLTE2\img\photo1.png" />
+    <Content Include="Static\AdminLTE2\img\photo2.png" />
+    <Content Include="Static\AdminLTE2\img\photo3.jpg" />
+    <Content Include="Static\AdminLTE2\img\photo4.jpg" />
+    <Content Include="Static\AdminLTE2\img\user1-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user2-160x160.jpg" />
+    <Content Include="Static\AdminLTE2\img\user3-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user4-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user5-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user6-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user7-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\img\user8-128x128.jpg" />
+    <Content Include="Static\AdminLTE2\js\app.js" />
+    <Content Include="Static\AdminLTE2\js\app.min.js" />
+    <Content Include="Static\AdminLTE2\js\demo.js" />
+    <Content Include="Static\AdminLTE2\js\pages\dashboard.js" />
+    <Content Include="Static\AdminLTE2\js\pages\dashboard2.js" />
+    <Content Include="Static\Home\css\Count.css" />
+    <Content Include="Static\Home\css\Live.css" />
+    <Content Include="Static\Home\css\login.css" />
+    <Content Include="Static\Home\css\shcommon.css" />
+    <Content Include="Static\Home\images\bg.fw_r2_c1.png" />
+    <Content Include="Static\Home\images\bg.fw_r2_c2.png" />
+    <Content Include="Static\Home\images\index_element.png" />
+    <Content Include="Static\Home\images\bg_login01.jpg" />
+    <Content Include="Static\Home\images\bg_login02.jpg" />
+    <Content Include="Static\Home\images\btn_login.png" />
+    <Content Include="Static\Home\images\e78.jpg" />
+    <Content Include="Static\Home\images\defaultLink.png" />
+    <Content Include="Static\Home\images\lf_bg01.png" />
+    <Content Include="Static\Home\images\lf_bg02.png" />
+    <Content Include="Static\Home\images\lf_bg03.png" />
+    <Content Include="Static\Home\images\bg.fw_r2_c1.png" />
+    <Content Include="Static\Home\images\bg.fw_r2_c2.png" />
+    <Content Include="Static\Home\images\bg_blue.png" />
+    <Content Include="Static\Home\images\bg_red.png" />
+    <Content Include="Static\Home\images\LoginBut.png" />
+    <Content Include="Static\Home\images\logobg01.png" />
+    <Content Include="Static\Home\images\logoTop01.png" />
+    <Content Include="Static\Home\images\logoTop02.png" />
+    <Content Include="Static\Home\images\logoTop03.png" />
+    <Content Include="Static\Home\images\logoTopbg01.png" />
+    <Content Include="Static\Home\images\logoTopImg.png" />
+    <Content Include="Static\Home\images\nav_bg_active2.gif" />
+    <Content Include="Static\Home\images\nav_bg_active2.png.gif" />
+    <Content Include="Static\Home\images\nav_bg_inactive2.gif" />
+    <Content Include="Static\Home\images\nav_bg_inactive2.png.gif" />
+    <Content Include="Static\Home\images\shlf_but01.gif" />
+    <Content Include="Static\Home\images\shtop01.png" />
+    <Content Include="Static\Home\images\shtop02.png" />
+    <Content Include="Static\Home\images\shtop03.png" />
+    <Content Include="Static\Home\images\shtop04.png" />
+    <Content Include="Static\Home\images\shtop05.png" />
+    <Content Include="Static\Home\images\TopBg01.png" />
+    <Content Include="Static\Home\images\TopBg02.jpg" />
+    <Content Include="Static\Home\images\TopBg03.jpg" />
+    <Content Include="Static\Home\images\TopBg04.jpg" />
+    <Content Include="Static\Home\images\yamon.png" />
+    <Content Include="Static\Home\images\nx.jpg" />
+    <Content Include="Static\Home\images\yjxy_bg.png" />
+    <Content Include="Static\Home\js\Index.js" />
+    <Content Include="Static\Home\js\IndexHome.js" />
+    <Content Include="Static\Home\js\Login.js" />
+    <Content Include="Static\App\js\ActiveUsers.js" />
+    <Content Include="Static\App\js\DisVersion.js" />
+    <Content Include="Static\App\js\NewUsers.js" />
+    <Content Include="Static\App\js\OverAll.js" />
+    <Content Include="Static\App\js\RealTime.js" />
+    <Content Include="Static\App\js\StartsNum.js" />
+    <Content Include="Resources\JsLib\knockout\knockout.js" />
+    <Content Include="Static\SiteManage\css\apidoc.css" />
+    <Content Include="Static\SiteManage\js\ResponseParamModel.js" />
+    <Content Include="Static\SiteManage\js\API.js" />
+    <Content Include="Static\SiteManage\js\SelectSubPlan.js" />
+    <Content Include="Static\UCenter\js\SetRolePuview.js" />
+    <Content Include="Static\SiteManage\css\version.css" />
+    <Content Include="Static\SiteManage\js\version.js" />
+    <Content Include="Static\v1\css\common.css" />
+    <Content Include="Static\v1\css\icon.css" />
+    <Content Include="Static\v1\css\index.css" />
+    <Content Include="Static\v1\images\btnLoginOut.jpg" />
+    <Content Include="Static\v1\images\btnModifyPwd.jpg" />
+    <Content Include="Static\v1\images\extanim32.gif" />
+    <Content Include="Static\v1\images\index\admin_icon.gif" />
+    <Content Include="Static\v1\images\index\index_top1.jpg" />
+    <Content Include="Static\v1\images\index\index_top2.jpg" />
+    <Content Include="Static\v1\images\index\index_topbg.jpg" />
+    <Content Include="Static\v1\images\index\index_top_info_bg.jpg" />
+    <Content Include="Static\v1\images\index\index_top_info_left.jpg" />
+    <Content Include="Static\v1\images\index\index_top_info_split.jpg" />
+    <Content Include="Static\v1\images\index\index_top_right.jpg" />
+    <Content Include="Static\v1\images\index\layout-browser-hd-bg.gif" />
+    <Content Include="Static\v1\images\loading.gif" />
+    <Content Include="Static\v1\images\remove.png" />
+    <Content Include="Static\v1\images\tabicons.png" />
+    <Content Include="Static\v1\js\common.js" />
+    <Content Include="Static\v1\js\DataGridGroup.js" />
+    <Content Include="Static\v1\js\DataGridView.js" />
+    <Content Include="Static\v1\js\Date.js" />
+    <Content Include="Static\v1\js\EditGrid.js" />
+    <Content Include="Static\v1\js\form.js" />
+    <Content Include="Static\v1\js\Grid.js" />
+    <Content Include="Static\v1\js\GridUtils.js" />
+    <Content Include="Static\v1\js\jQuery.batchFileUpload.js" />
+    <Content Include="Static\v1\js\SmartFormGrid.js" />
+    <Content Include="Static\v1\js\TreeGridUtils.js" />
+    <Content Include="Static\v1\js\Utils.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Error.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Error.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Layout1.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout1.generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Config\" />
+    <Folder Include="Models\" />
+    <Folder Include="Static\SiteManage\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\JsLib\dtree\images\system\default\vssver2.scc" />
+    <Content Include="Resources\JsLib\dtree\images\system\dept\vssver2.scc" />
+    <Content Include="Resources\JsLib\dtree\images\system\menu\vssver2.scc" />
+    <Content Include="Resources\JsLib\jquery-editable\editable.jquery.json" />
+    <Content Include="Resources\JsLib\jquery-editable\README.md" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\blue\blue.zip" />
+    <Content Include="Resources\JsLib\jquery.tablesorter\themes\green\green.zip" />
+    <Content Include="Resources\JsLib\ueditor\controller.ashx" />
+    <Content Include="Resources\JsLib\ueditor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="Resources\JsLib\ueditor\third-party\video-js\font\vjs.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Resources\JsLib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resources\JsLib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\JsLib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\JsLib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\JsLib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SimpleLayout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_SimpleLayout.generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\LeftMenu.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>LeftMenu.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\Login.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Login.generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\UEditorConfig.json" />
+    <Content Include="Views\Home\Blank.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Blank.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\HomePage.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>HomePage.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\JsLib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\JsLib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\JsLib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\JsLib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resources\JsLib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Resources\JsLib\font-awesome\less\animated.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\core.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\fixed-width.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\font-awesome.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\icons.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\larger.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\list.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\mixins.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\path.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\stacked.less" />
+    <Content Include="Resources\JsLib\font-awesome\less\variables.less" />
+    <Content Include="Resources\JsLib\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_animated.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_core.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_icons.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_larger.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_list.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_mixins.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_path.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_stacked.scss" />
+    <Content Include="Resources\JsLib\font-awesome\scss\_variables.scss" />
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\Navigation.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Navigation.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\JsLib\datatables\extensions\ColReorder\Readme.md" />
+    <Content Include="Resources\JsLib\datatables\extensions\ColVis\Readme.md" />
+    <Content Include="Resources\JsLib\datatables\extensions\FixedColumns\Readme.md" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Resources\JsLib\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="Resources\JsLib\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Resources\JsLib\datatables\extensions\TableTools\Readme.md" />
+    <Content Include="Resources\JsLib\input-mask\phone-codes\phone-be.json" />
+    <Content Include="Resources\JsLib\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="Views\Home\Test.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Test.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Shared\_Layout2.cshtml">
+      <LastGenOutput>_Layout21.generated.cs</LastGenOutput>
+      <Generator>RazorGenerator</Generator>
+    </Content>
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\lzx.pubxml" />
+    <None Include="Properties\PublishProfiles\zong.pubxml" />
+    <Content Include="Resources\JsLib\editormd\fonts\editormd-logo.eot" />
+    <Content Include="Resources\JsLib\editormd\fonts\editormd-logo.ttf" />
+    <Content Include="Resources\JsLib\editormd\fonts\editormd-logo.woff" />
+    <Content Include="Resources\JsLib\editormd\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resources\JsLib\editormd\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resources\JsLib\editormd\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resources\JsLib\editormd\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resources\JsLib\editormd\fonts\FontAwesome.otf" />
+    <Content Include="Resources\JsLib\editormd\plugins\emoji-dialog\emoji.json" />
+    <Content Include="Resources\JsLib\editormd\plugins\help-dialog\help.md" />
+    <Content Include="Resources\JsLib\editormd\plugins\html-entities-dialog\html-entities.json" />
+    <Content Include="Resources\JsLib\CodeMirror\AUTHORS" />
+    <Content Include="Resources\JsLib\CodeMirror\bower.json" />
+    <Content Include="Resources\JsLib\CodeMirror\LICENSE" />
+    <Content Include="Resources\JsLib\CodeMirror\package.json" />
+    <Content Include="Resources\JsLib\CodeMirror\README.md" />
+    <Content Include="Views\includeM\head.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>head.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\ads.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ads.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\config.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>config.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\content.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>content.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\header.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>header.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\lefts.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>lefts.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\log.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>log.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\mains.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>mains.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\manager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>manager.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\news_cat.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>news_cat.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\Home\person.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>person.generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortalIPS\Yamon.Module.PortalIPS.DAL\Yamon.Module.PortalIPS.DAL.csproj">
+      <Project>{eea75362-fae2-4183-87ed-452a1e4ff359}</Project>
+      <Name>Yamon.Module.PortalIPS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortalIPS\Yamon.Module.PortalIPS.Entity\Yamon.Module.PortalIPS.Entity.csproj">
+      <Project>{20b5e9b8-ddb5-4501-9389-db9b988b36d6}</Project>
+      <Name>Yamon.Module.PortalIPS.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortalIPS\Yamon.Module.PortalIPS.WebApi\Yamon.Module.PortalIPS.WebApi.csproj">
+      <Project>{e9cd6541-7ff1-4f9b-9693-926f71c2f29b}</Project>
+      <Name>Yamon.Module.PortalIPS.WebApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PortalIPS\Yamon.Module.PortalIPS.Web\Yamon.Module.PortalIPS.Web.csproj">
+      <Project>{cd91f2d7-3902-4b58-b735-9b79ad4725a5}</Project>
+      <Name>Yamon.Module.PortalIPS.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>44575</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44599/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

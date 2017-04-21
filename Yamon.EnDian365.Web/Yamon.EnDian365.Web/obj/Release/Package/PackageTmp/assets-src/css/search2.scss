@@ -1,0 +1,230 @@
+﻿#Search2,#Search3{
+    .row{
+        margin:0px;
+    }
+    .col-lg-1,.col-lg-3,.col-lg-2, .col-lg-5, .col-lg-7,.col-lg-8,.col-lg-4,.col-lg-12,.col-lg-6,.col-lg-9{
+        padding:0px;
+        margin:0px;
+    }
+    .searchBox{
+        padding:0px;
+        height:65px;
+        margin-top:20px;
+        .col-lg-1,.col-lg-3,.col-lg-2{
+             padding: 0px 2px;
+        }
+        span,input,select,button{
+            width:100%;
+            font-size:22px;
+            height: 45px;
+        }
+        input,select{
+            border: 2px solid #9A9A9A; 
+            /*background:#ac2b2b;*/
+        }
+        button{
+             background: #3C68A5;
+             color: #fff;
+        }
+     }
+    .itmeTitle{
+        background:#403B3B;
+        margin-bottom:10px;
+        p{
+            width:100%;
+        }
+        .video{
+             background:#ac2b2b;
+            p{
+                color:#fff;
+                padding:10px 0px;
+                font-size: 22px;
+                /*box-shadow:0px 6px 10px #848181;*/
+                /*height:45px;*/
+                text-align:center;
+            }
+        }
+    }
+    .article{
+        margin-top:10px;
+        .p1{
+            width:100%;
+            padding: 20px 0px;
+            padding-left:54px;
+            border:4px solid #4397e2;
+        }
+        article{
+            font-size: 16px;
+            line-height: 32px;
+            text-indent: 32px;
+            border: 4px solid #ef5b1d;
+            padding: 10px;
+        }
+    }
+    .jingwen{
+        border: 1px solid #888;
+        border-radius: 25px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        p{
+            font-size: 22px;
+            color: #ab3ec9;
+            border: 3px solid #000;
+            padding: 10px;
+            border-radius: 15px;
+            span{
+                font-weight:bold;
+            }
+        }
+    }
+    .copyRight{
+        p{
+            color:orange;
+            font-weight:600;
+            a{
+                color:orange;
+            }
+        }
+    }
+    .footer{
+        margin-top:0px;
+        .col-lg-4,.col-lg-6{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+  /* videobox */
+    .videobox
+    {
+     .video-img
+        {
+            overflow:hidden;
+            iframe{
+                width:100%;
+                height:550px;
+                border:1px solid #ccc;
+            }
+        }
+      .video-list{
+            height:78px;
+            padding-left:10px;
+            .oul{
+                height: 452px;
+                overflow: hidden;
+                iframe{
+                    width:100%;
+                    height:80px;
+                    position:relative;
+                }
+                .ins{
+                    display:inline-block;
+                    padding-left:5px;
+                    line-height:15px;
+                    p{
+                        font-size:14px;
+                    }
+                    span{
+                        font-size:12px;
+                        color:#888;
+                    }
+                }
+            }
+           li{
+                overflow:hidden;
+                position:relative;
+                cursor:pointer;
+                margin:5px 0px;
+                .icon-video{
+                    position:absolute;
+                    left:45px;
+                    top:25px;
+                    width:33px;
+                    height:33px;
+                    z-index:99;
+                    
+                }
+                .now .icon-video{
+                    display:none;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1201px) { 
+        .searchBox span, .searchBox input, .searchBox select,.searchBox button{
+              font-size:18px;
+         }
+        .article p{
+            font-size:18px;
+        }
+    } 
+    /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
+
+    @media screen and (max-width: 1200px) { 
+         .searchBox span, .searchBox input, .searchBox select,.searchBox button{
+              font-size:16px;
+         }
+         .videobox .video-list li .icon-video{
+             left:25px;
+         }
+          .article p{
+            font-size:16px;
+        }
+          .article article{
+              font-size:16px;
+          }
+          
+    } 
+    @media screen and (max-width: 900px) and (min-width:768px) { 
+        .searchBox{
+             margin-bottom:82px;
+          }
+    }
+    /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */ 
+
+    @media screen and (max-width: 900px) { 
+         .carousel-indicators {
+            width: 80%;
+        }
+           .videobox .video-list{
+            height:520px;
+         }
+    } 
+    /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */ 
+
+    @media screen and (max-width: 500px) { 
+      .searchBox{
+         margin-bottom:220px;
+      }
+     
+      .article{
+           .p1{
+              padding:15px 0px;
+              padding-left:10px;
+              font-size:14px;
+            }
+           article{
+               overflow-x:hidden;
+               span,p{
+                   font-size:14px;
+               }
+           }
+     }
+       .itmeTitle .video p{
+           font-size:15px;
+           padding:0px;
+           padding-top:5px;
+       }
+
+       .jingwen p{
+           font-size:16px;
+       }
+        .copyRight{
+            p{
+                font-size:13px;
+            }
+        }
+   }
+    
+    /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */ 
+}

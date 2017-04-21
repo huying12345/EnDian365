@@ -1,0 +1,55 @@
+﻿@using Yamon.Module.PortalIPS.Entity
+@using Yamon.Module.PortalIPS.DAL
+@{
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
+    Category category=(Category)ViewBag.category;
+    string CategoryID = category.CategoryID;
+    if (category.IsJournal == 1)//前台栏目不做查询
+    {
+        CategoryID = "";
+    }
+    if (vwInfo != null)
+    {
+        CategoryID =vwInfo.CategoryID;
+    }
+}
+<script type="text/javascript">
+    var CategoryID = '@(CategoryID)';
+</script>
+<div id="article">
+    <div class="row reviewVideos">
+        <div class="col-lg-12 col-xs-12" style="background:#403b3b;margin-bottom:10px;">
+            <div class="col-lg-3 col-xs-5" style="background:#ac2b2b;padding-top:5px;text-align:center">
+                <p style="color:#fff;font-size:2rem">所有内容--</p>
+            </div>
+            <div class="col-lg-9 col-xs-7"></div>
+        </div>
+        <div class="col-lg-12 col-xs-12 news">
+            <div class="col-lg-12 col-xs-12">                
+                <ul class="list-group pageUl">
+                    <!--ko foreach: article-->
+                    <li class="list-group-item" style="width:50%; float:left;"><a data-bind="attr: { href: PageUrlExtend }, text:Title" target="_self"></a></li>
+                    <!--/ko-->
+                </ul>              
+            </div>
+        </div>
+        <input type="hidden" id="start_page">
+        <input type="hidden" id="current_page" />
+        <input type="hidden" id="show_per_page" />
+        <input type="hidden" id="end_page">
+        <!------------分页----------------->
+        <div id="pageGro" class="col-lg-12 col-xs-12 cb">
+            <div class="pagestart" data-bind="click:first">首页</div>
+            <div class="pageUp" data-bind="click:previous">上一页</div>
+            <div class="pageList">
+                <ul data-bind="foreach:pageNumbers">
+                    <li data-bind="text:number,click:$root.gotoPage,attr:{class:visible}"></li>
+                </ul>
+            </div>
+            <div class="pageDown" data-bind="click:next">下一页</div>
+            <div class="pageend" data-bind="click:last">尾页</div>
+        </div>
+        <!------------end分页----------------->
+    </div>
+</div>

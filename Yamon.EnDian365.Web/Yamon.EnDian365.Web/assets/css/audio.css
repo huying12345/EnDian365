@@ -1,0 +1,219 @@
+@charset "UTF-8";
+#Audio, #Audio2 {
+  /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+  /* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+  /* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+  /* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+}
+
+#Audio .row, #Audio2 .row {
+  margin: 0px;
+}
+
+#Audio .col-lg-1, #Audio .col-lg-3, #Audio .col-lg-2, #Audio .col-lg-8, #Audio .col-lg-4, #Audio .col-lg-12, #Audio .col-lg-6, #Audio .col-lg-9, #Audio2 .col-lg-1, #Audio2 .col-lg-3, #Audio2 .col-lg-2, #Audio2 .col-lg-8, #Audio2 .col-lg-4, #Audio2 .col-lg-12, #Audio2 .col-lg-6, #Audio2 .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#Audio .searchBox, #Audio2 .searchBox {
+  padding: 0px;
+  height: 65px;
+  margin-top: 20px;
+}
+
+#Audio .searchBox .col-lg-1, #Audio .searchBox .col-lg-3, #Audio .searchBox .col-lg-2, #Audio2 .searchBox .col-lg-1, #Audio2 .searchBox .col-lg-3, #Audio2 .searchBox .col-lg-2 {
+  padding: 0px 2px;
+}
+
+#Audio .searchBox span, #Audio .searchBox input, #Audio .searchBox select, #Audio .searchBox button, #Audio2 .searchBox span, #Audio2 .searchBox input, #Audio2 .searchBox select, #Audio2 .searchBox button {
+  width: 100%;
+  font-size: 22px;
+  height: 45px;
+}
+
+#Audio .searchBox input, #Audio .searchBox select, #Audio2 .searchBox input, #Audio2 .searchBox select {
+  border: 2px solid #9A9A9A;
+}
+
+#Audio .searchBox button, #Audio2 .searchBox button {
+  background: #3C68A5;
+  color: #fff;
+}
+
+#Audio .itmeTitle p, #Audio2 .itmeTitle p {
+  width: 100%;
+}
+
+#Audio .itmeTitle .video p, #Audio2 .itmeTitle .video p {
+  background: #ac2b2b;
+  color: #fff;
+  box-shadow: 0px 6px 10px #848181;
+  text-align: center;
+}
+
+#Audio .itmeTitle .video iframe, #Audio2 .itmeTitle .video iframe {
+  width: 100%;
+  height: 550px;
+}
+
+#Audio .itmeTitle .videoList .list-group, #Audio2 .itmeTitle .videoList .list-group {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+#Audio .itmeTitle .videoList .list-group .list-group-item, #Audio2 .itmeTitle .videoList .list-group .list-group-item {
+  border: none;
+}
+
+#Audio .itmeTitle .videoList .hoster, #Audio2 .itmeTitle .videoList .hoster {
+  font-size: 20px;
+}
+
+#Audio .itmeTitle .videoList .tips, #Audio2 .itmeTitle .videoList .tips {
+  font-size: 18px;
+}
+
+#Audio .itmeTitle .videoList .text, #Audio2 .itmeTitle .videoList .text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+#Audio .itmeTitle .videoList .source, #Audio2 .itmeTitle .videoList .source {
+  font-size: 12px;
+  padding-left: 10px;
+  color: #807a7a;
+}
+
+#Audio .audio, #Audio2 .audio {
+  width: 100%;
+}
+
+#Audio .scriptureList, #Audio2 .scriptureList {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+
+#Audio .scriptureList img, #Audio2 .scriptureList img {
+  position: absolute;
+  margin-top: -105px;
+  width: 100%;
+  z-index: -1;
+}
+
+#Audio .scriptureList .list-group, #Audio2 .scriptureList .list-group {
+  padding: 0px 50px;
+}
+
+#Audio .scriptureList .list-group-item, #Audio2 .scriptureList .list-group-item {
+  font-size: 25px;
+  border: none;
+}
+
+#Audio .article, #Audio2 .article {
+  margin-top: 10px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#Audio .article img, #Audio2 .article img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#Audio .article p, #Audio2 .article p {
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 25px;
+  padding-left: 54px;
+}
+
+#Audio .article article, #Audio2 .article article {
+  font-size: 22px;
+  line-height: 40px;
+  text-indent: 32px;
+  padding: 50px 50px;
+}
+
+#Audio .footer, #Audio2 .footer {
+  margin-top: 0px;
+}
+
+#Audio .footer .col-lg-4, #Audio .footer .col-lg-6, #Audio2 .footer .col-lg-4, #Audio2 .footer .col-lg-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 1201px) {
+  #Audio .itmeTitle .video p, #Audio2 .itmeTitle .video p {
+    font-size: 25px;
+    padding: 18px 0px;
+    height: 65px;
+  }
+  #Audio .P, #Audio2 .P {
+    height: 65px;
+  }
+  #Audio .scriptureList .list-group-item, #Audio2 .scriptureList .list-group-item {
+    font-size: 18px;
+  }
+  #Audio .article article, #Audio2 .article article {
+    font-size: 18px;
+  }
+  #Audio .searchBox span, #Audio .searchBox input, #Audio .searchBox select, #Audio .searchBox button, #Audio2 .searchBox span, #Audio2 .searchBox input, #Audio2 .searchBox select, #Audio2 .searchBox button {
+    font-size: 18px;
+  }
+  #Audio .scriptureList .list-group, #Audio .scriptureList .list-group, #Audio2 .scriptureList .list-group, #Audio2 .scriptureList .list-group {
+    padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #Audio .itmeTitle .video p, #Audio2 .itmeTitle .video p {
+    font-size: 18px;
+    padding: 15px 0px;
+    height: 57px;
+  }
+  #Audio .P, #Audio2 .P {
+    height: 57px;
+  }
+  #Audio .scriptureList .list-group-item, #Audio2 .scriptureList .list-group-item {
+    font-size: 16px;
+  }
+  #Audio .article article, #Audio2 .article article {
+    font-size: 16px;
+  }
+  #Audio .searchBox span, #Audio .searchBox input, #Audio .searchBox select, #Audio .searchBox button, #Audio2 .searchBox span, #Audio2 .searchBox input, #Audio2 .searchBox select, #Audio2 .searchBox button {
+    font-size: 16px;
+  }
+  #Audio .scriptureList .list-group, #Audio .scriptureList .list-group, #Audio2 .scriptureList .list-group, #Audio2 .scriptureList .list-group {
+    padding: 20px 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #Audio .carousel-indicators, #Audio2 .carousel-indicators {
+    width: 80%;
+  }
+  #Audio .scriptureList .list-group, #Audio .scriptureList .list-group, #Audio2 .scriptureList .list-group, #Audio2 .scriptureList .list-group {
+    padding: 40px 40px;
+  }
+  #Audio .scriptureList, #Audio .scriptureList, #Audio2 .scriptureList, #Audio2 .scriptureList {
+    margin-top: 40px;
+  }
+  #Audio .scriptureList img, #Audio .scriptureList img, #Audio2 .scriptureList img, #Audio2 .scriptureList img {
+    margin-top: -50px;
+  }
+  #Audio .article article, #Audio .article article, #Audio2 .article article, #Audio2 .article article {
+    padding: 20px 20px;
+  }
+  #Audio .article img, #Audio .article img, #Audio2 .article img, #Audio2 .article img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #Audio .scriptureList img, #Audio .scriptureList img, #Audio2 .scriptureList img, #Audio2 .scriptureList img {
+    height: 100%;
+  }
+}

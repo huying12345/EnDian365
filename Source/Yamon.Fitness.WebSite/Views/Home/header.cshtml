@@ -1,0 +1,92 @@
+﻿@using System.Data
+@using Yamon.Module.SiteManage.Entity
+@{
+    ViewBag.Title = "header";
+    Layout = null;
+    List<Menu> menuList = (List<Menu>)ViewBag.LeftMenuList;
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    @RenderPage("~/Views/includeM/head.cshtml")
+    <title>后台管理页面</title>
+    <script type="text/javascript">
+        $(function () {
+            //顶部导航切换
+            $(".nav li a").click(function () {
+                $(".nav li a.selected").removeClass("selected")
+                $(this).addClass("selected");
+            });
+
+            jQuery(".nav li:first a").addClass("selected");
+
+            parent.menuClickleftFrame(jQuery(".nav li:first"));
+        });
+
+        
+    </script>
+
+</head>
+
+<body style="background:url(/Static/Home/img/topbg.gif) repeat-x;">
+    <div class="topleft">
+        <a href="/Manage/mains" target="rightFrame"><img src="/Static/Home/img/365logo.png" border="0" title="系统首页" /></a>
+    </div>
+    <ul class="nav">
+        @foreach (Menu menu in menuList)
+        {
+            string menuId = menu.MenuID;
+            if (menu.ParentID == "")
+            {
+                string imageUrl=menu.ImageUrl;
+                if (imageUrl == null || imageUrl == "")
+                {
+                    imageUrl = "/Static/Home/img/icon02.png";
+                }
+                if (menuId == "0498e053-94b8-48a4-928b-a3bd5f1940e6")
+                {
+                    <li url="@(menu.LinkUrl.Replace("Frame=1", "1=1"))" menuid="@menuId">
+                        <a href='@(menu.LinkUrl.Replace("Frame=1", "1=1"))' target="leftFrame" menuid="@menuId">
+                            <img src="@imageUrl" title="@(menu.MenuName)" />
+                            <h2>@(menu.MenuName)</h2>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li url="/Home/lefts?1=1&menuId=@menuId" menuid="@menuId">
+                        <a href='/Home/lefts?1=1&menuId=@menuId' target="leftFrame" menuid="@menuId">
+                            <img src="@imageUrl" title="@(menu.MenuName)" />
+                            <h2>@(menu.MenuName)</h2>
+                        </a>
+                    </li>
+                }
+            }
+        }
+    </ul>
+
+    <div class="topright">
+        <ul>
+            <li>
+                <span><img src="/Static/Home/img/help.png" title="帮助" class="helpimg" /></span>
+                <a href="#">帮助</a>
+            </li>
+            <li>
+                <a href="../" target="_blank">网站首页</a>
+            </li>
+            <li>
+                <a href="Login" target="_top" onclick="return confirm('确定退出系统吗？\n\n退出后自动关闭窗口！');">退出</a>
+            </li>
+        </ul>
+
+        <div class="user">
+            <span>→ 管理员：  @(CookieHelper.GetCookie("UserName"))  管理员级别：@(CookieHelper.GetCookie("RoleName")) </span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
