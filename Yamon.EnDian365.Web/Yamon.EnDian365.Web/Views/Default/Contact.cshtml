@@ -3,9 +3,10 @@
 @using Yamon.Module.PortalIPS.DAL
 @{
     ViewBag.Title = "Contact";
-    CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
-    InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    CategoryDAL categoryDal = new CategoryDAL();
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    Category categorycontact = categoryDal.GetInfoByID(categoryDal.GetIdByKey("lygwm"));
+    List<vwInfoCategory> zrcbList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorycontact.CategoryID }, "CreateTime desc", 10);
 }
 <!DOCTYPE html>
 <html>
@@ -17,18 +18,19 @@
     <div class="container" id="Contact">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/dedication-01.jpg" />
+            @if (zrcbList[0].MediaFileName=="")
+            {
+                <img src="~/assets/img/dedication-01.jpg" />
+            }
+            else
+            {
+                <img src=@zrcbList[0].MediaFileName />
+            }
+            
         </div>
         <div id="contactAndJoin">
             <hr />
-            <p>谢谢你浏览EnDian365网站！我们深切盼望这个网站可以成为你信仰路上的祝福!</p>
-            <p>若你有任何疑问或回馈，欢迎填妥一下留言表与我们联络。我们希望听见你的声音！</p>
-            <p>
-                Thank you for visiting our EnDian365 Website!
-                It is our greatest hope that this website can be a blessing to your spiritual walk with Christ.
-                If you have any enquiries or feedback, feel free to email us at <a href="javascript:;">information@hvsha.com</a>  or using the form below.
-                We would love to hear from you!
-            </p>
+                @Html.Raw(zrcbList[0].Content)
             <hr />
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom:20px;">

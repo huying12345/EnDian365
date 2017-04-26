@@ -12,9 +12,9 @@
     Category categoryspiritual = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
     Category categoryencyclopedias = categoryDal.GetInfoByID(categoryDal.GetIdByKey("encyclopedias"));
     Category categorycontact = categoryDal.GetInfoByID(categoryDal.GetIdByKey("contact"));
-    
+
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
-   
+
 }
 <!DOCTYPE html>
 <html>
@@ -26,13 +26,13 @@
     <div class="container" id="home">
         @RenderPage("~/Views/include/head.cshtml")
         @{
-            List<vwInfoCategory> zrcbList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorygyzrcbxl.CategoryID }, "CreateTime desc", 1);
+            List<vwInfoCategory> zrcbList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorygyzrcbxl.CategoryID }, "BackInt desc", 1);
         }
         @if (zrcbList.Count > 0)
         {
             <div class="title-img">
                 <img src="~/assets/img/11_03.jpg" />
-                <p onclick="window.open('@infoDal.GetPageUrl(zrcbList[0])')"><img src="~/assets/img/video.jpg" /><span>最新主日信息：</span><span>@(zrcbList[0].CreateTime.Value.ToString("yyyyMMdd"))【@zrcbList[0].Title】</span></p>
+                <p onclick="window.open('@infoDal.GetPageUrl(zrcbList[0])')"><img src="~/assets/img/video.jpg" /><span>最新主日信息：</span><span>【@zrcbList[0].Title】</span></p>
             </div>
         }
         <div id="myCarousel" class="carousel slide">
@@ -49,17 +49,17 @@
           
             <div class="carousel-inner">
                 <div class="item active">
-                    @if (vwList0[0].MediaFileName == "")
+                    @if (vwList0[0].MediaFileName == " ")
                     {
-                        <img src="~/assets/img/index-01.jpg" />
+                        <img src="~/assets/img/index-01.jpg"/>
                     }
                     else
                     {
-                        <img src="@vwList0[0].MediaFileName" />
+                        <img src="@vwList0[0].MediaFileName" onclick="window.open('https://weidian.com/?userid=975508089')" />
                     }
                 </div>
                 <div class="item">
-                    @if (vwList0[0].MediaFileName == "")
+                    @if (vwList0[1].MediaFileName == " ")
                     {
                         <img src="~/assets/img/index-02.jpg" />
                     }
@@ -69,13 +69,13 @@
                     }
                 </div>
                 <div class="item">
-                    @if (vwList0[0].MediaFileName == "")
+                    @if (vwList0[2].MediaFileName == " ")
                     {
                         <img src="~/assets/img/index-03.jpg" />
                     }
                     else
                     {
-                        <img src="@vwList0[2].MediaFileName" />
+                        <img src="@vwList0[2].MediaFileName"/>
                     }
                 </div>
             </div>
@@ -157,11 +157,11 @@
         </div>
         <div class="videobox row">
             @{
-                List<vwInfoCategory> vwList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { category365.CategoryID }, "BackInt desc", 3);
+                List<vwInfoCategory> vwList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { category365.CategoryID }, "BackInt desc", 4);
             }
-            @if (vwList.Count >0)
+            @if (vwList.Count >=4)
             {
-                vwInfoCategory ifc = vwList[0];
+                vwInfoCategory ifc = vwList[0],ifc1=vwList[1],ifc2=vwList[2],ifc3=vwList[3];
                 <div class="video-img col-lg-5 col-sm-5 col-md-5 col-xs-12" style="padding-right:0px;">
                     <iframe class="js_videoCon" frameborder="0" src="@ifc.VideoUrl"></iframe>
                 </div>
@@ -173,21 +173,21 @@
                         <p class="video_source">经文出处：@(ifc.Source)</p>
                     </article>
                     <ul style="padding:0px;" class="oul col-lg-12 col-md-12 col-sm-12 col-xs-12 Video">
-                        @foreach (vwInfoCategory info in vwList)
-                        {
-                            <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(info)" value="@(info.VideoUrl)" value1="@(info.Author)" value2="@(info.Source)" value3="@(info.CreateTime.Value.ToString("yyyy-MM-dd")) @(info.Title)">
-                                <img src='@(info.MediaFileName)' />
-                                <p>@(info.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
+                        @*@foreach (vwInfoCategory info in vwList)
+                        {*@
+                            <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc1)" value="@(ifc1.VideoUrl)" value1="@(ifc1.Author)" value2="@(ifc1.Source)" value3="@(ifc1.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc1.Title)">
+                                <img src='@(ifc1.MediaFileName)' />
+                                <p>@(ifc1.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
                             </li>
-                        }
-                        @*<li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc2)" value="@(ifc2.VideoUrl)" value1="@(ifc2.Author)" value2="@(ifc2.Source)" value3="@(ifc2.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc2.Title)">
+                        @*}*@
+                        <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc2)" value="@(ifc2.VideoUrl)" value1="@(ifc2.Author)" value2="@(ifc2.Source)" value3="@(ifc2.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc2.Title)">
                             <img src='@(ifc2.MediaFileName)' />
                             <p>@(ifc2.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
                         </li>
                         <li class="now col-lg-4 col-md-4 col-sm-4 col-xs-4" title="恩典365" id="@infoDal.GetPageUrl(ifc3)" value="@(ifc3.VideoUrl)" value1="@(ifc3.Author)" value2="@(ifc3.Source)" value3="@(ifc3.CreateTime.Value.ToString("yyyy-MM-dd")) @(ifc3.Title)">
                             <img src='@(ifc3.MediaFileName)' />
                             <p>@(ifc3.CreateTime.Value.ToString("yyyy-MM-dd"))</p>
-                        </li>*@
+                        </li>
                     </ul>
                     <div class="col-lg-10 col-xs-10 col-sm-10 col-md-10"></div>
                     <div class="more col-lg-2 col-md-2 col-sm-2 col-xs-2">
@@ -205,7 +205,7 @@
     <script>
         $(function () {
             $('.carousel').carousel({
-                interval: 3000
+                //interval: 3000
             });
         })
     </script>

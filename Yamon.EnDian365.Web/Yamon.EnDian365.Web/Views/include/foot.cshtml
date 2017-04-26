@@ -4,13 +4,21 @@
     CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
     InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
     Category categoryerweima = categoryDal.GetInfoByID(categoryDal.GetIdByKey("erweima"));
+    Category categoryeremail = categoryDal.GetInfoByID(categoryDal.GetIdByKey("email"));
+    Category categoryerlinks = categoryDal.GetInfoByID(categoryDal.GetIdByKey("links"));
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    List<vwInfoCategory> emailLists = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryeremail.CategoryID }, "BackInt desc");
+   
 }
 <footer class="footer">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <p class="contactTitle">联系方式：</p>
-            <p>邮箱：information@hvsha.com</p>
+            @if (emailLists.Count > 0)
+            {
+                vwInfoCategory ifc = emailLists[0];
+                <p>@ifc.Title：@ifc.SubTitle</p>
+            }
             <p class="joinUs" style="margin-top:30px;cursor:pointer;" onclick="window.open('/Default/Index?cid=11f75f7c-4a3d-48aa-846c-2545f7f69eb3#contactAndJoin')">留言给我们：</p>
         </div>
         @{
@@ -31,10 +39,16 @@
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <p class="friendTitle">友站连结：</p>
             <div class="FriendStaion">
-                <p><a href="#" onclick="window.open('http://www.tpehoc.org.tw/')">台北基督之家</a></p>
-                <p><a href="#" onclick="window.open('https://www.hvfhoc.com/')">财团法人天声传播协会</a></p>
-                <p><a href="#" onclick="window.open('http://new.fmlccc.org/wordpress/')">曙光华人基督教会</a></p>
-                <p><a href="#" onclick="window.open('http://www.lmsfstudio.org/')">晨星之光基金会</a></p>
+                @{
+                    List<vwInfoCategory>linkList=vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryerlinks.CategoryID }, "BackInt desc",8);
+                }
+                @if (linkList.Count > 0)
+                {
+                    foreach (vwInfoCategory Info in linkList)
+                    {
+                        <p><a href=@Info.BackNvarchar4 target="_blank">@Info.Title</a></p>
+                    }
+                }
             </div>
         </div>
     </div>

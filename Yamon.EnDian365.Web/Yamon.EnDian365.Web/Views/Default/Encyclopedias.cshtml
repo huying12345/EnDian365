@@ -78,7 +78,7 @@
                         <article>
                             @foreach (vwInfoCategory vwInfo in ttzwjList)
                             {
-                                <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                             }
                             <p id="/Default/InfoList2?CategoryID=@(ttzwj.CategoryID)">>>更多</p>
                         </article>
@@ -143,7 +143,7 @@
                                     <div class="more">
                                         @foreach (vwInfoCategory vwInfo in test2List)
                                         {
-                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                         }
                                         <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
                                     </div>
@@ -159,7 +159,7 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in test2List)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
                                 </article>
@@ -225,7 +225,7 @@
                                     <div class="more">
                                         @foreach (vwInfoCategory vwInfo in test3List)
                                         {
-                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                         }
                                         <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
                                     </div>
@@ -241,7 +241,7 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in test3List)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
                                 </article>
@@ -279,7 +279,7 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in jthksList)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(jthks.CategoryID)">>>更多</p>
                                 </article>
@@ -308,7 +308,7 @@
                         <div class="more">
                                 @foreach (vwInfoCategory vwInfo in edjhList)
                                 {
-                                    <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                                    <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                                 }
                                 <p id="/Default/InfoList2?CategoryID=@(edjh.CategoryID)">>>更多</p>
                         </div>
@@ -339,7 +339,7 @@
                     <div class="more">
                   @foreach (vwInfoCategory vwInfo in smdwtList)
                         {
-                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                         }
                         <p id="/Default/InfoList2?CategoryID=@(smdwt.CategoryID)">>>更多</p>
                     </div>
@@ -378,7 +378,7 @@
                     <article>
                     @foreach (vwInfoCategory vwInfo in tlzyList)
                         {
-                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title)</p>
+                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                         }
                         <p id="/Default/InfoList2?CategoryID=@(tlzy.CategoryID)">>>更多</p>
                     </article>
