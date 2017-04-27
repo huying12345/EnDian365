@@ -247,4 +247,7 @@
   #Search2 .copyRight p, #Search3 .copyRight p {
     font-size: 13px;
   }
+  #Search2 .videobox .video-img iframe, #Search3 .videobox .video-img iframe {
+    height: auto;
+  }
 }

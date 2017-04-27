@@ -10,12 +10,15 @@
     Category edjh = categoryDal.GetInfoByID(categoryDal.GetIdByKey("edjh"));//恩典记号
     Category smdwt = categoryDal.GetInfoByID(categoryDal.GetIdByKey("smdwt"));//生命的问题
     Category tlzy = categoryDal.GetInfoByID(categoryDal.GetIdByKey("tlzy"));//天籁之音
+    Category encyclopedias = categoryDal.GetInfoByID(categoryDal.GetIdByKey("encyclopedias"));//天籁之音
 
     Category categorytest1 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test11"));
     Category categorytest2 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test12"));
     Category categorytest3 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test11-1"));
     Category categorytest4 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("test12-1"));
-    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL(); 
+    vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+
+    List<vwInfoCategory> encyclopediasList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { encyclopedias.CategoryID }, "BackInt desc", 1);
 }
 <!DOCTYPE html>
 <html>
@@ -27,7 +30,15 @@
     <div class="container" id="Encyclopedias">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/Spiritual1-01.png" />
+            @if (encyclopediasList[0].MediaFileName == "")
+            {
+                <img src="~/assets/img/Spiritual1-01.png" />
+            }
+            else
+            {
+                <img src=@encyclopediasList[0].MediaFileName />
+            }
+            
         </div>
        <!-----------寇绍恩分享汇:天堂在我家------------->
         @{
@@ -78,7 +89,15 @@
                         <article>
                             @foreach (vwInfoCategory vwInfo in ttzwjList)
                             {
-                                <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                if (vwInfo.InfoType == "LinkInfo")
+                                {
+                                    <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                }
+                                else
+                                {
+                                    <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                }
+
                             }
                             <p id="/Default/InfoList2?CategoryID=@(ttzwj.CategoryID)">>>更多</p>
                         </article>
@@ -143,7 +162,14 @@
                                     <div class="more">
                                         @foreach (vwInfoCategory vwInfo in test2List)
                                         {
-                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            if (vwInfo.InfoType == "LinkInfo")
+                                            {
+                                                <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            }
+                                            else
+                                            {
+                                                <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            }
                                         }
                                         <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
                                     </div>
@@ -159,7 +185,14 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in test2List)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        if (vwInfo.InfoType == "LinkInfo")
+                                        {
+                                            <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
+                                        else
+                                        {
+                                            <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(test2List[0].CategoryID)">>>更多</p>
                                 </article>
@@ -225,7 +258,14 @@
                                     <div class="more">
                                         @foreach (vwInfoCategory vwInfo in test3List)
                                         {
-                                            <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            if (vwInfo.InfoType == "LinkInfo")
+                                            {
+                                                <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            }
+                                            else
+                                            {
+                                                <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                            }
                                         }
                                         <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
                                     </div>
@@ -241,7 +281,14 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in test3List)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        if (vwInfo.InfoType == "LinkInfo")
+                                        {
+                                            <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
+                                        else
+                                        {
+                                            <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(test3List[0].CategoryID)">>>更多</p>
                                 </article>
@@ -279,7 +326,14 @@
                                 <article>
                                     @foreach (vwInfoCategory vwInfo in jthksList)
                                     {
-                                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        if (vwInfo.InfoType == "LinkInfo")
+                                        {
+                                            <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
+                                        else
+                                        {
+                                            <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                        }
                                     }
                                     <p id="/Default/InfoList2?CategoryID=@(jthks.CategoryID)">>>更多</p>
                                 </article>
@@ -308,7 +362,14 @@
                         <div class="more">
                                 @foreach (vwInfoCategory vwInfo in edjhList)
                                 {
-                                    <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                    if (vwInfo.InfoType == "LinkInfo")
+                                    {
+                                        <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                    }
+                                    else
+                                    {
+                                        <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                                    }
                                 }
                                 <p id="/Default/InfoList2?CategoryID=@(edjh.CategoryID)">>>更多</p>
                         </div>
@@ -338,9 +399,16 @@
                 <div class="col-lg-5  col-md-5 col-sm-5 col-xs-12 iframe">
                     <div class="more">
                   @foreach (vwInfoCategory vwInfo in smdwtList)
-                        {
-                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
-                        }
+                  {
+                      if (vwInfo.InfoType == "LinkInfo")
+                      {
+                        <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                      }
+                      else
+                      {
+                        <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                      }
+                  }
                         <p id="/Default/InfoList2?CategoryID=@(smdwt.CategoryID)">>>更多</p>
                     </div>
                 </div>
@@ -377,9 +445,16 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ps Vedio">
                     <article>
                     @foreach (vwInfoCategory vwInfo in tlzyList)
+                    {
+                        if (vwInfo.InfoType == "LinkInfo")
                         {
-                        <p id="@infoDal.GetPageUrl(vwInfo)">@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                            <p id=@vwInfo.BackNvarchar4 name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
                         }
+                        else
+                        {
+                            <p id=@infoDal.GetPageUrl(vwInfo) name=@vwInfo.InfoType>@(vwInfo.Title.Length > 30 ? vwInfo.Title.Substring(0, 30) + " ..." : vwInfo.Title)</p>
+                        }
+                    }
                         <p id="/Default/InfoList2?CategoryID=@(tlzy.CategoryID)">>>更多</p>
                     </article>
                 </div>

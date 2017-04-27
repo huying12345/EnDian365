@@ -4,8 +4,10 @@
     ViewBag.Title = "Search2";
     CategoryDAL categoryDal = new CategoryDAL();
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    Category categoryspiritual = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
     vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
     Category category = (Category)ViewBag.category;
+    List<vwInfoCategory> spiritualList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryspiritual.CategoryID }, "BackInt asc", 5);
 }
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,14 @@
     <div class="container" id="Search2">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/index.jpg" />
+            @if (spiritualList[1].MediaFileName == "")
+            {
+                <img src="~/assets/img/index.jpg" />
+            }
+            else
+            {
+                <img src=@spiritualList[1].MediaFileName />
+            }
         </div>
         <p class="P" style=""></p>
         <div class="row itmeTitle">

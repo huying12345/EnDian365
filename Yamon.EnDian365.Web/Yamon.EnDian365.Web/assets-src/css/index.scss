@@ -8,6 +8,7 @@
             background: #545454;
             color: #fff;
             font-size: 20px;
+            cursor:pointer;
             img{
                 margin-right: 10px;
             }
@@ -16,7 +17,7 @@
     .carousel-control{
         background:none;
         color:#7FB7F3;
-        top:25%;
+        top:35%;
         display:none;
         }
      .carousel{
@@ -142,7 +143,7 @@
                     width:100%;
                     /*box-shadow:0 5px 10px #7E6B6B;*/
                     border:1px solid #ccc;
-                    /*height:100px;*/
+                    height:100px!important;
                 }
                 img:hover{
                     border:1px solid #ccc;

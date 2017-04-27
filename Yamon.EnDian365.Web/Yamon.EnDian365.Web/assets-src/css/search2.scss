@@ -157,6 +157,7 @@
         .article p{
             font-size:18px;
         }
+       
     } 
     /* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */ 
 
@@ -173,7 +174,6 @@
           .article article{
               font-size:16px;
           }
-          
     } 
     @media screen and (max-width: 900px) and (min-width:768px) { 
         .searchBox{
@@ -223,6 +223,9 @@
             p{
                 font-size:13px;
             }
+        }
+        .videobox .video-img iframe{
+            height:auto;
         }
    }
     

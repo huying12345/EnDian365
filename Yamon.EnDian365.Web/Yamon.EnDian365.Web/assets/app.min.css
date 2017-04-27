@@ -501,6 +501,7 @@
   border-radius: 50%;
   padding: 10px 0px;
   display: none;
+  z-index: 999;
 }
 
 .footer .backUp a {
@@ -527,6 +528,31 @@
   .footer .backUp {
     left: 50%;
   }
+}
+
+#beian {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0px;
+  background: #f9f9f9;
+}
+
+#beian article {
+  text-align: center;
+}
+
+#beian article p {
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+  color: #999 !important;
+  font-size: 12px !important;
+}
+
+#beian article p span, #beian article p a {
+  color: #999 !important;
+  font-size: 12px !important;
 }
 
 /*!css/head.scss*/
@@ -556,7 +582,7 @@ body .collapse {
 
 body nav {
   border: none !important;
-  background: #000 !important;
+  background: #262625 !important;
   margin-bottom: 0px !important;
 }
 
@@ -735,6 +761,7 @@ body #Search1 .nav .Searchpage a {
   background: #545454;
   color: #fff;
   font-size: 20px;
+  cursor: pointer;
 }
 
 #home .title-img p img {
@@ -744,7 +771,7 @@ body #Search1 .nav .Searchpage a {
 #home .carousel-control {
   background: none;
   color: #7FB7F3;
-  top: 25%;
+  top: 35%;
   display: none;
 }
 
@@ -890,7 +917,7 @@ body #Search1 .nav .Searchpage a {
   width: 100%;
   /*box-shadow:0 5px 10px #7E6B6B;*/
   border: 1px solid #ccc;
-  /*height:100px;*/
+  height: 100px !important;
 }
 
 #home .videobox .video_list .oul img:hover {
@@ -1373,7 +1400,7 @@ body #Search1 .nav .Searchpage a {
   }
   #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
     line-height: 50px;
-    padding-top: 10px;
+    padding-top: 50px;
   }
   #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
     font-size: 22px;
@@ -1409,7 +1436,7 @@ body #Search1 .nav .Searchpage a {
   }
   #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
     line-height: 40px;
-    padding-top: 10px;
+    padding-top: 50px;
   }
   #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
     font-size: 20px;
@@ -1738,6 +1765,9 @@ body #Search1 .nav .Searchpage a {
   }
   #Search2 .copyRight p, #Search3 .copyRight p {
     font-size: 13px;
+  }
+  #Search2 .videobox .video-img iframe, #Search3 .videobox .video-img iframe {
+    height: auto;
   }
 }
 

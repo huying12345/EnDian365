@@ -6,6 +6,7 @@
     Category categoryerweima = categoryDal.GetInfoByID(categoryDal.GetIdByKey("erweima"));
     Category categoryeremail = categoryDal.GetInfoByID(categoryDal.GetIdByKey("email"));
     Category categoryerlinks = categoryDal.GetInfoByID(categoryDal.GetIdByKey("links"));
+    Category categoryerwzbeian = categoryDal.GetInfoByID(categoryDal.GetIdByKey("wzbeian"));
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
     List<vwInfoCategory> emailLists = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryeremail.CategoryID }, "BackInt desc");
    
@@ -56,3 +57,16 @@
         <a href="javascript:;">返回</a>
     </div>
 </footer>
+@{
+    List<vwInfoCategory> beianList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryerwzbeian.CategoryID }, "BackInt desc", 1);
+}
+@if (beianList.Count > 0)
+{
+    <div class="row" id="beian">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <article>
+                @Html.Raw(beianList[0].Content)
+            </article>
+        </div>
+    </div>
+}

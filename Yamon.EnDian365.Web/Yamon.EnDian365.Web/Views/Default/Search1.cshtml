@@ -6,12 +6,14 @@
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
     vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
     Category category365 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ed365"));
+    Category search = categoryDal.GetInfoByID(categoryDal.GetIdByKey("Search1"));
 
     string CategoryID = ((Category)ViewBag.category).CategoryID;
     if (vwInfo != null)
     {
         CategoryID = vwInfo.CategoryID;
     }
+    List<vwInfoCategory> searchList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { search.CategoryID }, "BackInt desc", 1);
 }
 <script type="text/javascript">
     var CategoryID = '@(category365.CategoryID)';
@@ -26,7 +28,14 @@
     <div class="container" id="Search1">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/encyclopedias-01.jpg" />
+            @if (searchList[0].MediaFileName == "")
+            {
+                <img src="~/assets/img/encyclopedias-01.jpg" />
+            }
+            else
+            {
+                <img src=@searchList[0].MediaFileName />
+            }
         </div>
         @RenderPage("~/Views/Default/searchBox.cshtml")
         <!----------------查询内容--------------->

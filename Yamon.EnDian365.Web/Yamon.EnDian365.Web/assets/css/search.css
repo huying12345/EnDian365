@@ -257,7 +257,7 @@
   }
   #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
     line-height: 50px;
-    padding-top: 10px;
+    padding-top: 50px;
   }
   #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
     font-size: 22px;
@@ -293,7 +293,7 @@
   }
   #Search .video-list .oul, #Search1 .video-list .oul, #AudioMore .video-list .oul {
     line-height: 40px;
-    padding-top: 10px;
+    padding-top: 50px;
   }
   #Search .video-list .oul .oulTitle, #Search1 .video-list .oul .oulTitle, #AudioMore .video-list .oul .oulTitle {
     font-size: 20px;

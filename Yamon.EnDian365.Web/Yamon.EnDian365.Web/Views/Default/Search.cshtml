@@ -5,8 +5,10 @@
     CategoryDAL categoryDal = new CategoryDAL();
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
     InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categoryspiritual = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
     vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
     Category category = (Category)ViewBag.category;
+    List<vwInfoCategory> spiritualList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryspiritual.CategoryID }, "BackInt asc", 5);
 }
 <!DOCTYPE html>
 <html>
@@ -18,7 +20,14 @@
     <div class="container" id="Search">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/encyclopedias-01.jpg" />
+            @if (spiritualList[2].MediaFileName == "")
+            {
+                <img src="~/assets/img/encyclopedias-01.jpg" />
+            }
+            else
+            {
+                <img src=@spiritualList[2].MediaFileName />
+            }
         </div>
         <div class="row itmeTitle">
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
@@ -73,7 +82,7 @@
             {
                 <div class="video-list col-lg-3 col-sm-3 col-md-4 col-xs-12">
                     <ul class="oul" style="list-style:none;">
-                        <li class="oulTitle">【经文】</li>
+                        @*<li class="oulTitle">【经文】</li>*@
                         @foreach (vwInfoCategory vwInfos in everyList)
                         {
                             <li><a href="javascript:;" id="@(vwInfos.Description == "" ? "" : vwInfos.Description)" value="@Html.Raw(vwInfos.Content == "" ? "" : vwInfos.Content) " value1="@vwInfos.VideoUrl" value2="@vwInfos.Title">@vwInfos.Title</a></li>

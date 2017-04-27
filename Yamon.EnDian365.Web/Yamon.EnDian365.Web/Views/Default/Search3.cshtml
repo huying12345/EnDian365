@@ -4,8 +4,10 @@
     ViewBag.Title = "Search3";
     CategoryDAL categoryDal = new CategoryDAL();
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
+    Category categoryspiritual = categoryDal.GetInfoByID(categoryDal.GetIdByKey("spiritual"));
     vwInfoCategory vwInfo = (vwInfoCategory)ViewBag.vwInfo;
     Category category=(Category)ViewBag.category;
+    List<vwInfoCategory> spiritualList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryspiritual.CategoryID }, "BackInt asc", 5);
 }
 <!DOCTYPE html>
 <html>
@@ -20,21 +22,28 @@
     <div class="container" id="Search3">
         @RenderPage("~/Views/include/head.cshtml")
         <div class="title-img">
-            <img src="~/assets/img/index.jpg" />
+            @if (spiritualList[3].MediaFileName == "")
+            {
+                <img src="~/assets/img/index.jpg" />
+            }
+            else
+            {
+                <img src=@spiritualList[3].MediaFileName />
+            }
         </div>
-@if (everyList.Count > 0)
-{
-        <div class="row itmeTitle">
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
-                <p>@everyList[0].Title</p>
+    @if (everyList.Count > 0)
+    {
+            <div class="row itmeTitle">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 video">
+                    <p>@everyList[0].Title</p>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
+                    <p class="P" style=""></p>
+                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 videoList">
-                <p class="P" style=""></p>
-            </div>
-        </div>
-  }
-@if (everyList.Count > 0)
-{
+      }
+    @if (everyList.Count > 0)
+    {
     <div class="videobox row">
        
             <div class="video-img col-lg-9 col-sm-9 col-md-8 col-xs-12">

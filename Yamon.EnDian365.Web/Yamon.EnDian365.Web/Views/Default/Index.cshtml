@@ -5,6 +5,7 @@
     ViewBag.Title = "Index";
     CategoryDAL categoryDal = (CategoryDAL)ViewBag.CategoryDAL;
     InformationDAL infoDal = (InformationDAL)ViewBag.InformationDAL;
+    Category categoryindex = categoryDal.GetInfoByID(categoryDal.GetIdByKey("Index"));
     Category categorylunbo = categoryDal.GetInfoByID(categoryDal.GetIdByKey("lunbo"));
     Category categoryvideo = categoryDal.GetInfoByID(categoryDal.GetIdByKey("video"));
     Category category365 = categoryDal.GetInfoByID(categoryDal.GetIdByKey("ed365"));
@@ -14,7 +15,7 @@
     Category categorycontact = categoryDal.GetInfoByID(categoryDal.GetIdByKey("contact"));
 
     vwInfoCategoryDAL vwinfoDAL = new vwInfoCategoryDAL();
-
+    List<vwInfoCategory> indexList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categoryindex.CategoryID }, "BackInt desc", 1);
 }
 <!DOCTYPE html>
 <html>
@@ -28,13 +29,22 @@
         @{
             List<vwInfoCategory> zrcbList = vwinfoDAL.GetEntityList("CategoryID=? and Status='CHECKED' ", new object[] { categorygyzrcbxl.CategoryID }, "BackInt desc", 1);
         }
-        @if (zrcbList.Count > 0)
-        {
             <div class="title-img">
-                <img src="~/assets/img/11_03.jpg" />
+               @if (indexList[0].MediaFileName == "")
+                    {
+                        <img src="~/assets/img/11_03.jpg" />
+                    }
+                    else
+                    {
+                        <img src=@indexList[0].MediaFileName />
+                    }
+               
+            @if (zrcbList.Count > 0)
+           {
                 <p onclick="window.open('@infoDal.GetPageUrl(zrcbList[0])')"><img src="~/assets/img/video.jpg" /><span>最新主日信息：</span><span>【@zrcbList[0].Title】</span></p>
+           }
             </div>
-        }
+        
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
@@ -51,11 +61,18 @@
                 <div class="item active">
                     @if (vwList0[0].MediaFileName == " ")
                     {
-                        <img src="~/assets/img/index-01.jpg"/>
+                            <img src="~/assets/img/index-01.jpg"/>
                     }
                     else
                     {
-                        <img src="@vwList0[0].MediaFileName" onclick="window.open('https://weidian.com/?userid=975508089')" />
+                        if (vwList0[0].InfoType == "LinkInfo")
+                        {
+                            <img src="@vwList0[0].MediaFileName" onclick="window.open('@vwList0[0].BackNvarchar4')" />
+                        }
+                        else
+                        {
+                            <img src="@vwList0[0].MediaFileName" />
+                        }
                     }
                 </div>
                 <div class="item">
@@ -65,7 +82,14 @@
                     }
                     else
                     {
-                        <img src="@vwList0[1].MediaFileName" />
+                        if (vwList0[1].InfoType == "LinkInfo")
+                        {
+                            <img src="@vwList0[1].MediaFileName" onclick="window.open('@vwList0[1].BackNvarchar4')" />
+                        }
+                        else
+                        {
+                            <img src="@vwList0[1].MediaFileName" />
+                        }
                     }
                 </div>
                 <div class="item">
@@ -75,13 +99,20 @@
                     }
                     else
                     {
-                        <img src="@vwList0[2].MediaFileName"/>
+                        if (vwList0[2].InfoType == "LinkInfo")
+                        {
+                            <img src="@vwList0[2].MediaFileName" onclick="window.open('@vwList0[2].BackNvarchar4')" />
+                        }
+                        else
+                        {
+                            <img src="@vwList0[2].MediaFileName" />
+                        }
                     }
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                《
+                《 
             </a>
             <a class="carousel-control right" href="#myCarousel" data-slide="next">
                 》
